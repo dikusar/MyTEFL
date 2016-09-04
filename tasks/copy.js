@@ -11,3 +11,11 @@ gulp.task('copy', () => (
 		.pipe(gulpIf(!INCLUDE_ROBOTS, filter(file => !/resources[\\\/]robots\.txt/.test(file.path))))
 		.pipe(gulp.dest('dist'))
 ));
+
+gulp.task('copy:images', () => (
+	gulp.src('app/img/*.{png,jpg,gif}')
+		.pipe(changed('dist/assets/images/'))
+		.pipe(gulp.dest('dist/assets/images/'))
+));
+
+gulp.task('copy', ['copy:images']);
