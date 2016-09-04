@@ -1,6 +1,8 @@
 .nav-bar
 	display block
-	background-color #ececec
+	
+	&__heading
+		background-color #ececec
 	
 	&__logo
 		display block
@@ -8,6 +10,8 @@
 		padding-bottom 12px
 	
 	&__social
+		overflow hidden
+		padding-left 100px
 		padding-top 2px
 		
 		&-item
@@ -28,10 +32,7 @@
 			sprite $phone
 			
 		&-googlePl
-			background-image url("../images/sprites/social.png")
-			background-position -92px 0px
-			width 38px
-			height 54px
+			sprite $googleplus
 			
 		&-instagram
 			sprite $insta
@@ -40,4 +41,80 @@
 			sprite $twit
 			
 		&-facebook
-			sprite $faceB
+			sprite $facebook
+	
+	&__menu
+		height 57px
+		background-color rgba(0,0,0, .6)
+		
+
+		&-link
+			display block
+			position relative
+			padding-top 18px
+			padding-bottom 18px
+			padding-left 18px
+			padding-right 18px
+			color white
+			text-decoration none
+			font-size 18px
+			font-weight bold
+			
+			&:after
+				display block
+				position absolute
+				top 0
+				left 0
+				z-index 2
+				content ''
+				sprite $devider
+				background-position -88px -52px
+			
+			&_active
+				color #efac1b
+			
+		
+		&-item
+			position relative
+			float left
+			
+			&:last-of-type
+				&:before
+					display block
+					position absolute
+					top 0
+					right 0
+					z-index 2
+					content ''
+					sprite $devider
+					background-position -88px -52px
+	
+
+	&__login
+		padding-top 7px
+		text-align right
+		
+		&-btn
+			position relative
+			display inline-block
+			padding 10px 37px 10px 27px
+			color #efac1b
+			text-decoration none
+			border 2px solid #efac1b
+			border-radius 3px
+			
+			&:after
+				display: block;
+				position: absolute;
+				top: 13px;
+				z-index: 2;
+				content: '';
+				height: 4px;
+				width: 4px;
+				border: 3px solid;
+				border-radius: 3px;
+				border-color: transparent;
+				border-right-color: #efac1b;
+				border-bottom-color: #efac1b;
+				right: 22px;
+				transform: rotate(-52deg);
