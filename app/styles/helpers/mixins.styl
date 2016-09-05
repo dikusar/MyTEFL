@@ -42,3 +42,11 @@ retinaBackground($image, $ext = 'png') {
 		background-image url('../images/' + $image + '@2x.' + $ext)
 	}
 }
+
+// Px to em
+// @base_font_size: 16;
+// @base_font_size_ems: unit(@base_font_size / 16, em);
+// @px_em: unit(1 / @base_font_size, em);
+
+pixelsToEm(pixels)
+	return remove-unit(pixels)/remove-unit(base-font-size)*1em
