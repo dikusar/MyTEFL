@@ -1,7 +1,19 @@
 extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
 
 block head
 	- var pageTitle = 'My TEFL';
 
 block content
 	include ../blocks/nav-bar/nav-bar
+
+	+banner({
+		imgSrc: "assets/images/Internships_main_page_banner.jpg",
+		bannerTitle: "TEFL Internships",
+		bannerSubTitle: "Complete Teach & Travel Packages!",
+		bannerText: "no degree? no experience?",
+		bannerText2: "no problem!"
+		})
+		
+
+	

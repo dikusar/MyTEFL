@@ -1,0 +1,16 @@
+mixin banner(opt)
+	-opt = opt || {};
+		.banner
+			img.banner__img(src=opt.imgSrc, alt="banner")
+			.banner__container
+				h3.banner__title
+					= opt.bannerTitle
+				h5.banner__subtitle
+					= opt.bannerSubTitle
+				h6.banner__text
+					= opt.bannerText
+					|<br>
+					= opt.bannerText2
+
+
+	
