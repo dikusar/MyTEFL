@@ -18,4 +18,10 @@ gulp.task('copy:images', () => (
 		.pipe(gulp.dest('dist/assets/images/'))
 ));
 
-gulp.task('copy', ['copy:images']);
+gulp.task('copy:fonts', () => (
+	gulp.src('app/resources/fonts/*.woff')
+		.pipe(changed('dist/assets/fonts/'))
+		.pipe(gulp.dest('dist/assets/fonts/'))
+));
+
+gulp.task('copy', ['copy:images', 'copy:fonts']);
