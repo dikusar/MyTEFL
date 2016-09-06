@@ -1,0 +1,64 @@
+-menu = ['MyTEFL.Net', 'About TEFL', 'Why TEFL', 'Courses', 'Enroll', 'TEFL Jobs', 'Giving back', 'FAQs', 'Offers', 'Blog'];
+-programs = ['Thailand', 'China', 'South Africa'];
+-pay = ['Payment Methods', '', ''];
+
+
+footer.footer
+	.row.margin-bottom.container
+		.col.l2.m2.s2
+			ul.footer__list
+				each item, i in menu
+					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
+						a(class=i === 4 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+							= item
+		.col.l2.m2.s2
+			ul.footer__list
+				each item, i in programs
+					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
+						a.footer__list-link(href=jv0)
+							= item
+			ul.footer__list-pay
+				each item, i in pay
+					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
+						if i==0
+							a.footer__list-link(href=jv0)
+								= item
+						if i===1
+							a.footer__list-link-visa(href=jv0)
+								= item
+						if i===2
+							a.footer__list-link-master(href=jv0)
+								= item
+		.col.l4.m4.s4
+			.footer__contact
+				h5.footer__contact-header
+					| Have any questions?
+				.footer__contact-subheader
+					| Call one of our friendly experts at:
+				.footer__contact-content
+					span Canada:&nbsp;
+					span.footer__contact-text-blue 1.778.807.9619
+					|<br>
+					span USA:&nbsp;
+					span.footer__contact-text-blue 1.917.580.3653
+					|<br>
+					span UK:&nbsp;
+					span.footer__contact-text-blue 0.203.318.9697
+				.footer__contact-footer
+					| Or alternatively, you can request a call-back or contact us by Skype at
+					span myTEFL
+			.footer__search
+				input.footer__search-input(type="text" placeholder="Search")
+		.col.l2.m2.s2
+			ul.footer__list
+				li.footer__list-item-heading
+					div.footer__list-item-text_lead Requset
+					div.footer__list-item-text_sub a callback
+				li.footer__list-item
+					a(class="footer__list-link-callback", href=jv0)
+			ul.footer__list-mail
+				li.footer__list-item-heading
+					div.footer__list-item-text_lead Send Us
+					div.footer__list-item-text_sub a mail
+				li.footer__list-item
+					a(class="footer__list-link-mail", href=jv0)

@@ -19,7 +19,7 @@
 	&__subtitle
 		font-family PTSans-Bold
 		font-size pixelsToEm(38)
-		margin-bottom pixelsToEm(107)
+		margin-bottom 107px
 	
 	&__text
 		color #efac1b
@@ -27,3 +27,29 @@
 		font-size pixelsToEm(30)
 		text-transform uppercase
 		line-height 36px
+		margin-bottom 107px
+	
+	&__footer
+		position relative
+		margin 0 auto
+		width 44px
+		height 44px
+		border 3px solid #fff
+		border-radius 6px
+		cursor pointer
+		
+		&:after
+			display block;
+			position absolute
+			top 11px
+			z-index 2
+			content ''
+			height 6px
+			width 6px
+			border 3px solid
+			border-radius 4px
+			border-color transparent
+			border-right-color #fff
+			border-bottom-color #fff
+			transform rotate(45deg)
+			left 13px
