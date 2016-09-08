@@ -6,11 +6,21 @@
 
 	&__list
 		
+		&-social
+			text-align right
+			
+			.footer__list-link
+				text-align left
+				display inline-block
+		
 		&-pay
 			margin-top 113px
 		
 		&-mail
 			margin-top 68px
+		
+		&-contact
+			padding-left 30%
 			
 		&-item-header,
 		&-item
@@ -36,7 +46,7 @@
 					display block
 					position absolute
 					top 0
-					left 0
+					left 68px
 					z-index 2
 					content ''
 			
@@ -151,4 +161,24 @@
 			color #999999
 			border 1px solid #d4d4d4
 			border-radius 4px
+	
+	&__sub
+		padding 25px 0
+		font-family PTSans-Bold
+		font-size pixelsToEm(18)
+		background-color #366d8f
+		color #fff
+		
+		&-menu
+			float right
+		
+		&-item
+			float left
+		
+		&-link
+			color #fff
+			
+			&_yellow
+				color #efac1b
+				text-decoration underline
 			

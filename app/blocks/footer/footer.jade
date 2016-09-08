@@ -52,23 +52,36 @@ footer.footer
 				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
 		.col.l2.m2.s2
-			ul.footer__list
+			ul.footer__list-contact
 				li.footer__list-item-heading
 					div.footer__list-item-text_lead Requset
 					div.footer__list-item-text_sub a callback
 				li.footer__list-item
 					a(class="footer__list-link-callback", href=jv0)
-			ul.footer__list-mail
+			ul.footer__list-mail.footer__list-contact
 				li.footer__list-item-heading
 					div.footer__list-item-text_lead Send Us
 					div.footer__list-item-text_sub a mail
 				li.footer__list-item
 					a(class="footer__list-link-mail", href=jv0)
 		.col.l2.m2.s2
-			ul.footer__list
+			ul.footer__list-social
 				each item,i in social
 					li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
 						a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
 							span Join us on
 							|<br>
 							span=item.text
+
+	.footer__sub
+		.row.margin-bottom.container
+			.col.l6.m6.s6
+				span Copyright © 2015 MyTEFL.net. All rights reserved.
+			.col.l6.m6.s6
+				ul.footer__sub-menu
+					li.footer__sub-item 
+						a.footer__sub-link(href=jv0) Terms & Conditions&nbsp;&nbsp;|&nbsp;&nbsp;
+					li.footer__sub-item 
+						a.footer__sub-link(href=jv0) Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;
+					li.footer__sub-item
+						a.footer__sub-link_yellow(href=jv0) Sitemap
