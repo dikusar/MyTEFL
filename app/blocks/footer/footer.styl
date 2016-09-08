@@ -23,12 +23,43 @@
 				
 				& .footer__list-link
 					color #366d8f
+					
+			&-avatar
+				position relative
+				padding-left 30px
+				margin-bottom 33px
+				font-size pixelsToEm(18)
+				color #555555
+				line-height pixelsToEm(20)
+				
+				&:before
+					display block
+					position absolute
+					top 0
+					left 0
+					z-index 2
+					content ''
 			
+			&-facebook:before
+				sprite $footerfacebook
+				
+			&-googleplus:before
+				sprite $footergoogleplus
+			
+			&-insta:before
+				sprite $footerinstagram
+			
+			&-twit:before
+				sprite $footertwitter
+			
+			&-pinterest:before
+				sprite $footerpinterest
+				
 			&-heading
 				margin-bottom 20px
 				text-align center
 				color #555555
-				line-height: 26px;
+				line-height: 26px
 		
 		&-item-text_lead
 			text-transform uppercase
@@ -97,13 +128,27 @@
 			color #366d8f
 	
 	&__search
+		position relative
 		margin-top 20px
 		
+		&-btn
+			display block
+			position absolute
+			top 17px
+			right 14px
+			z-index 2
+			content ''
+			sprite $footersearch
+			cursor pointer
+		
 		&-input
+			position relative
 			width 100%
 			padding 20px
+			pading-right 50px
 			font-family PTSans-Regular
 			font-size pixelsToEm(18)
 			color #999999
 			border 1px solid #d4d4d4
 			border-radius 4px
+			

@@ -1,6 +1,7 @@
 -menu = ['MyTEFL.Net', 'About TEFL', 'Why TEFL', 'Courses', 'Enroll', 'TEFL Jobs', 'Giving back', 'FAQs', 'Offers', 'Blog'];
--programs = ['Thailand', 'China', 'South Africa'];
+-programs = ['Programs', 'Thailand', 'China', 'South Africa'];
 -pay = ['Payment Methods', '', ''];
+-social = [{text: 'Facebook', classPefix: 'facebook'}, {text: 'Google+', classPefix: 'googleplus'}, {text: 'Instagram', classPefix: 'insta'}, {text: 'Twitter', classPefix: 'twit'}, {text:'Pinterest', classPefix: 'pinterest'}];
 
 
 footer.footer
@@ -48,6 +49,7 @@ footer.footer
 					| Or alternatively, you can request a call-back or contact us by Skype at
 					span myTEFL
 			.footer__search
+				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
 		.col.l2.m2.s2
 			ul.footer__list
@@ -62,3 +64,11 @@ footer.footer
 					div.footer__list-item-text_sub a mail
 				li.footer__list-item
 					a(class="footer__list-link-mail", href=jv0)
+		.col.l2.m2.s2
+			ul.footer__list
+				each item,i in social
+					li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
+						a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+							span Join us on
+							|<br>
+							span=item.text
