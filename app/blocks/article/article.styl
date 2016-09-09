@@ -1,0 +1,38 @@
+.article
+	
+	&__title
+		padding 50px 0
+		font-size pixelsToEm(24)
+		font-family PTSans-Bold
+		color #366d8f
+		text-transform uppercase
+		
+		&_align_right
+			text-align right
+		
+		&-icon
+			float right
+			margin-left 10px
+	
+	&__content
+		padding-top 6px
+		padding-left 10px
+		overflow hidden
+	
+	&__item
+		margin-bottom 57px
+		
+		&:last-of-type
+			margin-bottom 40px
+		
+		&-avatar
+			float left
+		
+		&-title
+			 @extend .article__title
+			 padding 0 0 18px 0
+			 font-size pixelsToEm(18)
+		 
+		&-text
+			line-height 20px
+			
