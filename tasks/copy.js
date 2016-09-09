@@ -13,8 +13,7 @@ gulp.task('copy', () => (
 ));
 
 gulp.task('copy:images', () => (
-	gulp.src('app/img/*.{png,jpg,gif}')
-		.pipe(changed('dist/assets/images/'))
+	gulp.src('**/*.{png,jpg,gif}', {cwd: 'app/img'})
 		.pipe(gulp.dest('dist/assets/images/'))
 ));
 
