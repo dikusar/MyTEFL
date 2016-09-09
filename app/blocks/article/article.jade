@@ -1,0 +1,16 @@
+mixin article(data)
+	-data = data || [];
+		each elem in data
+			.col.l6.m6.s12
+				article.article
+					.article__title
+						|#{elem.title}
+					each item in elem.items
+						.article__item
+							.article__item-avatar
+								img(src=item.img, alt="img")
+							.article__content
+								.article__item-title
+									|#{item.title}
+								.article__item-text
+									|#{item.text}

@@ -1,5 +1,6 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/banner/banner
+include ../blocks/article/article
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -15,7 +16,42 @@ block content
 		bannerSubTitle: "Complete Teach & Travel Packages!",
 		bannerText: "no degree? no experience?",
 		bannerText2: "no problem!"
-		})
+	})
+
+	main.container
+		.row
+			+article([
+				{
+					title: 'Why choose to go with an internship?',
+					items:[
+						{
+							img: "assets/images/articles/degree-required.png",
+							title: "No Degree required",
+							text: "Many TEFL positions will request either a 4 year degree, or multiple years of teaching experience. A MyTefl Internship allows you to teach immediately, and build up your resume."
+						},
+						{
+							img: "assets/images/articles/work-and-play.png",
+							title: "Work & Play with other teaching interns from around the world",
+							text: "You'll complete in country orientations and often placements with other likeminded individuals, meaning lots of shared fun, excitement, adventures and lifelong friendships."
+						}
+					]
+				},
+				{
+					title: 'Request a callback',
+					items:[
+						{
+							img: "assets/images/articles/teaching-experience.png",
+							title: "No Teaching Experience required",
+							text: "All you need is our TEFL and a positive attitude; we'll provide the rest."
+						},
+						{
+							img: "assets/images/articles/simple-and-safe.png",
+							title: "Simple and Safe",
+							text: "MyTefl does all the work, guiding you and ensuring you are in good hands every step of the way. Our teams on the ground pick you up directly from the airport, provide safe accommodation options, provide thorough orientation, and are there for 24/7 support. Placement schools are screened to ensure they meet the safety and quality standards of our programs. No hassles!"
+						}
+					]
+				}
+			])
 	
 	include ../blocks/footer-banner/footer-banner
 	include ../blocks/footer/footer
