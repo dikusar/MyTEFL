@@ -1,6 +1,7 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/banner/banner
 include ../blocks/article/article
+include ../blocks/article-banner/article-banner
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -53,6 +54,20 @@ block content
 							text: "MyTefl does all the work, guiding you and ensuring you are in good hands every step of the way. Our teams on the ground pick you up directly from the airport, provide safe accommodation options, provide thorough orientation, and are there for 24/7 support. Placement schools are screened to ensure they meet the safety and quality standards of our programs. No hassles!"
 						}
 					]
+				}
+			])
+
+			+article-banner([
+				{
+					country: "Thailand",
+					text: "6 month",
+					paid: "paid program",
+					slides: [
+						{
+							list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences!"]
+						}
+					],
+					imgPath: "assets/images/teach-in/thailand.jpg"
 				}
 			])
 	

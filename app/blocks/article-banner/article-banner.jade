@@ -1,0 +1,23 @@
+mixin article-banner(articles)
+	-articles = articles || [];
+		each article in articles
+			.article-banner
+				.article-banner__info
+					.article-banner__text
+						| Teach in
+					.article-banner__title
+						=article.country
+					.article-banner__text
+						b
+							=article.text
+					.article-banner__text
+						=article.paid
+				.article-banner__slider
+					each slide in article.slides
+						ul.article-banner__list
+							each listItem in slide.list
+								li.article-banner__list-item
+									=listItem
+					a.article-banner__btn(href=jv0)
+						|Explore!
+				img.article-banner__img(src=article.imgPath, alt="img")
