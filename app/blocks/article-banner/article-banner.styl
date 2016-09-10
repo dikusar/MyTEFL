@@ -1,0 +1,69 @@
+.article-banner
+	border 1px solid #d9d9d9
+	
+	.row&
+		margin-bottom 40px
+		
+		&:last-of-type
+			margin-bottom 0
+	
+	&__info
+		padding-top 37px
+		text-align center
+		line-height pixelsToEm(33)
+	
+	&__list
+		padding-top 37px
+		padding-left 20px
+		line-height pixelsToEm(30)
+		list-style inherit
+
+	
+	&__title
+		margin 6px 0
+		font-size pixelsToEm(36)
+		text-transform uppercase
+		color #366d8f
+		text-decoration underline
+
+	&__text
+		font-size pixelsToEm(24)
+	
+	&__btn
+		display block
+		width 305px
+		margin-top 7px
+		margin-bottom 24px
+		padding 13px 0
+		background-color #efac1b
+		color #366d8f
+		text-transform uppercase
+		font-size pixelsToEm(18)
+		font-family PTSans-Bold
+		text-align center
+	
+	&__img
+		width 100%
+	
+	&__slider
+		position relative
+		
+		&-btn_left,
+		&-btn_right
+			position absolute
+			top 45%
+			left -27px
+			width 13px
+			height 13px
+			border 3px solid transparent
+			border-left-color #366d8f
+			border-bottom-color #366d8f
+			z-index 1
+			cursor pointer
+			border-radius 4px
+			transform rotate(45deg)
+		
+		&-btn_right
+			left inherit
+			right 76px
+			transform rotate(-137deg)

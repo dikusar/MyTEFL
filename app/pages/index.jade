@@ -56,20 +56,32 @@ block content
 					]
 				}
 			])
-
-			+article-banner([
-				{
-					country: "Thailand",
-					text: "6 month",
-					paid: "paid program",
-					slides: [
-						{
-							list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences!"]
-						}
-					],
-					imgPath: "assets/images/teach-in/thailand.jpg"
-				}
-			])
+		.row
+			.col.l12.m12.s12
+				+article-banner([
+					{
+						country: "Thailand",
+						text: "6 month",
+						paid: "paid program",
+						slides: [
+							{
+								list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences!"]
+							}
+						],
+						imgPath: "assets/images/article-banner/thailand.png"
+					},
+					{
+						country: "Argentina",
+						text: "No text",
+						paid: "no text",
+						slides: [
+							{
+								list: ["No text", "No text", "No text", "No text"]
+							}
+						],
+						imgPath: "assets/images/article-banner/argentina.png"
+					}
+				])
 	
 	include ../blocks/footer-banner/footer-banner
 	include ../blocks/footer/footer
