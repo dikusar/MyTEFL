@@ -33,7 +33,6 @@
 			align-items center
 			justify-content center
 			height 73px
-			width 37px
 			
 			&_bg_blue
 				background-color #366d8f
@@ -43,19 +42,32 @@
 			
 		&-googlePl
 			sprite $googleplus
+				
+			&_white
+				sprite $googlepluswhite
 			
 		&-instagram
 			sprite $insta
+				
+			&_white
+				sprite $instawhite
 			
 		&-twitter
 			sprite $twit
+				
+			&_white
+				sprite $twitwhite
 			
 		&-facebook
 			sprite $facebook
+				
+			&_white
+				sprite $f_white
+				padding-top 20px
 	
 	&__menu
 		height 57px
-		background-color rgba(0,0,0,0.6)
+		background-color rgba(0, 0, 0, 0.6)
 		position absolute
 		left 0
 		right 0
@@ -73,7 +85,7 @@
 			color white
 			font-family PTSans-Bold
 			text-decoration none
-			font-size: pixelsToEm(18);
+			font-size pixelsToEm(18)
 			font-weight bold
 			
 			&:after
