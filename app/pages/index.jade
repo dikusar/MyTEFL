@@ -56,33 +56,53 @@ block content
 					]
 				}
 			])
-		.row
-			.col.l12.m12.s12
-				+article-banner([
+		+article-banner([
+			{
+				country: "Thailand",
+				text: "6 month",
+				paid: "paid program",
+				slides: [
 					{
-						country: "Thailand",
-						text: "6 month",
-						paid: "paid program",
-						slides: [
-							{
-								list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences!"]
-							}
-						],
-						imgPath: "assets/images/article-banner/thailand.png"
-					},
-					{
-						country: "Argentina",
-						text: "No text",
-						paid: "no text",
-						slides: [
-							{
-								list: ["No text", "No text", "No text", "No text"]
-							}
-						],
-						imgPath: "assets/images/article-banner/argentina.png"
+						list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences!"]
 					}
-				])
-	
+				],
+				imgPath: "assets/images/article-banner/thailand.png"
+			},
+			{
+				country: "Argentina",
+				text: "No text",
+				paid: "no text",
+				slides: [
+					{
+						list: ["No text", "No text", "No text", "No text"]
+					}
+				],
+				imgPath: "assets/images/article-banner/argentina.png"
+			},
+			{
+				country: "Argentina",
+				text: "5 month",
+				paid: "paid internship",
+				slides: [
+					{
+						list: ["Online and in-class TEFL Training", "No degree required", "Full salaried position", "Amazing cultural experiences"]
+					}
+				],
+				imgPath: "assets/images/article-banner/china.png"
+			},
+			{
+				country: "Africa",
+				text: "1 month",
+				paid: "volunteer",
+				slides: [
+					{
+						list: ["Online and in-class TEFL Training", "No degree required", "Full accomodation", "Life changing experience"]
+					}
+				],
+				imgPath: "assets/images/article-banner/africa.png"
+			}
+		])
+
 	include ../blocks/footer-banner/footer-banner
 	include ../blocks/footer/footer
 		
