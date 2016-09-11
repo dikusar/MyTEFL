@@ -1,0 +1,41 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	+banner({
+		imgSrc: "assets/images/home_page_banner.jpg",
+		banner_mode_class: "_page_home",
+		bannerBeforeText: {
+			lineFist: "Want to teach English and live abroad?",
+			lineSecond: "We make it happen!"
+		},
+		bannerTitle: "Accredited TEFL Courses.",
+		bannerTitleSecondLine: "Real Job Placements",
+		btn: "GET A FREE LESSION",
+		calendar: [
+			{
+				integer: "12",
+				text: "Days"
+			},
+			{
+				integer: "05",
+				text: "Hours"
+			},
+			{
+				integer: "36",
+				text: "Minutes"
+			}
+		]
+	})
+
+	main.container
+		.row
+
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer

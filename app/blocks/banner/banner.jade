@@ -2,16 +2,44 @@ mixin banner(opt)
 	-opt = opt || {};
 		.banner
 			img.banner__img(src=opt.imgSrc, alt="banner")
-			.banner__container
+			.banner__container(class=opt.banner_mode_class ? "banner__container" + opt.banner_mode_class : "")
+
+				if opt.bannerBeforeText
+					.banner__text-before
+						span
+							=opt.bannerBeforeText.lineFist
+						br
+						span
+							=opt.bannerBeforeText.lineSecond
+
 				h3.banner__title
 					=opt.bannerTitle
-				h5.banner__subtitle
-					=opt.bannerSubTitle
-				h6.banner__text
-					=opt.bannerText
-					|<br>
-					=opt.bannerText2
+					if opt.bannerTitleSecondLine
+						br
+						=opt.bannerTitleSecondLine
+				if opt.bannerSubTitle
+					h5.banner__subtitle
+						=opt.bannerSubTitle
+
+				if opt.bannerText || opt.bannerText2
+					h6.banner__text
+						=opt.bannerText
+						|<br>
+						=opt.bannerText2
 				.banner__footer
+					if opt.btn
+						a.banner__footer-btn(href=jv0)
+							=opt.btn
+					if opt.calendar
+						.banner__footer-calendar
+							each item in opt.calendar
+								.banner__footer-calendar-item
+									.banner__footer-calendar-integer
+										=item.integer
+									.banner__footer-calendar-text
+										=item.text
+
+					.banner__footer-btn_down
 					
 
 
