@@ -1,4 +1,5 @@
 .banner
+	position relative
 	overflow hidden
 	
 	&__img
@@ -121,3 +122,68 @@
 			&-text
 				text-transform uppercase
 				font-size pixelsToEm(12)
+	
+	&__search
+		position absolute
+		z-index 1
+		bottom 1px
+		left 0
+		right 0
+		
+		& .col
+			padding 0
+		
+		&-blue
+		&-yellow,
+			position relative
+			padding 38px 38px 38px 0
+			background-color rgba(56, 102, 129, .7)
+			overflow hidden
+		
+		&-yellow
+			background-color rgba(231, 170, 37, .7)
+			
+			.banner__search-content
+				float none
+				padding-left 37px
+		
+		&-content
+			position relative
+			display inline-block
+			float right
+		
+		&-title
+			font-family PTSans-Bold
+			font-size pixelsToEm(30)
+			color #fff
+		
+		&-input
+			width 386px
+			height 50px
+			padding-left 20px
+			padding-right 36px
+			margin-left 24px
+			color #929292
+			border-radius 3px
+			border none
+		
+		&-btn
+			position absolute
+			top 17px
+			right 7px
+			width 24px
+			height 24px
+			z-index 2
+			cursor pointer
+			
+			&:after
+				position absolute
+				top 2px
+				left 7px
+				display block
+				content ""
+				width 0
+				height 0
+				border-top 8px solid transparent
+				border-bottom 8px solid transparent
+				border-left 8px solid #494949

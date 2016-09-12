@@ -40,6 +40,21 @@ mixin banner(opt)
 										=item.text
 
 					.banner__footer-btn_down
+			
+			if opt.bannerSearch
+				.row.margin-bottom.banner__search
+					.col.l6.m6.s12
+						.banner__search-blue
+							.banner__search-content
+								span.banner__search-title Get started!
+								input.banner__search-input(type="text", placeholder="Search courses...")
+								.banner__search-btn
+					.col.l6.m6.s12
+						.banner__search-yellow
+							.banner__search-content
+								span.banner__search-title Get started!
+								input.banner__search-input(type="text", placeholder="See where myTEFL takes you...")
+								.banner__search-btn
 					
 
 
