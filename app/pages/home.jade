@@ -39,7 +39,26 @@ block content
 	})
 
 	main.container
-		+circle-group()
+		+circle-group([
+			{
+				imgSrc: "assets/images/circle-group/courses.png",
+				title: "Courses",
+				text: "Accredited TEFL training and certification.",
+				btnText: "GET CERTIFIED"
+			},
+			{
+				imgSrc: "assets/images/circle-group/tefl-programs.png",
+				title: "TEFL Programs",
+				text: "Get experience, training and see the world!",
+				btnText: "BOOK ADVENTURE"
+			},
+			{
+				imgSrc: "assets/images/circle-group/job-placements.png",
+				title: "Job Placements",
+				text: "Graduate with us and Get employed.",
+				btnText: "GET EMPLOYED"
+			}
+		])
 
 
 	include ../blocks/footer-banner/footer-banner

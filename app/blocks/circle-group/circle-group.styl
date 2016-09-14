@@ -1,6 +1,9 @@
 .circle-group
 	display block
 	
+	&__heading
+		position relative
+	
 	&__title
 		text-align center
 		font-family PTSans-Bold
@@ -10,3 +13,36 @@
 	&__subtitle
 		color #555555
 		font-size pixelsToEm(22)
+	
+	&__item
+		display inline-block
+		
+		&-title
+			color #444444
+			font-family PTSans-Bold
+			font-size pixelsToEm(28)
+			text-align center
+			text-transform uppercase
+	
+	&__footer
+		width 222px
+		text-align center
+		margin 0 auto
+		line-height 20px
+	
+	&__btn
+		position absolute
+		top 42%
+		left 20%
+		padding 10px 30px
+		border 3px solid #fff
+		color #fff
+		text-transform uppercase
+		font-size pixelsToEm(18)
+		font-family PTSans-Bold
+		
+		&_yellow
+			color #efac1b
+			border-color #efac1b
+		
+			
