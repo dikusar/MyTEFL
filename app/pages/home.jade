@@ -1,5 +1,6 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/banner/banner
+include ../blocks/circle-group/circle-group
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -38,11 +39,8 @@ block content
 	})
 
 	main.container
-		.row
-			.col.l12.m12.s12
-				h5 Why US
-			.col.l12.m12.s12
-				| Accredited training with a socially responsible TEFL organization.
+		+circle-group()
+
 
 	include ../blocks/footer-banner/footer-banner
 	include ../blocks/footer/footer
