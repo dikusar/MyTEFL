@@ -1,0 +1,75 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = true;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper.alt(style="background-image:url(assets/images/home_page_banner.jpg)")
+					h2.page-title TEFL DESTINATIONS
+					h3.page-slog See where myTEFL can take you!
+		.row
+			.col.l12
+				//- blog item
+				article.blog-item
+					.row
+						.col.l7
+							p.mb-25 If you are an adventurous soul, and would like to explore exotic locations while teaching English you are in luck! Why not chow down on Peking duck in Beijing, participate in Brazil’s infamous Carnival, or go river tracing in Hualien, Taiwan? Your accredited TEFL certificate opens many doors and gives you access to a world of exciting opportunity!
+							a.button-st1(href="#") VIEW COURSES
+						.col.l5
+							.media-part
+								.context.text-center
+									i.context-icon.fa.fa-check
+									.title-st-2.mb-15 Title Here
+									p.mb-15 Your lorem ipsum dolore text will goes here.
+									a.context-link(href='#') Your link here
+								.pic
+									img(src="")
+				//- ! blog item
+				//- blog item
+				article.blog-item
+					.row
+						.col.l5
+							.media-part
+								.pic
+									img(src="")
+								.context.text-center
+									i.context-icon.fa.fa-check
+									.title-st-2.mb-15 Title Here
+									p.mb-15 Your lorem ipsum dolore text will goes here.
+									a.context-link(href='#') Your link here
+						.col.l7
+							.title-st-2.mb-20 TITLE GOES HERE
+							p.mb-25 The links below provide information on popular TEFL job destinations and current vacancies. Even if these positions are filled, we have hundreds of employers and positions eager for myTEFL.net graduates. These listings are a good way to gauge salary packages and benefits when carefully choosing a final destination and employer. 
+				//- ! blog item
+				//- blog item
+				article.blog-item
+					.row
+						.col.l7
+							.title-st-2.mb-20 TITLE GOES HERE
+							p.mb-25 Equipped with a myTEFL.net TEFL certificate, a professional resume and cover letter, you’ll be eligible for TEFL positions around the world. We will guide and assist you the entire way through the process, and provide comprehensive resources to ensure you get a great start in the TEFL world! With our reputation and contacts, you can often be hired even before completing your course! 
+							a.button-st1(href="#") VIEW COURSES
+						.col.l5
+							.media-part
+								.pic
+									img(src="")
+								.context.text-center
+									i.context-icon.fa.fa-check
+									.title-st-2.mb-15 Title Here
+									p.mb-15 Your lorem ipsum dolore text will goes here.
+									a.context-link(href='#') Your link here
+				//- ! blog item
+
+
+
+
+
+	include ../blocks/footer/footer

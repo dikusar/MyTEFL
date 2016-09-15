@@ -11,22 +11,25 @@ block content
 	include ../blocks/nav-bar/nav-bar
 
 	main.container
-		.row
+		.row.mt-100
 			.col.l12
 				.page-title-wrapper(style="background-image:url(assets/images/home_page_banner.jpg)")
 					h2.page-title PAYMENT DECLINED
-		.row
+		.row.mt-50.mb-60.clearfix
 			.col.l12
-				h3.title-st-1 Oops!#[br]There was a problem processing your credit card; please double check your payment information and try again.
+				h3.title-st-1.mb-30 Oops!#[br]There was a problem processing your credit card; please double check your payment information and try again.
+			.col.l8
 				div.cont-fs
 					strong Why wasn't my card charged?
 					p.mb-30 The most common issues are:
-					ul.list-st1
+					ul.list-st1.mb-30
 						li incorrect credit card number or expiration date
 						li incorrect AVS code (the 3 digit number on the back of your card)
 						li insufficient funds
-					p If your card is declined a second time, contact your bank as they may have puta temporary hold on your card. This can occur if this transaction is outside your normal spending habits or location.
-				a.button-st-1(href="#") GO BACK AND TRY AGAIN
+					p.mb-60 If your card is declined a second time, contact your bank as they may have puta temporary hold on your card. This can occur if this transaction is outside your normal spending habits or location.
+				a.button-st1(href="#") GO BACK AND TRY AGAIN
+			.col.l4
+				img(src='assets/images/article/degree-required.png')
 
 
 	include ../blocks/footer/footer
