@@ -11,6 +11,9 @@ b
 strong
 	font-weight 700
 	
+hr
+	border-top 1px solid #fafafa
+	border-bottom 1px solid #d8d8d8
 .cont-fs
 	font-size pixelsToEm(24px)
 	line-height 30px
@@ -90,7 +93,8 @@ strong
 		font-weight 700
 		color #376d8f
 .blog-item
-	
+	& + .blog-item
+		margin-top 50px
 	p, .context-link
 		font-size pixelsToEm(18)
 		line-height 24px
@@ -116,4 +120,41 @@ strong
 
 /**/
 /* ! blog item */
+/**/
+
+/**/
+/* gallery */
+/**/
+.k-gallery-grid
+	text-align center
+	margin 0 -3px
+	font-size 0
+	.gallery-item
+		position relative
+		z-index 1
+		max-width 243px
+		display inline-block
+		margin 3px
+		overflow hidden
+		img
+			transition all 0.3s
+		&:hover img
+			transform scale(1.1)
+			transition all 4s
+		.gallery-title
+			position absolute
+			z-index 3
+			top 50%
+			left 0
+			right 0
+			color #fff
+			font-size 32px
+			font-weight 700
+			text-shadow 0 3px 1px rgba(0,0,0,0.3)
+			text-transform uppercase
+			transform translateY(-50%)
+	
+
+/**/
+/* ! gallery*/
 /**/
