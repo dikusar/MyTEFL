@@ -3,7 +3,7 @@ mixin circle-group-item(item, i)
 		.circle-group__item
 			.circle-group__heading
 				img.circle-group__img(src=item.imgSrc, alt="img")
-				.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow" : "")
+				a.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow" : "", href=jv0)
 					=item.btnText
 			
 			.circle-group__footer
@@ -17,10 +17,10 @@ mixin circle-group(items)
 	.row.circle-group
 		.col.l12.m12.s12
 			h5.circle-group__title.pt-40.pb-50 Why US
-		.col.l12.m12.s12.text-center
+		.col.l12.m12.s12.text-center.mb-60
 			span.circle-group__subtitle Accredited training with a socially responsible TEFL organization.
 		
-	.row.mt-60
+	.row
 		each item, i in items
 			if i === 0
 				.col.l4.m4.s4
@@ -31,6 +31,10 @@ mixin circle-group(items)
 			if i === 2
 				.col.l4.m4.s4.text-right
 					+circle-group-item(item, i)
+
+	.row.mt-30.mb-30
+		.col.l12.m12.s12
+			.circle-group__btn-down
 					
 
 
