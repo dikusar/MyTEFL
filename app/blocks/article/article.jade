@@ -1,7 +1,7 @@
 mixin article(data)
 	-data = data || [];
 		each elem in data
-			.col.l6.m6.s12
+			.col.l6.m6.s12&attributes(attributes)
 				article.article
 					.article__title(class=elem.titleModClass ? "article__title_"+elem.titleModClass+"" : "")
 						|#{elem.title}
@@ -10,10 +10,15 @@ mixin article(data)
 								
 					each item in elem.items
 						.article__item(style=item.style ? item.style : "")
-							.article__item-avatar
-								img(src=item.img, alt="img")
+							if item.img
+								.article__item-avatar
+									img(src=item.img, alt="img")
 							.article__content
-								.article__item-title
-									|#{item.title}
+								if item.title
+									.article__item-title
+										|#{item.title}
 								.article__item-text
 									|#{item.text}
+								if item.buttonText
+									.button-st1
+										=item.buttonText
