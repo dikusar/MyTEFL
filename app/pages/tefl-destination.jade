@@ -4,7 +4,7 @@ include ../blocks/banner/banner
 block head
 	- var pageTitle = 'My TEFL';
 	- navbar_position_absolute = false;
-	- whiteIcons = true;
+	- whiteIcons = false;
 	- footerSubBtn = true;
 
 block content
@@ -186,11 +186,7 @@ block content
 					img(src="assets/images/gallery/gallery-23.jpg")
 					.gallery-title And More
 				//- ! gallery item
-		
+		include ../blocks/banner-blue/banner-blue
 		include ../blocks/course-enroll/course-enroll
-
-
-
-
-
+		include ../blocks/footer-banner/footer-banner
 	include ../blocks/footer/footer
