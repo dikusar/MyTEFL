@@ -3,6 +3,7 @@
 	overflow hidden
 	clear both
 	background-image url("../images/prise/prise-bg.jpg")
+	background-size cover
 	
 	&__title
 		font-family PTSans-Bold
@@ -24,3 +25,91 @@
 			text-transform uppercase
 			border 2px solid #efac1b
 			border-radius 4px
+	
+	&__item
+		font-family PTSans-Bold
+		color #fff
+		text-align center
+		
+		&-title,
+		&-title_orange
+			font-size pixelsToEm(32)
+			text-transform uppercase
+			background #2f8c89
+			background linear-gradient(to right,  #2f8c89 0%, #349795 50%, #308d8a 100%)
+		
+		&-title_orange
+			background #f26522
+		
+		&-content
+			padding 65px 0 40px 0
+			background-color #fff
+			overflow hidden
+		
+		&-text,
+		&-text_yellow,
+		&-text_orange
+			margin-top 60px
+			margin-bottom 11px
+			font-size pixelsToEm(40)
+			color #43d4cf
+		
+		&-text_yellow
+			color #efac1b
+		
+		&-text_orange
+			color #fa8e36
+		
+		&-text_before
+			margin-top 14px
+			margin-bottom 24px
+			font-size pixelsToEm(20)
+			color #ff9d00
+		
+		&-hours,
+		&-hours_green
+			font-size pixelsToEm(18)
+			text-transform uppercase
+			color #475059
+		
+		&-hours_green
+			color #31918e
+		
+		&-descript,
+		&-descript_orange
+			padding 24px 35px
+			text-transform uppercase
+			background-color #4bbbb8
+			font-size pixelsToEm(18)
+			line-height 23px
+		
+		&-descript_orange
+			background linear-gradient(to right,  #fa8f37 0%, #fba340 50%, #fa9037 100%)
+		
+		&-footer,
+		&-footer_orange
+			padding 24px 0
+			background-color #2f8b88
+		
+		&-footer_orange
+			background linear-gradient(to right,  #f36923 0%, #f78c2f 50%, #f36c24 100%)
+			
+		
+		&-btn,
+		&-btn_white,
+		&-btn_white-transparent
+			display inline-block
+			padding 11px 14px
+			color #c1dcdc
+			text-transform uppercase
+			border 2px solid #c1dcdc
+			border-radius 4px
+		
+		&-btn_white
+			color #efac1b
+			background-color #fff
+			border none
+		
+		&-btn_white-transparent
+			color #fff
+			border-color #fff
