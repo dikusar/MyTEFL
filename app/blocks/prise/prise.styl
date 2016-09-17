@@ -25,14 +25,24 @@
 			text-transform uppercase
 			border 2px solid #efac1b
 			border-radius 4px
+		
+
+	&__table
+		display flex
+		align-items stretch
 	
 	&__item
+		width 300px		
 		font-family PTSans-Bold
 		color #fff
 		text-align center
 		
+		&:last-of-type
+			padding-left 8px
+		
 		&-title,
 		&-title_orange
+			position relative
 			font-size pixelsToEm(32)
 			text-transform uppercase
 			background #2f8c89
@@ -41,10 +51,17 @@
 		&-title_orange
 			background #f26522
 		
+		&-title-devider
+			position absolute
+			right 0
+			top 43px
+			sprite $prisetitledevider
+		
 		&-content
 			padding 65px 0 40px 0
 			background-color #fff
 			overflow hidden
+			border-top 4px solid #eaeaea
 		
 		&-text,
 		&-text_yellow,
@@ -88,11 +105,18 @@
 		
 		&-footer,
 		&-footer_orange
+			position relative
 			padding 24px 0
 			background-color #2f8b88
 		
 		&-footer_orange
 			background linear-gradient(to right,  #f36923 0%, #f78c2f 50%, #f36c24 100%)
+		
+		&-footer-devider
+			position absolute
+			top 0
+			right 0
+			sprite $prisefooterdevider
 			
 		
 		&-btn,
@@ -108,7 +132,7 @@
 		&-btn_white
 			color #efac1b
 			background-color #fff
-			border none
+			border-color #fff
 		
 		&-btn_white-transparent
 			color #fff
