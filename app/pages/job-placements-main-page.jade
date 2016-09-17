@@ -1,0 +1,186 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper.alt(style="background-image:url(assets/images/header-job-placements.png)")
+					h2.page-title Job Placement Services
+					h3.page-slog Free for myTEFL Grads!
+		.row.mt-50.mb-60
+			.col.l12
+				.title-st-2.uppercase.mb-15 Job Placement Service: Exclusively for our Graduates
+				p.content-p Teaching EFL in the exotic corners of the world is one of the greatest, and most exciting decisions you'll ever make. At myTEFL, we know that having a great paying job, a safe environment, and on the ground support can make all the difference between a good experience, and an epic experience. Yes, we said epic.#[br]#[br]That's why we created
+					strong MyTEFL's Job Placement Service.
+					| Many TEFL providers leave you on your own once you have completed your course. We don't. We make sure you have a well-paying TEFL job before you land in your destination of choice.#[br]#[br]We help polish up your employment applications, match your desires and qualifications with suitable destinations, vet prospective employers, setup interviews, assist with work permit applications, and ensure all the details are taken care of so you don't have to.#[br]#[br]And the best part? All this is included in the price of the course! So go ahead, sign up, and become part of the international myTEFL family.
+		.row
+			.col.l5
+				img.block-center(src="assets/images/job-placements/placements-1.png")
+			.col.l7
+				.title-st-2.mt-15.mb-50.uppercase Our Job Placement Service Includes
+				ul.list-st1.mb-30.content-p
+					li Feedback and assistance on your CV & Cover Letter from our Coordinators
+					li Matching you with potential destinations and employers based on your needs and qualifications
+					li Initiating applications and securing interviews with vetted, safe and reliable employers
+					li Assistance with pre-departure preparations
+					li Assistance with further job placement requests for life
+		.row.mt-50.mb-25
+			.col.l12
+				.title-st-2 Check out the requirements for each of our TEFL Job Destination and contact our #[ins job placement experts] for more details.
+		//- placements section
+		.row
+			.col.l6
+				//- placement item
+				.placement-item.mb-20
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-2.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-3.png")
+						.title-st-1.mb-25 Teach in Taiwan
+						.title-st-2.mb-30 Teach in Taiwan Employment Package:
+						ul.list-st1.checked
+							li work visa/permit
+							li 55,000 to 75,000 NTD ($2,150 to $2,900 CAD) p/m
+							li safe and affordable accommodation assistance
+							li 1 more point from salary package
+							li 2 more point from salary package
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+			.col.l6
+				//- placement item
+				.placement-item.mb-20
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-3.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-1.png")
+						.title-st-1.mb-25 Teach in Thailand
+						.title-st-2.mb-30 Teach in Thailand Employment Package:
+						ul.list-st1.checked
+							li work visa/permit
+							li 30,000 to 35,000 THB ($1,100 - $1,300 CAD) p/m
+							li safe and affordable accommodation assistance
+							li 1 more point from salary package
+							li 2 more point from salary package
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+			.col.l6
+				//- placement item
+				.placement-item.mb-20
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-4.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-2.png")
+						.title-st-1.mb-25 Teach in China
+						.title-st-2.mb-30 Teach in China Employment Package:
+						ul.list-st1.checked
+							li work visa/permit
+							li 8,500 to 12,000 CNY ($1,700 to $2,900 CAD) p/m
+							li safe and affordable accommodation assistance
+							li 1 more point from salary package
+							li 2 more point from salary package
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+			.col.l6
+				//- placement item
+				.placement-item.mb-20
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-5.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-5.png")
+						.title-st-1.mb-25 Teach in Korea
+						.title-st-2.mb-30 Teach in Korea Employment Package:
+						ul.list-st1.checked
+							li work visa/permit
+							li 2M Won to 2.5M Won ($2,250 to $2,800 CAD) p/m
+							li 1.3M Won settlement bonus ($1,450 CAD)
+							li 1 more point from salary package
+							li 2 more point from salary package
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+			.col.l6
+				//- placement item
+				.placement-item
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-6.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-6.png")
+						.title-st-1.mb-25 Teach in Colombia
+						.title-st-2.mb-30 Teach in Colombia Employment Package:
+						ul.list-st1.checked
+							li work visa/permit
+							li 1,500,000 Colombian Pesos ($620 CAD) p/m
+							li airport pick-up
+							li 1 more point from salary package
+							li 2 more point from salary package
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+			.col.l6
+				//- placement item
+				.placement-item
+					.placement-item-pic
+						img.placement-main-img(src="assets/images/job-placements/placements-7.png")
+					.placement-item-content
+						img.flag(src="assets/images/job-placements/flag-4.png")
+						.title-st-1.mb-25 Online Placements
+						.title-st-2.mb-30 Not sure where to go, or have another destinations in mind? Send us an email with your CV and photo, and one of our Placement Coordinators will get back to you promptly!
+						.text-center.mt-15
+							a.button-st1.uppercase(href="#") More details
+				//- ! placement item
+		//- ! placements section
+	.k-parallax-section.overlay.overlay-half.mb-30(style="background-image:url(assets/images/enroll-form.jpg)")
+			.container.pt-60.pb-40
+				.row.course-enroll
+					.col.l6
+						.course-enroll_slog.mb-25 Study Anywhere #[br] on any Device
+						.course-enroll_context.text-white.mb-30 #[strong All you need is internet connectivity #[br] and a web browser]
+						a.button-st1.orange(href="#") LEARN MORE
+					.col.l6
+						.course-enroll_container
+							.course-enroll_title.text-center.mb-30 Enroll in a TEFL course
+							form.course-enroll_form
+								input.form-row.form-col-6(type="text", name="name", placeholder="First Name")
+								input.form-row.form-col-6(type="text", name="name", placeholder="Last Name")
+								input.form-row(type="text", name="email" placeholder="Email address")
+								input.form-row(type="text", name="phone" placeholder="Phone Number")
+								p.text-white.mt-20 #[strong Your Location]
+								select.enroll-country-select(name="billing_country")
+									option Select a country...
+									option(value="") Select a country…
+									option(value="AX") Åland Islands
+									option(value="AF") Afghanistan
+									option(value="AL") Albania
+									option(value="DZ") Algeria
+									option(value="AD") Andorra
+									option(value="AO") Angola
+									option(value="AI") Anguilla
+									option(value="AQ") Antarctica
+									option(value="AG") Antigua and Barbuda
+									option(value="AR") Argentina
+									option(value="AM") Armenia
+									option(value="AW") Aruba
+									option(value="AU") Australia
+									option(value="AT") Austria
+								br
+								input(id="checkbox_enroll-1" type="checkbox" name="ship_to_different_address" value="1" class="checkbox_enroll")
+								label.text-white(for="checkbox_enroll-1") I have read and I agree to the #[span.text-orange Terms of Use] and #[span.text-orange Privacy Policy]
+								br
+								input.mt-25(type="submit" name="woocommerce_checkout_place_order", value="GET STARTED", data-value="Update Totals" class="button-st1 orange")
+	include ../blocks/footer-banner/footer-banner
+
+
+
+	include ../blocks/footer/footer
