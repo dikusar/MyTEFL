@@ -51,6 +51,10 @@ hr
 	line-height 30px
 	font-weight 700
 	color #366d8f
+.text-white
+	color #ffffff
+.text-orange
+	color $orange
 .page-slog
 	text-transform uppercase
 	color #ffffff
@@ -70,6 +74,9 @@ hr
 	border 3px solid #4e97c4
 	color #4e97c4
 	padding 9px 60px
+	box-sizing border-box
+	background-color transparent
+	-webkit-appearance none
 	font-weight 700
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -79,6 +86,12 @@ hr
 	&:hover
 		color #ffffff
 		background-color #4e97c4
+	&.orange
+		border-color $orange
+		color $orange
+		&:hover
+			background-color $orange
+			color #ffffff
 
 /**/
 /* ! button */
@@ -91,7 +104,7 @@ hr
 		font-size pixelsToEm(24)
 		line-height 36px
 		font-weight 700
-		color #376d8f
+		color $main-color
 .blog-item
 	& + .blog-item
 		margin-top 50px
@@ -101,12 +114,18 @@ hr
 	.media-part
 		display flex
 		background-color #f7f7f7
+		img
+			width 100%
 		.context
+			align-self center
 			padding 15px 20px
 			width 50%
+			.context-icon
+				font-size pixelsToEm(26)
+				color $main-color
 			.context-link
 				display inline-block
-				color #376d8f
+				color $main-color
 				&:after
 					display inline-block
 					content ">"
@@ -157,4 +176,86 @@ hr
 
 /**/
 /* ! gallery*/
+/**/
+
+/**/
+/* Parallax */
+/**/
+
+.k-parallax-section
+	position relative
+	z-index 1
+	background-size cover
+	background-attachment fixed
+	&.overlay:before,
+	&.overlay-half:after
+		content ""
+		position absolute
+		display block
+		top 0
+		right 0
+		left 0
+		bottom 0
+		z-index 1
+		background-color #000000
+		opacity 0.45
+	&.overlay-half:after
+		left 50%
+	.row
+		position relative
+		z-index 4
+/**/
+/* ! Parallax */
+/**/
+
+/**/
+/* course enroll form*/
+/**/
+.course-enroll
+	display flex
+	flex-wrap wrap
+	.col
+		align-self center
+.course-enroll_slog
+	font-size pixelsToEm(60)
+	line-height 58px
+	color $orange
+	font-weight 700
+.course-enroll_context
+	font-size pixelsToEm(24)
+	line-height 1.4
+.course-enroll_title
+	color $orange
+	font-size pixelsToEm(48)
+	font-weight 700
+.course-enroll_container
+	padding-left 25px
+.course-enroll_form
+	font-size pixelsToEm(18)
+	line-height 1.7
+	&:after
+		content ''
+		display table
+		clear both
+	input:not(.button-st1):not(.checkbox_enroll),
+	.enroll-country-select
+		color #999999
+		background-color #ffffff
+		border 0
+		box-shadow none
+		border-radius 4px
+		padding 18px 10px
+		margin 0 17px 13px 0
+	.form-row,
+	.enroll-country-select
+		width calc(100% - 17px)
+	.form-col-6
+		float left
+		width calc(50% - 17px)
+	
+		
+		
+
+/**/
+/* ! course enroll form*/
 /**/
