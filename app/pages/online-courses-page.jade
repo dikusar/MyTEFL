@@ -1,5 +1,6 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/banner/banner
+include ../blocks/circle-group/circle-group
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -12,6 +13,9 @@ block content
 
 	main.container
 		.row.mt-100
+			.col.l12.text-center
+				.title-st-2 ONSITE TEFL COURSES
+				p.content-p If you prefer learning in a traditional classroom, our onsite courses are perfect for you. Our courses are fully accredited and we will provide local job placement assistance when completed. Check out our exciting TEFL courses below.
 			.col.l12
 				//- course banner item
 				.course-banner-item
@@ -84,6 +88,27 @@ block content
 								li Pack your bags!
 							a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
 				//- ! course banner item
+		.courses-page
+			+circle-group([
+				{
+					imgSrc: "assets/images/courses-page/k-circle-1.png",
+					title: "JOB PLACEMENTS",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+					btnText: "LEARN MORE"
+				},
+				{
+					imgSrc: "assets/images/courses-page/k-circle-2.png",
+					title: "FAQ",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+					btnText: "LEARN MORE"
+				},
+				{
+					imgSrc: "assets/images/courses-page/k-circle-3.png",
+					title: "GIVIN BACK",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+					btnText: "LEARN MORE"
+				}
+			])
 
 
 	include ../blocks/footer-banner/footer-banner
