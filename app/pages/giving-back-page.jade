@@ -1,0 +1,88 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main
+		.container
+			.row.mt-100
+				.col.l12
+					.page-title-wrapper.alt(style="background-image:url(assets/images/giving-back-page/giving-back-1.png)")
+						h2.page-title.uppercase Giving Back
+						h3.page-slog Developing sustainable communities
+			.row.mt-40.mb-40
+				.col.l12
+					.title-st-2.uppercase.mb-15 Buy a Course > Help your world
+					p.content-p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.
+			.row
+				.col.l12
+					img.block-center(src="assets/images/giving-back-page/giving-back-2.png")
+			.row.mt-30.mb-25
+				.col.l12
+					//- blog item
+					article.blog-item
+						.row
+							.col.l7
+								.title-st-2.mb-20 TITLE GOES HERE
+								p.mb-25 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.
+							.col.l5
+								.media-part
+									.context.text-center
+										i.context-icon.fa.fa-calendar
+										.title-st-2.mb-15 Title Here
+										p.mb-15 Your lorem ipsum dolore text will goes here.
+										a.context-link(href='#') Your link here
+									.pic
+										img(src="assets/images/giving-back-page/giving-back-3.png")
+					//- ! blog item
+			.row.pb-30
+				.col.l12.mb-60
+					.title-st-2.uppercase charity we support
+				.col.l6
+					img.block-center(src='assets/images/giving-back-page/giving-back-4.png')
+				.col.l6
+					img.block-center(src='assets/images/giving-back-page/giving-back-5.png')
+		hr.mb-40
+		.container.mb-70
+			//- blog item
+			article.blog-item
+				.row
+					.col.l5
+						.media-part
+							.pic
+								img(src="assets/images/giving-back-page/giving-back-6.png")
+							.context.text-center
+								i.context-icon.fa.fa-calendar
+								.title-st-2.mb-15 Title Here
+								p.mb-15 Your lorem ipsum dolore text will goes here.
+								a.context-link(href='#') Your link here
+					.col.l7
+						.title-st-2.mb-20 TITLE GOES HERE
+						p.mb-25 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.	
+			//- ! blog item
+			//- blog item
+			article.blog-item
+				.row
+					.col.l7
+						.title-st-2.mb-20 TITLE GOES HERE
+						p.mb-25 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.	
+					.col.l5
+						.media-part
+							.context.text-center
+								i.context-icon.fa.fa-calendar
+								.title-st-2.mb-15 Title Here
+								p.mb-15 Your lorem ipsum dolore text will goes here.
+								a.context-link(href='#') Your link here
+							.pic
+								img(src="assets/images/giving-back-page/giving-back-7.png")
+					
+			//- ! blog item
+
+	include ../blocks/footer/footer
