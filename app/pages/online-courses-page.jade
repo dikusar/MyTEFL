@@ -10,85 +10,89 @@ block head
 
 block content
 	include ../blocks/nav-bar/nav-bar
-
-	main.container
-		.row.mt-100
-			.col.l12.text-center
-				.title-st-2 ONSITE TEFL COURSES
-				p.content-p If you prefer learning in a traditional classroom, our onsite courses are perfect for you. Our courses are fully accredited and we will provide local job placement assistance when completed. Check out our exciting TEFL courses below.
-			.col.l12
-				//- course banner item
-				.course-banner-item
-					.course-banner-pic
-						img(src='assets/images/courses-page/course-price-item-1.png')
-					.course-banner-content
-						.course-banner-price-section.text-center
-							.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
-							.course-banner-country.mt-15.mb-10 THAILAND
-							.course-banner-price.mb-30
-								p NOW FOR ONLY
-								span.price $1,990 USD
-							a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
-						.course-banner-context
-							ul.list-st1.content-p
-								li Complete our registration process
-								li Reserve your spot with a deposit
-								li Apply for your visa
-								li Prepare documents for post training employment
-								li Update your vaccinations
-								li Purchase insurance and a plane ticket
-								li Pack your bags!
-							a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
-				//- ! course banner item
-				//- course banner item
-				.course-banner-item
-					.course-banner-pic
-						img(src='assets/images/courses-page/course-price-item-2.png')
-					.course-banner-content
-						.course-banner-price-section.text-center
-							.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
-							.course-banner-country.mt-15.mb-10.uppercase Argentina
-							.course-banner-price.mb-30
-								p NOW FOR ONLY
-								span.price $1,990 USD
-							a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
-						.course-banner-context
-							ul.list-st1.content-p
-								li Complete our registration process
-								li Reserve your spot with a deposit
-								li Apply for your visa
-								li Prepare documents for post training employment
-								li Update your vaccinations
-								li Purchase insurance and a plane ticket
-								li Pack your bags!
-							a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
-				//- ! course banner item
-				//- course banner item
-				.course-banner-item
-					.course-banner-pic
-						img(src='assets/images/courses-page/course-price-item-3.png')
-					.course-banner-content
-						.course-banner-price-section.text-center
-							.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
-							.course-banner-country.mt-15.mb-10.uppercase Spain
-							.course-banner-price.mb-10
-								p NOW FOR ONLY
-								span.price $1,220 USD
-								br
-								span.del-price $1,990 USD
-							a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
-						.course-banner-context
-							ul.list-st1.content-p
-								li Complete our registration process
-								li Reserve your spot with a deposit
-								li Apply for your visa
-								li Prepare documents for post training employment
-								li Update your vaccinations
-								li Purchase insurance and a plane ticket
-								li Pack your bags!
-							a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
-				//- ! course banner item
-		.courses-page
+	include ../blocks/promo-banner/promo-banner
+	main
+		.container
+			.row.mt-30.mb-70
+				.col.l12.text-center
+					.title-st-2 ONSITE TEFL COURSES
+					p.content-p.mb-40 If you prefer learning in a traditional classroom, our onsite courses are perfect for you. Our courses are fully accredited and we will provide local job placement assistance when completed. Check out our exciting TEFL courses below.
+				.col.l12
+					//- course banner item
+					.course-banner-item
+						.course-banner-pic
+							img(src='assets/images/courses-page/course-price-item-1.png')
+						.course-banner-content
+							.course-banner-price-section.text-center
+								.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
+								.course-banner-country.mt-15.mb-10 THAILAND
+								.course-banner-price.mb-30
+									p NOW FOR ONLY
+									span.price $1,990 USD
+								a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
+							.course-banner-context
+								ul.list-st1.content-p
+									li Complete our registration process
+									li Reserve your spot with a deposit
+									li Apply for your visa
+									li Prepare documents for post training employment
+									li Update your vaccinations
+									li Purchase insurance and a plane ticket
+									li Pack your bags!
+								a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
+					//- ! course banner item
+					//- course banner item
+					.course-banner-item
+						.course-banner-pic
+							img(src='assets/images/courses-page/course-price-item-2.png')
+						.course-banner-content
+							.course-banner-price-section.text-center
+								.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
+								.course-banner-country.mt-15.mb-10.uppercase Argentina
+								.course-banner-price.mb-30
+									p NOW FOR ONLY
+									span.price $1,990 USD
+								a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
+							.course-banner-context
+								ul.list-st1.content-p
+									li Complete our registration process
+									li Reserve your spot with a deposit
+									li Apply for your visa
+									li Prepare documents for post training employment
+									li Update your vaccinations
+									li Purchase insurance and a plane ticket
+									li Pack your bags!
+								a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
+					//- ! course banner item
+					//- course banner item
+					.course-banner-item
+						.course-banner-pic
+							img(src='assets/images/courses-page/course-price-item-3.png')
+						.course-banner-content
+							.course-banner-price-section.text-center
+								.course-banner-slog.uppercase Only $295 to secure Your spot and start your TEFL!
+								.course-banner-country.mt-15.mb-10.uppercase Spain
+								.course-banner-price.mb-10
+									p NOW FOR ONLY
+									span.price $1,220 USD
+									br
+									span.del-price $1,990 USD
+								a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
+							.course-banner-context
+								ul.list-st1.content-p
+									li Complete our registration process
+									li Reserve your spot with a deposit
+									li Apply for your visa
+									li Prepare documents for post training employment
+									li Update your vaccinations
+									li Purchase insurance and a plane ticket
+									li Pack your bags!
+								a.button-st1.full-width.uppercase.alt.mt-20(href="#") LEARN MORE
+					//- ! course banner item
+	
+	include ../blocks/banner-blue/banner-blue
+	.courses-section.pt-60.pb-50(style="background-color: #f4f4f4;")
+		.container
 			+circle-group([
 				{
 					imgSrc: "assets/images/courses-page/k-circle-1.png",
