@@ -9,7 +9,28 @@ block head
 block content
 	include ../blocks/nav-bar/nav-bar
 	
-	.container.mt-40.mb-30
+	.title-lead.text-center.mt-40.mb-40.uppercase TEFL program Thailand
+
+	.container.mt-40.mb-40
 		.k-gallery-grid
-			.gallery-item
-				img(src="assets/images/gallery/gallery-1.png")
+			- imagesForGalary = ['inner-internships-page-gallery-1.jpg', 'inner-internships-page-gallery-2.jpg', 'Inner-internships-page-gallery-3.jpg', 'Inner-internships-page-gallery-4.jpg', 'Inner-internships-page-gallery-5.jpg']
+			each item in imagesForGalary
+				.gallery-item
+					img(src="assets/images/gallery/" + item)
+	
+	.container
+		.row
+			.col.l7.m7.s12
+				.blog-item
+					.title-st-2.mb-20(style="color:#555555;") Overview
+					p(style="margin-bottom:35px;") An amazing opportunity to get paid to teach and travel in extraordinary Thailand, the “Land of Smiles”!
+					p Now, imagine earning a salary teaching English while living the dream! After completing our 120 Hour Online TEFL Course, pack your bags and head out to Hua Hin for a one week Thai Orientation program. Here you'll meet up with other teachers from around the world, and receive an introduction to the country, the school system, the culture, the language, survival tips and much more.
+					p Upon successful completion of your orientation course, you'll be placed in a paid teaching position with a minimum guaranteed salary that is enough to cover your expenses and then some.
+
+			.col.l5.m5.s12
+				include ../blocks/program-total/program-total
+
+
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer
+

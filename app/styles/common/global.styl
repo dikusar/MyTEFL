@@ -52,6 +52,12 @@ hr
 /**/
 /* page title */
 /**/
+
+.title-lead
+	font-family PTSans-Bold
+	font-size pixelsToEm(36)
+	color #366d8f
+
 .page-title-wrapper
 	&.alt
 		padding 87px 50px
@@ -140,6 +146,10 @@ hr
 		font-weight 700
 		color $main-color
 .blog-item
+	
+	p + p
+		margin-bottom 35px
+
 	& + .blog-item
 		margin-top 50px
 	p, .context-link

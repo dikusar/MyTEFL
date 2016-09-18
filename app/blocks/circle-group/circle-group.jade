@@ -12,13 +12,14 @@ mixin circle-group-item(item, i)
 				p.circle-group__text
 					=item.text
 
-mixin circle-group(items)
+mixin circle-group(items, isHeading, isBtnDown)
 	- items = items || [];
-	.row.circle-group
-		.col.l12.m12.s12
-			h5.circle-group__title.pt-40.pb-50 Why US
-		.col.l12.m12.s12.text-center.mb-60
-			span.circle-group__subtitle Accredited training with a socially responsible TEFL organization.
+	if isHeading
+		.row.circle-group
+			.col.l12.m12.s12
+				h5.circle-group__title.pt-40.pb-50 Why US
+			.col.l12.m12.s12.text-center.mb-60
+				span.circle-group__subtitle Accredited training with a socially responsible TEFL organization.
 		
 	.row
 		each item, i in items
@@ -32,9 +33,10 @@ mixin circle-group(items)
 				.col.l4.m4.s4.text-right
 					+circle-group-item(item, i)
 
-	.row.mt-30.mb-30
-		.col.l12.m12.s12
-			.circle-group__btn-down
+	if isBtnDown
+		.row.mt-30.mb-30
+			.col.l12.m12.s12
+				.circle-group__btn-down
 					
 
 
