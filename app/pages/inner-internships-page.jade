@@ -1,0 +1,15 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = false;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+	
+	.container.mt-40.mb-30
+		.k-gallery-grid
+			.gallery-item
+				img(src="assets/images/gallery/gallery-1.png")
