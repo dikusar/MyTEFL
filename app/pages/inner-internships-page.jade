@@ -1,4 +1,5 @@
 extends /blocks/layout-default/layout-default
+include ../blocks/circle-group/circle-group
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -22,13 +23,63 @@ block content
 		.row
 			.col.l7.m7.s12
 				.blog-item
-					.title-st-2.mb-20(style="color:#555555;") Overview
+					.title-st-2.mb-20.uppercase(style="color:#555555;") Overview
 					p(style="margin-bottom:35px;") An amazing opportunity to get paid to teach and travel in extraordinary Thailand, the “Land of Smiles”!
 					p Now, imagine earning a salary teaching English while living the dream! After completing our 120 Hour Online TEFL Course, pack your bags and head out to Hua Hin for a one week Thai Orientation program. Here you'll meet up with other teachers from around the world, and receive an introduction to the country, the school system, the culture, the language, survival tips and much more.
 					p Upon successful completion of your orientation course, you'll be placed in a paid teaching position with a minimum guaranteed salary that is enough to cover your expenses and then some.
 
 			.col.l5.m5.s12
 				include ../blocks/program-total/program-total
+
+
+		.row
+			.col.l12.m12.s12
+				.title-st-2.mb-20.uppercase(style="color:#555555;") Course Benefits
+			.col.l12.m12.s12
+				.circle-group-small.mb-40
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/120-hour-tefl.png",
+						title: "120 Hour TEFL Course",
+						text: "Sed ut perspiciatis unde omnis iste natus error.",
+					})
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/hands-on-training.png",
+						title: "hands on training",
+						text: "Sed ut perspiciatis unde omnis iste natus error.",
+					})
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/accommodation.png",
+						title: "Accommodation",
+						text: "Sed ut perspiciatis unde omnis iste natus error.",
+					})
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/gauranteed-job.png",
+						title: "Gauranteed job",
+						text: "Sed ut perspiciatis unde omnis iste natus error.",
+					})
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/salary.png",
+						title: "Salary",
+						text: "Sed ut perspiciatis unde omnis iste natus error.",
+					})
+
+			.row
+				.col.l7.m7.s12
+					.blog-item_border
+						.title-st-2.uppercase.mt-20(style="color:#555555;") Pre trip
+						ul.list-st1.mb-30.content-p.mb-20
+							li Complete your 120 Hour Online TEFL course
+							li Make sure your vaccines are up to date
+							li Purchase insurance (may be purchased at a discounted rate in Thailand through us)
+							li Purchase a plane ticket
+							li Pack your bags!
+			
+			.row
+				.col.l7.m7.s12
+					.blog-item.blog-item_border
+						.title-st-2.mt-20.mb-25.uppercase(style="color:#555555;") Arrival and Accommodations 
+						p(style="margin-bottom:35px;") You will be met at the Bangkok airport and transported directly to Hua Hin. Or, you might want to explore Bangkok for a few days and then call for your ride to the Orientation program. We offer a discounted corporate hotel in Hua Hin for trainees, or our in country team can assist you with finding other accommodations that suit your desires and budget.
+						p You will also be provided with a local SIM card, along with documentation & assistance to open a local bank account.
 
 
 	include ../blocks/footer-banner/footer-banner

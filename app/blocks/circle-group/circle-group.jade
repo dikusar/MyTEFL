@@ -3,8 +3,9 @@ mixin circle-group-item(item, i)
 		.circle-group__item
 			.circle-group__heading
 				img.circle-group__img(src=item.imgSrc, alt="img")
-				a.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow button-st1 orange" : "", href=jv0)
-					=item.btnText
+				if item.btnText
+					a.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow button-st1 orange" : "", href=jv0)
+						=item.btnText
 			
 			.circle-group__footer
 				.circle-group__item-title.mt-20.mb-10
