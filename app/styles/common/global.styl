@@ -17,6 +17,9 @@ hr
 .cont-fs
 	font-size pixelsToEm(24px)
 	line-height 30px
+.content-p
+	font-size pixelsToEm(18)
+	line-height 1.2
 .list-st1
 	li
 		padding-left 20px
@@ -31,7 +34,21 @@ hr
 		background-color #366d8f
 		margin-left -18px
 		margin-right 11px
-	
+	&.content-p li
+		margin 7px 0
+		&:before
+			width 4px
+			height 4px
+	&.checked li
+		margin 3px 0
+		&:before
+			font-size: pixelsToEm(15);
+			width auto
+			height auto
+			font-family FontAwesome
+			content "\f00c"
+			background-color: transparent
+			color #4e97c4
 /**/
 /* page title */
 /**/
@@ -51,6 +68,8 @@ hr
 	line-height 30px
 	font-weight 700
 	color #366d8f
+.uppercase
+	text-transform uppercase
 .text-white
 	color #ffffff
 .text-orange
@@ -61,6 +80,10 @@ hr
 	font-size pixelsToEm(18)
 	font-weight 700
 	line-height 1.2
+.block-center
+	display block
+	margin-left auto
+	margin-right auto
 	
 /**/
 /* ! page title */
@@ -217,3 +240,65 @@ hr
 /**/
 /* ! flex */
 /**/
+.course-enroll
+	display flex
+	flex-wrap wrap
+	.col
+		align-self center
+.course-enroll_slog
+	font-size pixelsToEm(60)
+	line-height 58px
+	color #efac1b
+	font-weight 700
+
+.course-enroll_context
+	font-size pixelsToEm(24)
+	line-height 1.4
+
+.course-enroll_title
+	color #efac1b
+	font-size pixelsToEm(48)
+	font-weight 700
+
+.course-enroll_container 
+	padding-left 25px
+
+.course-enroll_form
+	font-size pixelsToEm(18)
+	line-height 1.7
+.course-enroll_form:after 
+	content ''
+	display table
+	clear both
+.course-enroll_form input:not(.button-st1):not(.checkbox_enroll), .course-enroll_form .enroll-country-select 
+	color #999
+	background-color #fff
+	border 0
+	box-shadow none
+	border-radius 4px
+	padding 18px 10px
+	margin 0 17px 13px 0
+.course-enroll_form .form-row, .course-enroll_form .enroll-country-select 
+	width calc(100% - 17px)
+.course-enroll_form .form-col-6 
+	float left
+	width calc(50% - 17px)
+.placement-item-pic 
+	font-size 0
+	border 1px solid #ccc
+.placement-item-pic img 
+	width 100%
+	max-width 100%
+.placement-item-content 
+	color #555
+	padding 25px 20px 40px 20px
+	background-color #f9f9f9
+	border 1px solid #ccc
+.placement-item-content .title-st-2 
+	font-weight 400
+	color inherit
+.placement-item-content .flag 
+	position relative
+	z-index 5
+	float left
+	margin-top -80px
