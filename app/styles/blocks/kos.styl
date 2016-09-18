@@ -1,0 +1,47 @@
+/**/
+/* Course banner item */
+/**/
+.course-banner-item
+	& + .course-banner-item
+		margin-top 37px
+	display flex
+	border 2px solid #d9d9d9
+	.course-banner-pic
+		font-size 0
+	.course-banner-content
+		.button-st1
+			max-width 306px
+		display flex
+		flex-wrap wrap
+		flex 1
+		padding 19px 20px 24px 5px
+		>*
+			padding 0 25px
+		.course-banner-price-section
+			box-sizing content-box
+			max-width 306px
+	.course-banner-slog
+		color #747474
+		line-height 1.2
+		font-size pixelsToEm(16)
+		font-weight 700
+	.course-banner-country
+		color #366d8f
+		font-weight 700
+		font-size pixelsToEm(36)
+		text-decoration underline
+	.course-banner-price
+		p
+			font-size pixelsToEm(24)
+		.price
+			font-size pixelsToEm(48)
+			line-height 1.46
+			font-weight 700
+			color #3e8f36
+		.del-price
+			font-size pixelsToEm(24)
+			line-height 0.8
+			font-weight 700
+			color #e54239
+			text-decoration line-through
+			

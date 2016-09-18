@@ -106,9 +106,20 @@ hr
 	    -ms-transition: all .3s ease;
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
+	&.full-width
+		width 100%
+		text-align center
 	&:hover
 		color #ffffff
 		background-color #4e97c4
+	&.alt
+		background-color #4e97c4
+		color #ffffff
+		&:hover
+			background-color transparent
+			color #4e97c4
+	&.text-orange
+		color $orange
 	&.orange
 		border-color $orange
 		color $orange
