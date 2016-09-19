@@ -14,6 +14,10 @@ strong
 hr
 	border-top 1px solid #fafafa
 	border-bottom 1px solid #d8d8d8
+
+.clear
+	clear both	
+
 .cont-fs
 	font-size pixelsToEm(24px)
 	line-height 30px
@@ -83,7 +87,7 @@ hr
 .text-white
 	color #ffffff
 .text-orange
-	color $orange
+	color $orange !important
 .page-slog
 	text-transform uppercase
 	color #ffffff
@@ -203,6 +207,7 @@ hr
 	text-align center
 	margin 0 -3px
 	font-size 0
+	
 	.gallery-item
 		position relative
 		z-index 1
@@ -227,6 +232,9 @@ hr
 			text-shadow 0 3px 1px rgba(0,0,0,0.3)
 			text-transform uppercase
 			transform translateY(-50%)
+	&-footer
+		.gallery-item
+			max-width 310px
 	
 
 /**/
