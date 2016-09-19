@@ -1,0 +1,96 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main
+		.container
+			.row.mt-100
+				.col.l12
+					.page-title-wrapper(style="background-image:url(assets/images/about-us/images/about-us-1.png)")
+						h2.page-title.uppercase ABOUT US
+			.row.mt-40.mb-50.clearfix
+				.col.l12
+					p.cont-fs English is hands down the fastest-spreading language in the world. With more people speaking English than ever before, it has become the universal language for communication in tourism, commerce, trade, education, and science on an international level. The number of children, travellers, and businesspeople demanding to learn English around the world is astonishing.
+		div.title-st-1.text-white.text-center.pt-40.pb-40(style="background-color:#376d8f;") We combine world class teacher training with real job placements. TEFL training that works!
+		.container
+			.row.mt-30.mb-40
+				.col.l12
+					//- blog item
+					.blog-item-2
+						.media-wrap
+							img(src="assets/images/about-us/images/about-us-2.png")
+						.icon-title-wrap
+							i.fa.fa-users
+							h3.title-st-2.blog-2-title.mt-30.text-center For Teachers#[br]By Teachers
+							a.button-st1.mt-40.uppercase(href="#") our courses
+						.content-wrap
+							p.content-p With the lacklustre economy and lack of jobs for new college graduates, now is the opportunity of a lifetime to go overseas, broaden your horizons, learn a new language, live in exotic places, and earn money at the same time! Teaching English to Foreign Learners is a well-rounded experience that will intrigue future employers, shape your character abilities, diversify your resume, and give you a better perspective on the world. But before you take off, it's a good idea to be prepared for that first day you walk in a classroom full of eager and nervous learners. Few TEFLers are provided with the tools and training to minimize the anxiety and doubt that haunt new teachers...until NOW!
+					//- ! blog item
+					//- blog item
+					.blog-item-2
+						.content-wrap
+							p.content-p With the lacklustre economy and lack of jobs for new college graduates, now is the opportunity of a lifetime to go overseas, broaden your horizons, learn a new language, live in exotic places, and earn money at the same time! Teaching English to Foreign Learners is a well-rounded experience that will intrigue future employers, shape your character abilities, diversify your resume, and give you a better perspective on the world. But before you take off, it's a good idea to be prepared for that first day you walk in a classroom full of eager and nervous learners. Few TEFLers are provided with the tools and training to minimize the anxiety and doubt that haunt new teachers...until NOW!
+						.media-wrap
+							img(src="assets/images/about-us/images/about-us-3.png")
+						.icon-title-wrap
+							i.fa.fa-laptop
+							h3.title-st-2.blog-2-title.mt-30.text-center Job#[br]Placements
+							a.button-st1.mt-40.uppercase(href="#") READ more
+					//- ! blog item
+					//- blog item
+					.blog-item-2
+						.icon-title-wrap
+							i.fa.fa-star-o
+							h3.title-st-2.blog-2-title.mt-30.text-center Accredited
+							a.button-st1.mt-40.uppercase(href="#") accreditation
+						.content-wrap
+							p.content-p With the lacklustre economy and lack of jobs for new college graduates, now is the opportunity of a lifetime to go overseas, broaden your horizons, learn a new language, live in exotic places, and earn money at the same time! Teaching English to Foreign Learners is a well-rounded experience that will intrigue future employers, shape your character abilities, diversify your resume, and give you a better perspective on the world. But before you take off, it's a good idea to be prepared for that first day you walk in a classroom full of eager and nervous learners. Few TEFLers are provided with the tools and training to minimize the anxiety and doubt that haunt new teachers...until NOW!
+						.media-wrap
+							img(src="assets/images/about-us/images/about-us-4.png")
+					//- ! blog item
+					//- blog item
+					.blog-item-2
+						.content-wrap
+							p.content-p With the lacklustre economy and lack of jobs for new college graduates, now is the opportunity of a lifetime to go overseas, broaden your horizons, learn a new language, live in exotic places, and earn money at the same time! Teaching English to Foreign Learners is a well-rounded experience that will intrigue future employers, shape your character abilities, diversify your resume, and give you a better perspective on the world. But before you take off, it's a good idea to be prepared for that first day you walk in a classroom full of eager and nervous learners. Few TEFLers are provided with the tools and training to minimize the anxiety and doubt that haunt new teachers...until NOW!
+						.media-wrap
+							img(src="assets/images/about-us/images/about-us-5.png")
+						.icon-title-wrap
+							i.fa.fa-key
+							h3.title-st-2.blog-2-title.mt-30.text-center Giving#[br]Back
+							a.button-st1.mt-40.uppercase(href="#") read more
+					//- ! blog item
+		div.title-st-1.text-white.text-center.pt-40.pb-40(style="background-color:#efac1b;") See what our grads say about myTEFL
+		.container
+			.row.mt-30.mb-30
+				.col.l6
+					.k-img-banner-wrapper
+						img.block-center(src="assets/images/about-us/images/about-us-6.png")
+				.col.l6
+					.widget-latest-comments
+						.comment-list
+							.comment-item
+								img.avatar(src='assets/images/about-us/images/about-us-7.png')
+								.comment-text
+									p.meta Tanya,
+										time(datetime="2016-06-07T12:14:53+00:00") May 2016
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							.comment-item
+								img.avatar(src='assets/images/about-us/images/about-us-8.png')
+								.comment-text
+									p.meta Tanya,
+										time(datetime="2016-06-07T12:14:53+00:00") May 2016
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						div.text-center
+							a.button-st1.mt-15.uppercase(href="#") read more
+	include ../blocks/banner-blue/banner-blue
+			
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer

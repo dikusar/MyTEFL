@@ -88,3 +88,73 @@
 /**/
 /*  ! service items */
 /**/
+
+/**/
+/* Blog item style 2 */
+/**/
+
+.blog-item-2
+	display flex
+	flex-wrap wrap
+	& + .blog-item-2
+		margin-top 27px
+	&>*
+		width 33.33%
+	.media-wrap
+		font-size 0
+		img
+			width 100%
+	.content-wrap
+		padding 25px
+		.content-p
+			line-height 1.273
+	.icon-title-wrap
+		display flex
+		justify-content center
+		align-items center
+		flex-direction column
+		background-color #f7f7f7
+		.blog-2-title
+			line-height 1.2
+		i
+			font-size pixelsToEm(76)
+			color $main-color
+
+/**/
+/* ! Blog item style 2 */
+/**/
+
+.k-img-banner-wrapper
+	border 1px solid #d9d9d9
+	padding 42px 0 34px 0
+	img
+		max-width 95%
+
+/**/
+/* widget latest comment */
+/**/
+
+.widget-latest-comments
+	padding 30px 28px 20px 28px
+	border 1px solid #d9d9d9
+	
+	.comment-item
+		& + .comment-item
+			margin-top 25px
+		&:after
+			content ""
+			clear both
+			display table
+		.avatar
+			float left
+			margin-right 25px
+		.comment-text
+			font-size pixelsToEm(18)
+			color #444444
+			line-height 1.25
+			.meta
+				font-weight 700
+
+/**/
+/* ! widget latest commet */
+/**/
