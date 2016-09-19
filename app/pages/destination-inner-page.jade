@@ -1,0 +1,83 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper(style="background-image:url(assets/images/dest_inner_page/dest-in-1.png)")
+					h2.page-title.uppercase TEFL Jobs in Brazil
+		.row.mt-30.mb-50.clearfix
+			.col.l12
+				p.content-p As South America’s largest country with a fast growing economy, Brazil is a great destination for EFL teachers. The country itself is gorgeous, with miles of pristine beaches, tropical rainforests, modern cities and an energetic go go vibe. The 2014 FIFA World Cup and the 2016 Olympic Games are to be held in Brazil, propelling the tourism industry, leading to even higher demand for English teachers.#[br]#[br]The average monthly salary for a full time teacher is between $800-$1500US, depending on location and hours.
+		.row.mb-50
+			.col.l4
+				.service-item.text-center
+					.pic
+						img.block-center(src="assets/images/dest_inner_page/dest-in-2.png")
+						.service-item-title.uppercase Salary
+					.service-item-description.text-center $800 - $1500 USD p/m#[br]$10 - $20 USD p/h
+			.col.l4
+				.service-item.text-center
+					.pic
+						img.block-center(src="assets/images/dest_inner_page/dest-in-3.png")
+						.service-item-title.uppercase Climate
+					.service-item-description.text-center 21 - 28 Celsius#[br]70 - 81 Fahrenheit#[br]Humid
+			.col.l4
+				.service-item.text-center
+					.pic
+						img.block-center(src="assets/images/dest_inner_page/dest-in-4.png")
+						.service-item-title.uppercase Languages
+					.service-item-description.text-center Portugese		
+		.row.mb-0
+			.col.l12
+				hr.mb-40
+				.title-st-2.mb-20.text-center.uppercase Securing a TEFL Position in Brazil
+				p.content-p.mb-30 Like other South American countries, it is much more effective to actually be in Brazil when starting to seek out positions. There are jobs in both small towns and large cities. One of the drawbacks of working in large cities like Rio is the long commute times and traffic, which plays a factor when travelling between classes.#[br]#[br]The best times to seek out positions in Brail are in March and August, although many private language institutes hire year round to match demand. Seek out as many language schools in the area as you can and go in person with your resume, and ready for an on the spot interview. If a school is looking for someone immediately or in the near future, they will be most happy to oblige. If not, they are very likely to meet you and keep you on file in case new classes are opened. Due to the high demand for teachers, it is unnecessary to be persistent with one or two schools. You will easily secure a position quickly with a proper TEFL certificate and professional demeanor. A good way to build up more income is to take on private students as a tutor.
+				.k-gallery-grid
+					- imagesForGalary = ['dest-in-5.png', 'dest-in-6.png', 'dest-in-7.png', 'dest-in-8.png', 'dest-in-9.png']
+					each item in imagesForGalary
+						.gallery-item
+							img(src="assets/images/dest_inner_page/" + item)
+				.title-st-2.mt-40.mb-30.text-center.uppercase Getting certified to teach in Brazil
+				p.content-p.mb-60 If you want to start a life of teaching English in Brazil, you'll need to take the first step and get TEFL certified. This online qualification can be completed in 120 hours and gives you the training and know-how required by top schools in Brazil, and around the world.
+				div.text-center
+					a.button-st1.uppercase(href="") Get TEFL certified
+				.title-st-2.mt-80.mb-20.text-center.uppercase Discover Other Placements:
+			.k-gallery-grid
+				//- gallery item
+				.gallery-item
+					img(src="assets/images/gallery/gallery-1.png")
+					.gallery-title KOREA
+				//- ! gallery item
+				//- gallery item
+				.gallery-item
+					img(src="assets/images/gallery/gallery-2.png")
+					.gallery-title Argentina
+				//- ! gallery item
+				//- gallery item
+				.gallery-item
+					img(src="assets/images/gallery/gallery-3.png")
+					.gallery-title Spain
+				//- ! gallery item
+				//- gallery item
+				.gallery-item
+					img(src="assets/images/gallery/gallery-4.png")
+					.gallery-title COLOMBIA
+				//- ! gallery item
+				//- gallery item
+				.gallery-item
+					img(src="assets/images/gallery/gallery-5.png")
+					.gallery-title China
+				//- ! gallery item
+			
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer
