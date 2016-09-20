@@ -53,6 +53,8 @@ hr
 			content "\f00c"
 			background-color: transparent
 			color #4e97c4
+	&.orange li:before
+		color $orange
 /**/
 /* page title */
 /**/
@@ -138,6 +140,13 @@ hr
 			color #4e97c4
 	&.text-orange
 		color $orange
+	&.orange-bg
+		background-color $orange
+		color $main-color
+		border-color $orange
+		&:hover
+			background-color transparent
+			color $orange
 	&.orange
 		border-color $orange
 		color $orange
