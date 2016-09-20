@@ -7,7 +7,7 @@ mixin circle-group-item(item, i)
 					a.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow button-st1 orange" : "", href=jv0)
 						=item.btnText
 			
-			.circle-group__footer
+			.circle-group__footer&attributes(attributes)
 				.circle-group__item-title.mt-20.mb-10
 					=item.title
 				p.circle-group__text

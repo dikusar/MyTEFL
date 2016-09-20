@@ -1,0 +1,149 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/circle-group/circle-group
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = false;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	include ../blocks/promo-banner/promo-banner
+
+	.title-lead.text-center.mt-40.mb-40.uppercase TEFL Course Thailand
+
+	.container.mt-40
+		.k-gallery-grid
+			- imagesForGalary = ['gallery-1.png', 'gallery-2.png', 'gallery-3.png', 'gallery-4.png', 'gallery-5.png']
+			each item in imagesForGalary
+				.gallery-item
+					img(src="assets/images/onsite-courses-inner-page/" + item)
+
+		.title-st-2.uppercase.mb-15.mt-40 TITLE of titles 
+		p.content-p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+		.row
+			.col.l7.m7.s12
+				.title-st-2.uppercase.mb-40.mt-40 Course details
+
+				.circle-group-small.mb-40(style="justify-content:space-around;")
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/location.png",
+						title: "Location",
+						text: "Thailand",
+					})(class="width_auto")
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/length.png",
+						title: "Length",
+						text: "6 weeks",
+					})(class="width_auto")
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/certification.png",
+						title: "Certification",
+						text: "120 Hour",
+					})(class="width_auto")
+					+circle-group-item({
+						imgSrc: "assets/images/circle-group/timing.png",
+						title: "Timing",
+						text: "Monthly",
+					})(class="width_auto")
+
+				.blog-item_border.mb-20
+					.title-st-2.uppercase.mt-20.text-orange Pre trip
+					ul.list-st1.content-p.mb-20
+						li.orange-before Complete our registration process
+						li.orange-before Reserve your spot with a deposit
+						li.orange-before Apply for your visa
+						li.orange-before Prepare documents for post training employment
+						li.orange-before Update your vaccinations
+						li.orange-before Purchase insurance and a plane ticket
+						li.orange-before Pack your bags!
+
+					hr
+					
+					.title-st-2.uppercase.mt-20.text-orange Arrival and Accommodations 
+					ul.list-st1.content-p.mb-20
+						li.orange-before Airport pickup from Bangkok with transfer to Hua Hin
+						li.orange-before Full accommodations for 4 weeks in Hua Hin
+						li.orange-before Accommodations are walking distance from our training centre
+						li.orange-before Advice on contracts and offers
+						li.orange-before Salaries of 25,000 - 35,000 THB per month
+						li.orange-before Full 24/7 on the ground support for the duration of your work contract
+						li.orange-before Lifetime job placement assistance in Thailand
+
+					hr
+					
+					.title-st-2.uppercase.mt-20.text-orange Post Graduation Placements
+					ul.list-st1.content-p.mb-20
+						li.orange-before CV creation, revision and formatting
+						li.orange-before Video CVs
+						li.orange-before Arranging and assisting with interviews
+						li.orange-before Advice on contracts and offers
+						li.orange-before Salaries of 25,000 - 35,000 THB per month
+						li.orange-before Full 24/7 on the ground support for the duration of your work contract
+						li.orange-before Lifetime job placement assistance in Thailand
+
+
+			.col.l5.m5.s12
+				.mt-30.mb-20
+					include ../blocks/program-total/program-total
+				
+				div.mb-20(style="margin-left:18px")
+					include ../blocks/brochure/brochure
+
+				.blog-item_border.mt-0(style="margin-left:17px;")
+					.title-st-2.uppercase.mt-20.mb-30(style="color:#555555;") #[i.icon-before.text-orange.fa.fa-calendar] Start dates
+					.calendar
+						- calendar = [{date: '28', month:'September', year: '2016'}, {date: '26', month:'October', year: '2016'}, {date: '30', month:'December', year: '2016'}, {date: '28', month:'January', year: '2017'}];
+						each item in calendar
+							.calendar__row.uppercase
+								.calendar__item
+									span.calendar__date
+										=item.date
+									span.calendar__month
+										=item.month
+								.calendar__year
+										=item.year
+
+		.row
+			.col.l12.m12.s12
+				.blog-item_border.blog-item_bg
+					.title-st-2.uppercase.mb-20.mt-20 Course outline
+					ul.list-st1.content-p.mb-20
+						li 120 Hour Accredited TEFL held over 4 weeks
+						li Includes in class components and offsite components
+						li Teaching theories
+						li Teaching speaking, reading, writing and listening
+						li Lesson plan development & presentation
+						li Practical activities and techniques to use in the classroom
+						li Classroom management skills
+						li Observed real world teaching practice
+						li Books and learning materials provided
+						li Lessons on Thai language, society and culture
+						li Access to online Teaching Resources
+						li Cultural excursions to a Buddhist temple, elephant rescue foundation, pineapple plantation, beach BBQ,  and a professional Muay Thai lesson
+
+		.row
+			.col.l12.m12.s12.text-center.mt-10
+				a.button-st1.uppercase.alt.text-orange(href=jv0) Enroll now
+
+		.title-lead.text-center.mt-30.mb-30.uppercase TEFL Course Thailand
+
+		.container
+			.k-gallery-grid.k-gallery-grid-footer-2
+				- imagesForFooterGalary = [{img: 'thailand.png', title: 'Thailand'}, {img: 'argentina.png', title: 'Argentina'}, {img: 'spain.png', title: 'Spain' }]
+				each item in imagesForFooterGalary
+					a.gallery-item(href=jv0)
+						img(src="assets/images/inner_internships_page/" + item.img)
+						.gallery-title
+							=item.title
+
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer
+
+
+
+
+
