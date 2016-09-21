@@ -1,0 +1,26 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper(style="background-image:url(assets/images/terms.png)")
+					h2.page-title Terms and Conditions
+		.row.mt-50.mb-70.clearfix
+			.col.l12
+				.cont-fs #[strong Terms]#[br]#[br]By accessing Footprints Language Education Ltd.’s myTEFL.net (hereafter “FLE,”) you agree to be bound by the Terms and Conditions of Use outlined in this website, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing FLE course materials. The materials contained in this web site are protected by applicable copyright and trade mark law.#[br]#[br]#[strong User License]#[br]#[br]You may only use this website for lawful purposes when using the companies' services. Users may not:#[br]#[br]
+					ol
+						li Sell, distribute, license, or otherwise exploit, in whole or in part, any content included on this website
+						li Copy, alter, translate, or otherwise modify any content included on this website
+						li Remove or obscure the copyright notice appearing on any website content or otherwise use any website content in a manner that infringes FLE’s rights.
+						li Modify, disassemble, decompile, reverse engineer, or apply any process, technique or procedure to ascertain or derive the source code, source listings, or any other proprietary information contained therein, except and only to the extent such activity is expressly permitted by applicable law;
+	include ../blocks/footer/footer
