@@ -1,41 +1,66 @@
 .prise-extend
 	.prise-extend__heading
-		.prise-extend__heading
-			-heading = [{text: 'Testers', img: 'testers'}, {text: 'Refresher', img: 'refresher'}, {text: 'upgrade', img: 'upgrade'}, {text: 'Best value', img: 'best-value'}]
+		.prise-extend__heading-wrapper
+			-heading = [{text: 'Testers', img: 'testers.png'}, {text: 'Refresher', img: 'refresher.png'}, {text: 'upgrade', img: 'upgrade.png'}, {text: 'Best value', img: 'best-value.png'}]
 			each item in heading
-				.prise-extend__heading-item
+				.prise-extend__heading-item.uppercase
 					img(src="assets/images/prise-extend/"+ item.img, alt="img")
 					span
 						=item.text
 
-		.prise-extend__table
-			.prise-extend__table-item
-				.prise-extend__heading
-					span It's time to #[br]
-					span Choose #[br]
-					span Your Course
+	.prise-extend__table.clear
+		.prise-extend__table-item.side-bar
 
-				ul.prise-extend__list
-					-list = [{text: '24/7 Tutor Support', icon: 'fa-life-ring'}, {text: 'Tech Support', icon: 'fa-cogs'}, {text: 'Full Library Access', icon: 'fa fa-book'}, {text: 'Skills Based Units', icon: 'fa-user-plus'}, {text: 'Intensive Grammar Units', icon: 'fa-font'}, {text: 'Comprehensive Phonology', icon: 'fa-bold'}, {text: 'Curriculum Development', icon: 'fa-level-up'}, {text: 'Designing Testing Systems', icon: 'fa-sticky-note'}, {text: 'Popularity', icon: 'fa-star'}]
-					each elem in list
-						li.prise-extend__list-item
-							//- img(src="assets/images/prise-extend/"+ elem.img alt="img")
-							i.fa(class=elem.icon)
-							span
-								=elem.text
+			.prise-extend__table-heading.uppercase
+				span.first-line It's time to #[br]
+				span.second-line Choose #[br]
+				span.third-line Your Course
 
-				.prise-extend__footer
-					ul.prise-extend__list
-						li.prise-extend__list-item
-							i(class="fa fa-hand-o-right" aria-hidden="true")
-							span Talk to a TEFL Expert
-						li.prise-extend__list-item
-							i(class="fa fa-hand-o-right" aria-hidden="true")
-							span Our special offers
-						
-						li.prise-extend__list-item
-							i(class="fa fa-hand-o-right" aria-hidden="true")
-							span FAQs
+			ul.prise-extend__list._content
+				-list = [{text: '24/7 Tutor Support', icon: 'fa-life-ring'}, {text: 'Tech Support', icon: 'fa-cogs'}, {text: 'Full Library Access', icon: 'fa fa-book'}, {text: 'Skills Based Units', icon: 'fa-user-plus'}, {text: 'Intensive Grammar Units', icon: 'fa-font'}, {text: 'Comprehensive Phonology', icon: 'fa-bold'}, {text: 'Curriculum Development', icon: 'fa-level-up'}, {text: 'Designing Testing Systems', icon: 'fa-pencil-square-o'}, {text: 'Popularity', icon: 'fa-star'}]
+				each elem in list
+					li.prise-extend__list-item
+						//- img(src="assets/images/prise-extend/"+ elem.img alt="img")
+						i.fa(class=elem.icon)
+						span
+							=elem.text
+
+			.prise-extend__footer
+				ul.prise-extend__list._footer
+					li.prise-extend__list-item
+						i(class="fa fa-hand-o-right" aria-hidden="true")
+						span Talk to a TEFL Expert
+					li.prise-extend__list-item
+						i(class="fa fa-hand-o-right" aria-hidden="true")
+						span Our special offers
+					
+					li.prise-extend__list-item
+						i(class="fa fa-hand-o-right" aria-hidden="true")
+						span FAQs
+		
+		.prise-extend__table-item
+			.prise-extend__table-heading.uppercase
+				.first
+					span Basic #[br]
+					span 40 Hour
+				.second
+					| Fundamental Classroom #[br] Management
+
+			ul.prise-extend__list._content
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green
+					i.fa.fa-star 
+					i.fa.fa-star
 
 
 
