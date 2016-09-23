@@ -1,14 +1,14 @@
 .prise-extend
-	.prise-extend__heading
-		.prise-extend__heading-wrapper
-			-heading = [{text: 'Testers', img: 'testers.png'}, {text: 'Refresher', img: 'refresher.png'}, {text: 'upgrade', img: 'upgrade.png'}, {text: 'Best value', img: 'best-value.png'}]
-			each item in heading
-				.prise-extend__heading-item.uppercase
-					img(src="assets/images/prise-extend/"+ item.img, alt="img")
-					span
-						=item.text
+	//- .prise-extend__heading
+	//- 	.prise-extend__heading-wrapper
+	//- 		-heading = [{text: 'Testers', img: 'testers.png'}, {text: 'Refresher', img: 'refresher.png'}, {text: 'upgrade', img: 'upgrade.png'}, {text: 'Best value', img: 'best-value.png'}]
+	//- 		each item in heading
+	//- 			.prise-extend__heading-item.uppercase
+	//- 				img(src="assets/images/prise-extend/"+ item.img, alt="img")
+	//- 				span
+	//- 					=item.text
 
-	.prise-extend__table.clear
+	.prise-extend__table.mb-20.clear
 		.prise-extend__table-item.side-bar
 
 			.prise-extend__table-heading.uppercase
@@ -37,13 +37,18 @@
 					li.prise-extend__list-item
 						i(class="fa fa-hand-o-right" aria-hidden="true")
 						span FAQs
-		
+
+		//- Basic prise
 		.prise-extend__table-item
+			.prise-extend__table-title.uppercase
+				img(src="assets/images/prise-extend/testers.png", alt="img")
+				span Testers
+
 			.prise-extend__table-heading.uppercase
-				.first
+				.first(style="margin-left:3px")
 					span Basic #[br]
 					span 40 Hour
-				.second
+				.second(style="margin-left:3px")
 					| Fundamental Classroom #[br] Management
 
 			ul.prise-extend__list._content
@@ -61,6 +66,133 @@
 				li.prise-extend__list-item.text-center.text-green
 					i.fa.fa-star 
 					i.fa.fa-star
+
+			.prise-extend__table-footer
+				.first.uppercase(style="margin-left:3px")
+					span $169 USD #[br]
+					span $225 USD
+				a.second.uppercase(href=jv0)(style="margin-left:3px") More info
+		
+		//- Standart prise
+		.prise-extend__table-item
+			.prise-extend__table-title.uppercase
+				img(src="assets/images/prise-extend/refresher.png", alt="img")
+				span Refresher
+
+			.prise-extend__table-heading.uppercase
+				.first
+					span Standart #[br]
+					span 60 Hour
+				.second
+					| Teaching Techniques #[br] & Methods
+
+			ul.prise-extend__list._content
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green
+					i.fa.fa-star 
+					i.fa.fa-star
+					i.fa.fa-star
+
+			.prise-extend__table-footer
+				.first.uppercase
+					span $229 USD #[br]
+					span $225 USD
+				a.second.uppercase(href=jv0) More info
+
+		//- Advanced prise
+		.prise-extend__table-item
+			.prise-extend__table-title.uppercase
+				img(src="assets/images/prise-extend/upgrade.png", alt="img")
+				span Upgrade
+
+			.prise-extend__table-heading.uppercase
+				.first
+					span Advanced  #[br]
+					span 80 Hour
+				.second
+					| Advanced Approaches #[br] & Grammar
+
+			ul.prise-extend__list._content
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green 
+				li.prise-extend__list-item.text-center.text-green
+					i.fa.fa-star 
+					i.fa.fa-star
+					i.fa.fa-star
+					i.fa.fa-star
+
+			.prise-extend__table-footer
+				.first.uppercase
+					span $229 USD #[br]
+					span $225 USD
+				a.second.uppercase(href=jv0) More info
+
+		//- Professional prise
+		.prise-extend__table-item.accent
+			.prise-extend__table-title.uppercase
+				img(src="assets/images/prise-extend/best-value.png", alt="img")
+				span Best value
+
+			.prise-extend__table-heading.uppercase
+				.first
+					span Professional #[br]
+					span 120 Hour
+					img(src="assets/images/prise-extend/reward.png", alt="img")
+				.second
+					| Master TEFL #[br] Expert Teacher
+
+			ul.prise-extend__list._content
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green.padding-none
+					i.fa.fa-check.circle
+				li.prise-extend__list-item.text-center.text-green
+					i.fa.fa-star 
+					i.fa.fa-star
+					i.fa.fa-star
+					i.fa.fa-star
+					i.fa.fa-star
+
+			.prise-extend__table-footer
+				.first.uppercase
+					span $399 USD #[br]
+					span $225 USD
+				a.second.uppercase(href=jv0) More info
 
 
 
