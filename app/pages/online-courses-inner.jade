@@ -1,0 +1,27 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = false;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	+banner({
+		imgSrc: "assets/images/online-courses-inner/online-courses-inner-banner.jpg",
+		bannerBeforeText: {
+			lineSecond: "Accredited course to teach abroad!"
+		},
+		bannerTitle: "Pro 120 Hour TEFL",
+		bannerText: "START YOUR 120 hours today",
+		btn: "AND SAVE 10% discount",
+		bannerSearch: false
+	})
+
+
+	include ../blocks/course-enroll/course-enroll
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer
