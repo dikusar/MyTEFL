@@ -1,0 +1,152 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper(style="background-image:url(assets/images/blog/blog-page-13.png)")
+					h2.page-title.uppercase My tefl Blog
+		.row.mt-50.mb-60.clearfix
+			.col.l7
+				//- blog def
+				article.blog-def-item
+					h3.title-st-2.blog-def-title #[a(href="#") Kung fu and culture: wrapping up my China Internship]
+					img.mt-10.blog-pic(src="assets/images/blog/blog-page-12.png")
+					.blog-def-content.mt-15
+						p.content-p In my final blog of China I want to give a quick review over everything I’ve experienced while here, or at least enough to hopefully convince you that you should definitely make the decision to come here. You think it’s expensive, I know you do, part of you thinks you should wait until you have     #[a.read-more(href='#') ...read on]
+					.blog-post-info.mt-20
+						p Posted on 24-02-2016 by #[a.post-author(href='#') Kerry] - 1 Comment.
+					.blog-share-icons.mt-20
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-11.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-10.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-9.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-8.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-7.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-6.png")
+				//- ! blog def
+				//- blog def
+				article.blog-def-item
+					h3.title-st-2.blog-def-title #[a(href="#") Kung fu and culture: wrapping up my China Internship]
+					img.mt-10.blog-pic(src="assets/images/blog/blog-page-5.png")
+					.blog-def-content.mt-15
+						p.content-p In my final blog of China I want to give a quick review over everything I’ve experienced while here, or at least enough to hopefully convince you that you should definitely make the decision to come here. You think it’s expensive, I know you do, part of you thinks you should wait until you have     #[a.read-more(href='#') ...read on]
+					.blog-post-info.mt-20
+						p Posted on 24-02-2016 by #[a.post-author(href='#') Kerry] - 1 Comment.
+					.blog-share-icons.mt-20
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-11.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-10.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-9.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-8.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-7.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-6.png")
+				//- ! blog def
+				//- blog def
+				article.blog-def-item
+					h3.title-st-2.blog-def-title #[a(href="#") Kung fu and culture: wrapping up my China Internship]
+					img.mt-10.blog-pic(src="assets/images/blog/blog-page-2.png")
+					.blog-def-content.mt-15
+						p.content-p In my final blog of China I want to give a quick review over everything I’ve experienced while here, or at least enough to hopefully convince you that you should definitely make the decision to come here. You think it’s expensive, I know you do, part of you thinks you should wait until you have     #[a.read-more(href='#') ...read on]
+					.blog-post-info.mt-20
+						p Posted on 24-02-2016 by #[a.post-author(href='#') Kerry] - 1 Comment.
+					.blog-share-icons.mt-20
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-11.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-10.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-9.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-8.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-7.png")
+						a(href="#")
+							img.share-icon(src="assets/images/blog/blog-page-6.png")
+				//- ! blog def
+				a.button-st1.uppercase.mt-20(href="#") Get More articles
+			.col.l5
+				//- widget
+				aside.widget-wrapper.widget-search
+					h4.widget-title.title-st-1.text-center.mb-20 SEARCH OUR BLOG
+					form(method="get" class="search-form" action="#")
+						label
+							input(type="search" class="search-field" placeholder="Search blog" value="" name="s" title="Search for:")
+				//- ! widget
+				//- widget
+				aside.widget-wrapper.widget-select(style="background-color:#366d8f;")
+					h4.widget-title.title-st-1.text-center.mb-20.uppercase.text-orange countries
+					form(method="get" class="widget-selection" action="#")
+						select.widget-select-country(name="billing_country")
+							option Select a country...
+							option(value="") Select a country…
+							option(value="AX") Åland Islands
+							option(value="AF") Afghanistan
+							option(value="AL") Albania
+							option(value="DZ") Algeria
+							option(value="AD") Andorra
+							option(value="AO") Angola
+							option(value="AI") Anguilla
+							option(value="AQ") Antarctica
+							option(value="AG") Antigua and Barbuda
+							option(value="AR") Argentina
+							option(value="AM") Armenia
+							option(value="AW") Aruba
+							option(value="AU") Australia
+							option(value="AT") Austria
+				//- ! widget
+				//- widget
+				aside.widget-wrapper.widget-categories
+					h4.widget-title.title-st-1.text-center.mb-10.uppercase Categories
+					.row
+						.col.l6
+							a.cat-link(href="#") Country information
+							a.cat-link(href="#") TEFL tips and advice
+						.col.l6
+							a.cat-link(href="#") Our teachers' stories
+							a.cat-link(href="#") TEFL videos
+				//- ! widget
+				//- widget
+				aside.widget-wrapper.widget-recent-post
+					h4.widget-title.title-st-1.text-center.mb-10.uppercase Categories
+					.row
+						.col.l12
+							a.recent-post-link(href="#") What's it really like on the LoveTEFL Thailand Internship?
+							a.recent-post-link(href="#") A day in the life: teaching in Kanchanaburi
+							a.recent-post-link(href="#") Thailand internship: My final week!
+							a.recent-post-link(href="#") Seaside Sihanoukville: relaxing by the beach
+							a.recent-post-link(href="#") Intern life & our house in Kanchanaburi
+							a.recent-post-link.more-post(href="#") More Post >
+				//- ! widget
+				//- widget
+				aside.widget-wrapper.email.clearfix
+					img.float-left(src="assets/images/blog/blog-page-4.png")
+					p.content-p If you’d like to write for us, or for us to share your LoveTEFL travel writing, please email #[a.strong(href="#") blogs@lovetefl.com]
+				//- ! widget
+				//- widget
+				aside.widget-wrapper.clearfix
+					img.wp-plugin(src="assets/images/blog/blog-page-3.png")
+					img.wp-plugin.mt-25(src="assets/images/blog/blog-page-1.png")
+				//- ! widget
+
+
+	include ../blocks/footer/footer
