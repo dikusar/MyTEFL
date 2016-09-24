@@ -6,21 +6,95 @@ block head
 	- navbar_position_absolute = false;
 	- whiteIcons = false;
 	- footerSubBtn = false;
+	- margin_top_none_romo_banner = true;
 
 block content
 	include ../blocks/nav-bar/nav-bar
 
 	+banner({
-		imgSrc: "assets/images/online-courses-inner/online-courses-inner-banner.jpg",
+		imgSrc: "assets/images/online-courses-inner-page/online-courses-inner-banner.jpg",
 		bannerBeforeText: {
 			lineSecond: "Accredited course to teach abroad!"
 		},
 		bannerTitle: "Pro 120 Hour TEFL",
 		bannerText: "START YOUR 120 hours today",
+		banner_text_class: "_color_white",
 		btn: "AND SAVE 10% discount",
 		bannerSearch: false
 	})
+	include ../blocks/promo-banner/promo-banner
 
+	.container
+		.row
+			.col.l7
+				.title-lead.uppercase.mt-60 PROFESSIONAL COURSE #[br] 120 Hours
+				ul.list-st1.checked.mt-40
+					li Internationallyaccreditedand endorsed by employers
+					li International Job Placement Service Included
+					li Comprehensivecourse-everything you need to start teaching and living abroad!
+
+			.col.l5
+				.widget-banner-discount.text-center.mt-40
+					div.bigest-header.uppercase.mt-15.mb-10 #[strong Get started!]
+					.cur-price.uppercase.mb-20 #[strong 120 Hour TEFL Only $299!]
+					a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
+
+					.b-program-total__block-second.mb-0
+						.b-program-total__text-before.mb-20 I have an additional discount code:
+						input.b-program-total__input(type="text" placeholder="Paste URL here")
+						.b-program-total__btn.uppercase Submit
+	
+	.section-blue
+		.container
+			.row.mb-0
+				.col.l7
+					.title-st-2.text-white.uppercase.mt-30.mb-30 HEAR WHAT THEY SAY ABOUT US
+					iframe.mb-70(width="580" height="350" frameborder="0" src="https://www.youtube.com/embed/v8Ji0qGXJBA?rel=0&amp;controls=0")
+					img.smailes(src="assets/images/online-courses-inner-page/smiles.png", alt="img")
+
+				.col.l5
+					img.mt-50(src="assets/images/online-courses-inner-page/tefl-review.png", alt="img")
+
+	.container
+		.row
+			.col.l7
+				.title-st-2.uppercase.mt-100.mb-30.text-black What's included?
+
+				div(class="accordion")
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| Internationally-RecognizedTEFL Certificate?
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| Official Letter of Recommendation with Course Module Breakdown
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| Full Tutor & Tech Support with Personalised Feedback
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| 24/7 Access to Online Course via Multiple Devices
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| Donation to charitable project made by myTEFL in your name
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+					div(class="content-title checked yellow")
+						i(class="accordion-icon")
+						| TEFL Job Placement Assistance Worldwide
+					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
+
+			.col.l5.text-center
+				img.mt-130(src="assets/images/online-courses-inner-page/img-1.png", alt="img")
+	
+	
 
 	include ../blocks/course-enroll/course-enroll
 	include ../blocks/footer-banner/footer-banner

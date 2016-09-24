@@ -1,0 +1,27 @@
+.smailes
+	position absolute
+	bottom -60px
+	left 0
+	z-index 2
+
+.accordion .content-title
+	
+	&.yellow
+		font-family PTSans-Bold
+	
+	&.active.yellow
+		color #366d8f
+	
+	&.checked:before
+		font-size: pixelsToEm(15);
+		width auto
+		height auto
+		font-family FontAwesome
+		content "\f00c"
+		background-color: transparent
+		color #efac1b
+	
+	&.active.yellow,
+	&.active.yellow + .content
+		border-color #efac1b
+		background-color #fff

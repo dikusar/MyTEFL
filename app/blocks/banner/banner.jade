@@ -22,13 +22,13 @@ mixin banner(opt)
 						=opt.bannerSubTitle
 
 				if opt.bannerText || opt.bannerText2
-					h6.banner__text
+					h6.banner__text(class=opt.banner_text_class ? "banner__text" + opt.banner_text_class : "")
 						=opt.bannerText
 						|<br>
 						=opt.bannerText2
 				.banner__footer
 					if opt.btn
-						a.banner__footer-btn(href=jv0)
+						a.banner__footer-btn.button-st1.orange(href=jv0)
 							=opt.btn
 					if opt.calendar
 						.banner__footer-calendar
@@ -39,7 +39,7 @@ mixin banner(opt)
 									.banner__footer-calendar-text
 										=item.text
 
-					.banner__footer-btn_down
+			.banner__footer-btn_down
 			
 			if opt.bannerSearch
 				.row.margin-bottom.banner__search

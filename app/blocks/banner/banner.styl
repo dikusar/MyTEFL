@@ -3,11 +3,12 @@
 	overflow hidden
 	
 	&__img
+		display block
 		height auto
 	
 	&__container
 		position absolute
-		top pixelsToEm(275)
+		top pixelsToEm(175)
 		color white
 		width 100%
 		text-align center
@@ -32,6 +33,10 @@
 		text-transform uppercase
 		line-height 36px
 		margin-bottom 107px
+		
+		&_color_white
+			color #fff
+			margin-bottom 3px
 	
 	&__text-before
 		margin-bottom 25px
@@ -56,8 +61,11 @@
 			border 3px solid #efac1b
 		
 		&-btn_down
-			position relative
-			margin 0 auto
+			position absolute
+			bottom 30px
+			left 50%
+			right 50%
+			transform translate(-50%)
 			width 44px
 			height 44px
 			border 3px solid #fff
