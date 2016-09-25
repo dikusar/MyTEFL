@@ -1,0 +1,125 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/circle-group/circle-group
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = false;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	.row.container.mt-40.mb-40
+		.col.l12
+			.title-st-2.uppercase.mb-15.mt-40 Why Choose MyTEFL?
+			p.content-p With over 35 years of combined TEFL experience, our team and partners make myTEFL a great choice. We've been teachers, training managers, writers, editors, publishers, consultants and just like you, travelers and adventurers at heart.
+
+	.container
+		.divider
+		
+		.flex.justify-between.mt-40.mb-40
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/accredited.png",
+				title: "Professionally designed courses",
+				text: "The ideal blend of theory and practicality"
+			})(class="page_why-tefl")
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/accredited.png",
+				title: "Accredited",
+				text: "Accepted by employers around the world"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/online.png",
+				title: "Online",
+				text: "Convenience & value"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/onsite.png",
+				title: "Onsite",
+				text: "Experience and practice"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/support.png",
+				title: "Support",
+				text: "A dedicated tutor and our famous customer service"
+			})
+
+		.divider
+
+		.flex.justify-between.mt-40.mb-40
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/job-placement.png",
+				title: "Job placement",
+				text: "An amazing job lined up for you"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/giving-back.png",
+				title: "Giving back",
+				text: "We make a donation for every course enrollment"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/affordable.png",
+				title: "Affordable",
+				text: "TEFL Courses startat $139"
+			})
+
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/greate-reviews.png",
+				title: "Greate reviews",
+				text: "Our grads love us"
+			})
+
+			+circle-group-item({
+				imgSrc: "assets/images/circle-group/lifelong.png",
+				title: "Lifelong",
+				text: "Your TEFL never expires"
+			})
+
+		.divider
+
+		.title-st-2.uppercase.mb-15.mt-40 See what our grads say
+
+		.row.mb-0
+			.col.l6
+				.k-img-banner-wrapper
+					img.block-center(src="assets/images/about-us/images/about-us-6.png")
+			.col.l6
+				.widget-latest-comments
+					.comment-list
+						.comment-item
+							img.avatar(src='assets/images/about-us/images/about-us-7.png')
+							.comment-text
+								p.meta Tanya,
+									time(datetime="2016-06-07T12:14:53+00:00") May 2016
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						.comment-item
+							img.avatar(src='assets/images/about-us/images/about-us-8.png')
+							.comment-text
+								p.meta Tanya,
+									time(datetime="2016-06-07T12:14:53+00:00") May 2016
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					div.text-center
+						a.button-st1.mt-15.uppercase(href="#") read more
+
+	.section-blue.mt-30
+		.container
+			.row.mb-30
+				.col.l9
+					.title-st-2.uppercase.mb-5.mt-40.text-blue-light Ready to start your exciting new career?
+					.title-st-2.text-white(style="font-weight:normal;") Enroll in our most popular 120 hour course and be certified in four to six weeks!
+
+				.coll.3.push-l1
+					a.button-st2.uppercase.alt.text-white.mt-40.text-center(href="#" style="width:250px;") Learn more
+
+
+	include ../blocks/footer-banner/footer-banner
+	include ../blocks/footer/footer
+

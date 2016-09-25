@@ -103,6 +103,9 @@ ol
 .text-main-color
 	color $main-color
 
+.text-blue-light
+	color #aee1fa !important
+ 
 .text-black
 	color #444444 !important
 
@@ -144,11 +147,7 @@ ol
 	-webkit-appearance none
 	font-weight 700
 	white-space nowrap
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+	transition all .3s ease
 	&.full-width
 		width 100%
 		text-align center
@@ -176,6 +175,22 @@ ol
 		&:hover
 			background-color $orange
 			color #ffffff
+
+.button-st2
+	display inline-block
+	border 3px solid #aee1fa
+	color #4e97c4
+	padding 9px 60px
+	box-sizing border-box
+	background-color #aee1fa
+	font-weight 700
+	white-space nowrap
+	transition all .3s ease
+	
+	&:hover
+		color #aee1fa
+		background-color transparent
+	
 
 /**/
 /* ! button */
@@ -341,6 +356,9 @@ ol
 .flex
 	display flex
 	align-items stretch
+	
+	&.justify-between
+		justify-content space-between
 /**/
 /* ! flex */
 /**/
@@ -414,6 +432,7 @@ ol
 .section-blue
 	position relative
 	background-color #366d8f
+	overflow hidden
 	
 /**/
 /* sections */

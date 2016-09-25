@@ -39,7 +39,7 @@ mixin banner(opt)
 									.banner__footer-calendar-text
 										=item.text
 
-			.banner__footer-btn_down
+			.banner__footer-btn_down(class=opt.btn_down_mod_class ? "banner__footer-btn" + opt.btn_down_mod_class : "")
 			
 			if opt.bannerSearch
 				.row.margin-bottom.banner__search
