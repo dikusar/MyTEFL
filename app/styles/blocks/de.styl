@@ -47,7 +47,16 @@
 		padding-right 80px
 		
 		&:last-of-type
-			padding-right 0	
+			padding-right 0
+		
+		&.modules-1
+			padding-left 40px
+			
+			.list-st1.content-p
+				line-height 1.45
+		
+		&.modules-2
+			padding-left 31px
 /**/
 /* registration */
 /**/
@@ -56,6 +65,7 @@
 /* b-input */
 /**/
 .b-input
+	position relative
 	margin-bottom 25px
 	
 	&__label
@@ -104,6 +114,76 @@
 			&:last-of-type
 				margin-right 0	
 
+
+.payment
+	margin-left 20px
+	padding 62px 0 62px 54px
+	border 2px solid #ebebeb
+	border-radius 20px
+	font-family PTSans-Bold
+	background-image url('/assets/images/registration-internships-1/payment.png')
+	background-repeat no-repeat
+	background-position-y 53px
+	background-position-x 271px
+	
+	&__paragraph
+		line-height 1.4
+	
+	&__price
+		font-size pixelsToEm(48)
+	
+	&__text
+		display block
+
+.b-credit
+	position relative
+	padding 27px
+	padding-top 42px
+	margin-left 18px
+	margin-right 23px
+	border 2px solid #ebebeb
+	border-radius 20px
+	background-color #ebebeb
+	
+	.b-reg__container
+		justify-content space-between
+	
+	&__right
+		position absolute
+		right -26px
+		top 28px
+		height 100%
+	
+	&__bottom
+		width 94%
+		position absolute
+		bottom -28px
+		right 0
+		
+	
+	.b-input i
+		position absolute
+		right 10px
+		bottom 12px
+		font-size 20px
+		color #9d9d9d
+	
+	.b-input__label
+		font-size 14px
+		letter-spacing 1px
+		color #9d9d9d
+	
+	.b-input__input,
+	.b-input__select,
+	.b-input__select_width-full
+		padding 10px
+		color #9d9d9d
+		font-weight 600
+		border-color #e4e4e4
+	
+	.b-input__select
+		width 130px!important
+		margin-right 0
 	
 	
 		

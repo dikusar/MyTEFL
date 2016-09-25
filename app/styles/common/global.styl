@@ -105,6 +105,12 @@ ol
 
 .text-black
 	color #444444 !important
+
+.text-green
+	color #2e8885
+
+.text-accent
+	color #f26522 !important	
 	
 .page-slog
 	text-transform uppercase
@@ -112,8 +118,10 @@ ol
 	font-size pixelsToEm(18)
 	font-weight 700
 	line-height 1.2
+	
 .text-right
 	text-align right
+	
 .block-center
 	display block
 	margin-left auto
@@ -196,6 +204,17 @@ ol
 	
 	&_border_blue
 		border-color #366d8f
+		
+		.col span
+			display block
+			margin-bottom 20px
+			
+			&.text-main-color,
+			&.text-accent
+				font-family PTSans-Bold
+			
+			&:last-of-type
+				margin-bottom 0
 	
 	p + p
 		margin-bottom 35px
