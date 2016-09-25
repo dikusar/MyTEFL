@@ -480,3 +480,117 @@ p a
 /**/
 /* ! widgets */
 /**/
+
+/**/
+/* blog single */
+/**/
+.blog-def-item.single-page
+	border-bottom 0
+.comments-header
+	font-size pixelsToEm(18)
+	font-weight 700
+	margin-bottom 20px
+	&>span:after
+		content: ""
+		display inline-block
+		vertical-align middle
+		margin 0 8px
+		width 3px
+		height 3px
+		background-color #b3b3b3
+	.button-minimize
+		color $main-color
+		i
+			display inline-block
+			text-align center
+			line-height 14px
+			font-size 20px
+			width 16px
+			height 16px
+			border 1px solid $main-color
+			border-radius 2px
+		span
+			text-decoration underline
+	.count-reaction
+		color #b3b3b3
+		&:after
+			display none
+	.rate-stars
+		float right
+.comments-enter
+	.comments-avatar
+		float left
+		margin-right 12px
+	.comments-leave-message
+		width calc(100% - 48px)
+		box-sizing border-box
+		border-radius 2px
+		padding 3px 12px
+.nav-comments
+	border-bottom 2px solid #ebeff1
+	padding-top 30px
+	padding-bottom 11px
+	position relative
+	&:before
+		position absolute
+		display block
+		content ""
+		bottom -2px
+		left 0
+		width 100px
+		height 2px
+		background-color #1e98fc
+	.button-nav-comment
+		font-size pixelsToEm(13)
+		margin-left 20px 
+		&:after
+			content "|"
+			color #e0e1e3
+			margin 0 0 0 13px
+	.right-nav-comments
+		color #777777
+		font-size pixelsToEm(13)
+		float right
+.comments-block
+	.comments-avatar
+		float left
+		
+.comments-block
+	padding 20px 0 15px
+	& + .comments-block
+		border-top 1px solid #e6e6e6
+.comment-content
+	margin-left 50px
+	line-height 24px
+	.comment-author
+		color #1e98fc
+	.time
+		color #818181
+		font-size 13px
+		&:before
+			content ""
+			display inline-block
+			width 2px
+			height 2px
+			background-color #cdcdcd
+			vertical-align middle
+			margin 0 5px
+	.comment-footer
+		.share:before,
+		.reply:before
+			content ""
+			display inline-block
+			width 2px
+			height 2px
+			background-color #cdcdcd
+			vertical-align middle
+			margin 0 5px
+		i
+			font-size 10px
+			vertical-align text-top
+			line-height 15px
+		font-size 13px
+		color #818181
+/**/
+/* ! blog single */
+/**/
