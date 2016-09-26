@@ -1,0 +1,51 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper(style="background-image:url(assets/images/decline.png)")
+					h2.page-title.uppercase Payment Success
+		.row.mt-50.mb-30.clearfix
+			.col.l8
+				h3.title-st-1.mb-30 #[img.img-inline(src="assets/images/payment-success/payment-success-1.png")] Congratulations!!
+				p.cont-fs.mb-30 You’re about to embark on a wonderful educational experience, and the adventure of a lifetime! We’ll be here around the clock to provide assistance,encouragement, advice, tough love and anything else you need to successfully reach your Teach & Travel Goals!#[br]#[br]You will receive an email shortly containing your #[strong 120 Hour TEFL course] login details, which you can start immediately. Don’t forget to check out our Library section for useful lesson plans, activities, definitions, flash cards etc. It’s all FREE for our students!#[br]#[br]An Internship Advisor will be in touch with you within 48 Hours to discuss the program and the next steps with you. We’ll cover everything from what to expect, visas, plane tickets, to what to wear, what to bring, and what to leave behind. You can reach us #[a(href="#") here] for tutor advice, questions about your internship program, technical support, and anything else.#[br]#[br] #[strong Welcome Aboard & Happy Learning!]
+			.col.l4
+				img.mt-70(src="assets/images/payment-success/payment-success-2.png")
+		hr
+		.row.mt-30.mb-20
+			.col.l12
+				img.float-left.float-img(src="assets/images/payment-success/payment-success-3.png")
+				h3.title-st-2.uppercase.mb-5.mt-20 40 Hour  Introduction & Organization
+				p.cont-fs.mb-5(style='color:#5e5e5e;') #[strong Basic Course]
+				p.cont-fs.mb-20(style='color:#3e8f36;') #[strong $169.00 USD]
+				p.cont-fs.mb-40 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel neque eu lectus eleifend cursus. Duis eleifend sem non odio efficitur suscipit. Quisque pulvinar nisl eu tellus pharetra, ac egestas ipsum mollis. Suspendisse nec consectetur neque. adipiscing elit. Donec vel neque eu lectus eleifend cursus. Duis eleifend sem non odio efficitur suscipit. Quisque pulvinar nisl eu tellus pharetra, ac egestas ipsum mollis. Suspendisse nec consectetur neque. Etiam fringilla quam in lacus placerat, sit amet viverra augue eleifend. Fusce molestie diam vel ipsum dictum accumsan. Vestibulum rhoncus lorem venenatis nisl dictum, et ornare diam auctor. Nam lobortis dui orci, eu sagittis ante feugiat sed. Fusce imperdiet justo eget sapien pharetra, ut tristique lectus sollicitudin:
+				ul.cont-fs.lh-50
+					li - Praesent ultricies magna pharetra ipsum dictum
+					li - Semper condimentum erat tincidunt
+					li - Cras eget finibus dolor, id suscipit ex.
+					li - Ut pharetra diam mattis ligula hendrerit ullamcorper
+					li - Nunc accumsan nec nibh auctor sodales
+					li - Donec tempus ante eu ligula tincidunt feugiat
+					li - Donec consequat risus gravida ante dapibus pharetra
+					li - Etiam in purus odio.
+		div.mb-40(style='border:1px solid #366d8f;border-radius: 1px;padding: 20px')
+			.cont-fs #[strong Thank you for helping us improve lives] #[br]When you enroll in one of our courses, myTEFL makes a donation to one of our partner charities.
+			.wrap-img.mt-50
+				.wrap-img-desc
+					img.img-inline(src="assets/images/giving-back-page/giving-back-4.png" style="width:220px;")
+					span.img-desc Little Footprints, Big Steps
+				.wrap-img-desc
+					img.img-inline(src="assets/images/giving-back-page/giving-back-5.png" style="width:150px;")
+					span.img-desc Trek To Teach
+
+	include ../blocks/footer/footer
