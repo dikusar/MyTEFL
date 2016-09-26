@@ -1,0 +1,58 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper(style="background-image:url(assets/images/decline.png)")
+					h2.page-title.uppercase Payment Success
+		.row.mt-50.mb-30.clearfix
+			.col.l12
+				h3.title-st-1.mb-30 #[img.img-inline(src="assets/images/payment-success/payment-success-1.png")] Thank you for your payment. Are you excited yet?!?!
+				p.cont-fs.mb-30 As your departure date draws closer, make sure to check the following items off your to-do list:
+			.col.l8
+				ul.list-st1.cont-fs.lh-40
+					li Vaccinations up to date
+					li Visa received
+					li TEFL Course completed
+					li Local weather conditions researched properly (for clothing choices)
+					li Plane tickets booked
+					li Flight information forwarded to your Internship Advisor
+					li Check airline baggage regulations
+					li Small trinkets for your students (stickers, pins, little flags etc.)
+					li Currency conversions and spending money sorted 
+					li Bags packed
+					li Farewell parties, meets, and sayonaras
+					li Controlling that goofy perma grin!
+			.col.l4
+				img(src="assets/images/payment-success/payment-success-2.png")
+			.col.l12
+				p.cont-fs.mt-20 If you have any questions before your departure date, your Advisor is available around the clock. Once in country, you will have the full support of our team on the ground (although your Advisor will still be there 24/7). #[br]#[br] #[strong Most of all, Experience, Learn, and Have Fun!!!]
+		hr
+		.row.mt-30.mb-80
+			.col.l12
+				img.float-left.float-img(src="assets/images/payment-success/payment-success-3.png")
+				h3.title-st-2.uppercase.mb-5.mt-20 40 Hour  Introduction & Organization
+				p.cont-fs.mb-5(style='color:#5e5e5e;') #[strong Basic Course]
+				p.cont-fs.mb-20(style='color:#3e8f36;') #[strong $169.00 USD]
+				p.cont-fs.mb-40 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel neque eu lectus eleifend cursus. Duis eleifend sem non odio efficitur suscipit. Quisque pulvinar nisl eu tellus pharetra, ac egestas ipsum mollis. Suspendisse nec consectetur neque. adipiscing elit. Donec vel neque eu lectus eleifend cursus. Duis eleifend sem non odio efficitur suscipit. Quisque pulvinar nisl eu tellus pharetra, ac egestas ipsum mollis. Suspendisse nec consectetur neque. Etiam fringilla quam in lacus placerat, sit amet viverra augue eleifend. Fusce molestie diam vel ipsum dictum accumsan. Vestibulum rhoncus lorem venenatis nisl dictum, et ornare diam auctor. Nam lobortis dui orci, eu sagittis ante feugiat sed. Fusce imperdiet justo eget sapien pharetra, ut tristique lectus sollicitudin:
+				ul.cont-fs.lh-50
+					li - Praesent ultricies magna pharetra ipsum dictum
+					li - Semper condimentum erat tincidunt
+					li - Cras eget finibus dolor, id suscipit ex.
+					li - Ut pharetra diam mattis ligula hendrerit ullamcorper
+					li - Nunc accumsan nec nibh auctor sodales
+					li - Donec tempus ante eu ligula tincidunt feugiat
+					li - Donec consequat risus gravida ante dapibus pharetra
+					li - Etiam in purus odio.
+
+	include ../blocks/footer/footer
