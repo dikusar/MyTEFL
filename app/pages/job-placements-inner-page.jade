@@ -1,0 +1,21 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/banner/banner
+
+block head
+	- var pageTitle = 'My TEFL';
+	- navbar_position_absolute = false;
+	- whiteIcons = false;
+	- footerSubBtn = true;
+
+block content
+	include ../blocks/nav-bar/nav-bar
+
+	main.container
+		.row.mt-100
+			.col.l12
+				.page-title-wrapper.alt(style="background-image:url(assets/images/job-placements-inner-page/header-banner.jpg)")
+					h2.page-title Live & Teach in China
+					h3.page-slog Placements exclusively for myTEFL graduates
+
+			.col.l12
+				.title-st-1.mt-40.mb-20 TEACHING ENGLISH IN CHINA
