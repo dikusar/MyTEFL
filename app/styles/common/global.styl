@@ -10,6 +10,9 @@ b
 	font-weight bold
 strong
 	font-weight 700
+
+i
+	font-style italic
 	
 hr, .divider
 	border-top 1px solid #fafafa
@@ -64,6 +67,13 @@ ol
 			color #4e97c4
 	&.orange li:before
 		color $orange
+	
+	&.job-page li
+		font-family PTSans-Bold
+
+		&:before
+			margin-right 18px
+		
 /**/
 /* page title */
 /**/
@@ -221,6 +231,7 @@ ol
 .blog-item
 	
 	&_bg
+		padding 20px
 		background-color #f0f0f0
 	
 	&_border,
@@ -243,6 +254,25 @@ ol
 			
 			&:last-of-type
 				margin-bottom 0
+	
+	&_job-page
+		position relative
+		border-width 5px
+		
+		.fa-angle-right
+			width 53px
+			height 53px
+			border-radius 50%
+			color #fff
+			background-color #4e97c4
+			text-align center
+			margin-left 15px
+			padding-top 10px
+		
+		img
+			position absolute
+			bottom 25px
+			left 51%
 	
 	p + p
 		margin-bottom 35px
@@ -372,6 +402,13 @@ ol
 	
 	&.justify-between
 		justify-content space-between
+	
+	&_job-page
+		justify-content space-between
+		
+		.blog-item_border
+			width 49%
+		
 /**/
 /* ! flex */
 /**/
