@@ -148,6 +148,15 @@ ol
 	font-weight 700
 	white-space nowrap
 	transition all .3s ease
+	&.add-triangle:after
+		content ""
+		display inline-block
+		margin-left 6px
+		width 0
+		height 0
+		border-style solid
+		border-width 6px 0 6px 10px
+		border-color transparent transparent transparent $orange
 	&.full-width
 		width 100%
 		text-align center
