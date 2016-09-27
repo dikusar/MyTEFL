@@ -1,4 +1,4 @@
--menu = ['Home', 'Courses', 'Internships', 'TEFL Jobs', 'Why TEFL', 'About', 'Giving Back', 'Offers', 'Blog'];
+- menuArray = [{menu: 'Home'}, {menu: 'Courses', submenu: ['Online Courses', 'Onsite Courses']}, {menu: 'Internships', submenu: ['Teach in China', 'Teach in Thailand', 'Teach in Africa', 'Teach in Argentina']}, {menu: 'TEFL Jobs', submenu: ['China', 'Colombia', 'Korea', 'Thailand', 'Taiwan', 'Online']}, {menu: 'Why TEFL', submenu: ['Why MyTEFL?', 'Destinations']}, {menu: 'About', submenu: ['FAQs', 'Accreditation']}, {menu: 'Giving Back'}, {menu: 'Offers'}, {menu: 'Blog'}];
 
 nav.nav-bar(class=navbar_position_absolute === true ? "nav-bar_position_absolute" : "")
 	.nav-bar__heading
@@ -39,10 +39,18 @@ nav.nav-bar(class=navbar_position_absolute === true ? "nav-bar_position_absolute
 		.row.margin-bottom.container
 			.col.l10.m10.s10
 				ul.nav-bar__menu-list
-					each item, i in menu
+					each item, i in menuArray 
 						li.nav-bar__menu-item
 							a(class=i === 1 ? "nav-bar__menu-link nav-bar__menu-link_active" : "nav-bar__menu-link", href=jv0)
-								= item
+								= item.menu
+
+							if item.submenu
+								ul.nav-bar__submenu
+									each elem, i in item.submenu
+										li.nav-bar__submenu-item
+											a(class=i === 1 ? "nav-bar__submenu-link nav-bar__submenu-link_active" : "nav-bar__submenu-link", href=jv0)
+												=elem
+
 			.col.l2.m2.s2
 				.nav-bar__login
 					a.nav-bar__login-btn.button-st1.orange(href=jv0)

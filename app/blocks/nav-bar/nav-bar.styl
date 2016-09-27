@@ -88,6 +88,8 @@
 			text-decoration none
 			font-size pixelsToEm(18)
 			font-weight bold
+			will-change color
+			transition color .2s ease
 			
 			&:after
 				display block
@@ -98,8 +100,14 @@
 				content ''
 				sprite $devider
 			
+			&:hover
+				color lighten(#efac1b, 35%)
+			
 			&_active
 				color #efac1b
+				
+				&:hover
+					color #efac1b	
 			
 		
 		&-item
@@ -116,6 +124,75 @@
 					z-index 2
 					content ''
 					sprite $devider
+					
+	&__submenu
+		position absolute
+		z-index 2
+		white-space nowrap
+		top 52px
+		left 0
+		background-color #4f4f4f
+		cursor pointer
+		visibility hidden
+		z-index -1
+		opacity 0
+		transform translate(0, -9px)
+		will-change visibility, opacity, z-index
+		transition visibility .25s ease-out, opacity .25s ease-out, z-index .25s ease-out, transform .25s ease-out .1s
+		
+		&:before
+			position absolute
+			top -7px
+			left 23px
+			content ''
+			z-index 3
+			width 0
+			height 0
+			border-left 8px solid transparent
+			border-right 8px solid transparent
+			border-bottom 8px solid #4f4f4f
+		
+		&-item
+			display block
+			position relative
+			
+			&:after
+				display block
+				position absolute
+				bottom 0
+				left 50%
+				right 50%
+				transform translate(-50%, 0)
+				z-index 3
+				content ''
+				sprite $dropdowndivider
+			
+			&:last-of-type:after
+				content none
+			
+		&-link
+			position relative
+			display block
+			padding 20px 36px 20px 23px
+			font-family PTSans-Bold
+			color #fff
+			will-change color
+			transition color .2s ease
+	
+			&:hover
+				color lighten(#efac1b, 35%)
+			
+			&_active
+				color #efac1b
+				
+				&:hover
+					color #efac1b
+	
+	&__menu-item:hover &__submenu
+		visibility visible
+		z-index 12
+		opacity 1
+		transform translate(0, 1px)
 	
 
 	&__login
