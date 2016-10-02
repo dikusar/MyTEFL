@@ -8,15 +8,14 @@ mixin banner(opt)
 					.banner__text-before
 						span
 							=opt.bannerBeforeText.lineFist
-						br
 						span
 							=opt.bannerBeforeText.lineSecond
 
 				h3.banner__title
-					=opt.bannerTitle
+					span=opt.bannerTitle
 					if opt.bannerTitleSecondLine
-						br
-						=opt.bannerTitleSecondLine
+						span=opt.bannerTitleSecondLine
+
 				if opt.bannerSubTitle
 					h5.banner__subtitle
 						=opt.bannerSubTitle
@@ -26,18 +25,21 @@ mixin banner(opt)
 						=opt.bannerText
 						|<br>
 						=opt.bannerText2
+
 				.banner__footer
 					if opt.btn
 						a.banner__footer-btn.button-st1.orange.uppercase(href=jv0)
 							=opt.btn
 					if opt.calendar
 						.banner__footer-calendar
+							.banner__footer-calendar-title Discount until
 							each item in opt.calendar
 								.banner__footer-calendar-item
-									.banner__footer-calendar-integer
-										=item.integer
 									.banner__footer-calendar-text
 										=item.text
+									each integer in item.integers
+										.banner__footer-calendar-integer
+											=integer
 
 			.banner__footer-btn_down(class=opt.btn_down_mod_class ? "banner__footer-btn" + opt.btn_down_mod_class : "")
 			
