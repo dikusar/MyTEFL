@@ -5,6 +5,9 @@
 	background-image url("../images/prise/prise-bg.jpg")
 	background-size cover
 	
+	&__heading
+		text-align center
+	
 	&__title
 		font-family PTSans-Bold
 		font-size pixelsToEm(44)
@@ -25,6 +28,16 @@
 			text-transform uppercase
 			border 2px solid #efac1b
 			border-radius 4px
+	
+	&__subtitle
+		display inline-block
+		padding 11px 15px
+		font-size pixelsToEm(22)
+		color #7aaccb
+		text-transform uppercase
+		text-align center
+		border 2px solid #bad5e5
+		border-radius 6px
 		
 
 	&__table
@@ -50,17 +63,31 @@
 		&:last-of-type
 			padding-left 8px
 		
+		&:nth-child(3) &-content
+			border-right-color transparent
+		
 		&-title,
-		&-title_orange
+		&-title_orange,
+		&-title_blue,
+		&-title_blue_dark,
+		&-title_blue_light
 			position relative
 			font-size pixelsToEm(32)
 			text-transform uppercase
-			background #2f8c89
-			background linear-gradient(to right,  #2f8c89 0%, #349795 50%, #308d8a 100%)
+			background #4b8aaf
 		
 		&-title_orange
 			background #f26522
 			border-top-right-radius 4px
+		
+		&-title_blue_light
+			background linear-gradient(to right,  #73a7c8 0%, #79accb 50%, #75a8c9 100%)
+		
+		&-title_blue_dark
+			background linear-gradient(to right,  #2c6b92 0%, #31779f 50%, #2c6b92 100%)
+		
+		&-title_blue
+			background linear-gradient(to right,  #4b8aaf 0%, #5296b7 50%, #4a89ae 100%)
 		
 		&-title-devider
 			position absolute
@@ -68,19 +95,27 @@
 			top 43px
 			sprite $prisetitledevider
 		
-		&-content
-			padding 65px 0 40px 0
+		&-content,
+		&-content_orange
+			padding 0 0 15px 0
 			background-color #fff
 			overflow hidden
-			border-top 4px solid #eaeaea
+			border-top 4px solid #b8d0df
+			border-right 2px dotted #61bbc0
+			
+			& i
+				color #7badcc
+		
+		&-content_orange
+			border-top-color #f2c6a2
 		
 		&-text,
 		&-text_yellow,
 		&-text_orange
-			margin-top 60px
+			margin-top 10px
 			margin-bottom 11px
 			font-size pixelsToEm(40)
-			color #43d4cf
+			color #77aaca
 		
 		&-text_yellow
 			color #efac1b
@@ -89,21 +124,45 @@
 			color #fa8e36
 		
 		&-text_before
-			margin-top 14px
-			margin-bottom 24px
-			font-size pixelsToEm(20)
-			color #ff9d00
+			margin-top 27px
+			margin-bottom 33px
+			font-family PTSans-Bold
+			font-size pixelsToEm(30)
+			color #2b6990
+			text-transform uppercase
+			
+			&_orange
+				position relative
+				margin-bottom 33px
+				font-family PTSans-Bold
+				margin-top 8px
+				text-transform uppercase
+				
+				& .first-line
+					display block
+					color #ff9d00
+					font-size pixelsToEm(20)
+				
+				& span
+					font-size pixelsToEm(30)
+					color #f26522
+				
+				& img
+					position absolute
+					top 0
+					right 26px
 		
-		&-hours,
-		&-hours_green
+		&-hours
+			margin-bottom 12px
 			font-size pixelsToEm(18)
 			text-transform uppercase
-			color #475059
-		
-		&-hours_green
-			color #31918e
-		
+			color #737b83
+			
+	
 		&-descript,
+		&-descript_blue,
+		&-descript_blue_light,
+		&-descript_blue_dark,
 		&-descript_orange
 			padding 24px 35px
 			text-transform uppercase
@@ -111,14 +170,36 @@
 			font-size pixelsToEm(18)
 			line-height 23px
 		
+		&-descript_blue_light
+			background-color #93bad2
+		
+		&-descript_blue_dark
+			background-color #4987ad
+			
+		&-descript_blue
+			background-color #73a7c8
+		
 		&-descript_orange
 			background linear-gradient(to right,  #fa8f37 0%, #fba340 50%, #fa9037 100%)
 		
+		
 		&-footer,
+		&-footer_blue,
+		&-footer_blue_light
+		&-footer_blue_dark,
 		&-footer_orange
 			position relative
 			padding 24px 0
 			background-color #2f8b88
+		
+		&-footer_blue_light
+			background-color #73a7c8
+		
+		&-footer_blue
+			background-color #4987ad	
+		
+		&-footer_blue_dark
+			background-color #2b6990
 		
 		&-footer_orange
 			background linear-gradient(to right,  #f36923 0%, #f78c2f 50%, #f36c24 100%)
@@ -136,13 +217,15 @@
 		&-btn_white-transparent
 			display inline-block
 			padding 11px 14px
+			font-family PTSans-Bold
+			font-size pixelsToEm(22)
 			color #c1dcdc
 			text-transform uppercase
 			border 2px solid #c1dcdc
 			border-radius 4px
 		
 		&-btn_white
-			color #efac1b
+			color #f26522
 			background-color #fff
 			border-color #fff
 		

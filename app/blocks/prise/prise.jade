@@ -1,59 +1,89 @@
 .b-prise
 	.container
-		.b-prise__title.mt-50.mb-30
-			span.b-prise__title-text Choose your course 
-				a.b-prise__title-btn.button-st1.orange(href=jv0) &#38; Get discount
+		.b-prise__heading
+			.b-prise__title.mt-50.mb-30
+				h3.b-prise__title-text Choose your course 
+					//- a.b-prise__title-btn.button-st1.orange(href=jv0) &#38; Get discount
+			a.b-prise__subtitle.mb-40(href=jv0) & for a limited time save an additional 30% with promo code SAVE30
 		
 		.b-prise__table
 					.b-prise__item
-						.b-prise__item-title.pt-40.pb-40 Basic
-							.b-prise__item-title-devider
-						.b-prise__item-content(style="padding-bottom:58px; border-right:1px solid #3da29f;")
+						.b-prise__item-title_blue_light.pt-40.pb-40 Basic
+							//- .b-prise__item-title-devider
+						.b-prise__item-content
+							.b-prise__item-text_before
+								span Testers
+
 							img.b-prise__item-img(src="assets/images/prise/basic.png", alt="img")
 							.b-prise__item-text $169 USD
 							.b-prise__item-hours 40 HOURS
-						.b-prise__item-descript
+							i.fa.fa-star
+							i.fa.fa-star 
+						.b-prise__item-descript_blue_light
 							| Fundamental Classroom Management
-						.b-prise__item-footer
-							.b-prise__item-footer-devider
+						.b-prise__item-footer_blue_light
+							//- .b-prise__item-footer-devider
 							a.b-prise__item-btn(href=jv0) Get now!
 
 				
 					.b-prise__item
-						.b-prise__item-title.pt-40.pb-40 Standart
-							.b-prise__item-title-devider
-						.b-prise__item-content(style="padding-bottom:48px; border-right:1px solid #3da29f;")
-							img.b-prise__item-img(src="assets/images/prise/standart.png", alt="img")
-							.b-prise__item-text_yellow $229 USD
-							.b-prise__item-hours_green 60 HOURS
-						.b-prise__item-descript
-							| Teaching Techniques &#38; Methods
-						.b-prise__item-footer
-							.b-prise__item-footer-devider
+						.b-prise__item-title_blue.pt-40.pb-40 Standart
+							//- .b-prise__item-title-devider
+						.b-prise__item-content
+							.b-prise__item-text_before
+								span Refresher
+
+							img.b-prise__item-img(src="assets/images/prise/standard.png", alt="img")
+							.b-prise__item-text $229 USD
+							.b-prise__item-hours 60 HOURS
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+						.b-prise__item-descript_blue
+							| Teaching Techniques #[br] &#38; Methods
+						.b-prise__item-footer_blue
+							//- .b-prise__item-footer-devider
 							a.b-prise__item-btn_white(href=jv0) Get now!
 
 				
 					.b-prise__item
-						.b-prise__item-title.pt-40.pb-40 Advanced
-						.b-prise__item-content(style="padding-bottom:44px;")
+						.b-prise__item-title_blue_dark.pt-40.pb-40 Advanced
+						.b-prise__item-content
+							.b-prise__item-text_before
+								span UPGRADE
+
 							img.b-prise__item-img(src="assets/images/prise/advanced.png", alt="img")
 							.b-prise__item-text $229 USD
 							.b-prise__item-hours 80 HOURS
-						.b-prise__item-descript
-							| Advanced Approaches &#38; Grammar
-						.b-prise__item-footer
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+						.b-prise__item-descript_blue_dark
+							| Advanced Approaches #[br] &#38; Grammar
+						.b-prise__item-footer_blue_dark
 							a.b-prise__item-btn(href=jv0) Get now!
 
 				
 					.b-prise__item
 						.b-prise__item-title_orange.pt-40.pb-40 Professional
-						.b-prise__item-content.pt-0
-							.b-prise__item-text_before Most popular!!!
+						.b-prise__item-content_orange.pt-0
+							.b-prise__item-text_before_orange
+								span.first-line Most popular!!!
+								span Best value
+								img(src="assets/images/prise/reward.png", alt="img")
+
 							img.b-prise__item-img(src="assets/images/prise/professional.png", alt="img")
 							.b-prise__item-text_orange $399 USD
 							.b-prise__item-hours 120 HOURS
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+
 						.b-prise__item-descript_orange
-							| Advanced Approaches &#38; Grammar
+							| Master TEFL #[br] Expert Teacher
 						.b-prise__item-footer_orange
 							a.b-prise__item-btn_white-transparent(href=jv0) Get now!
 
