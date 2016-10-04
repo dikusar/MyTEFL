@@ -1,8 +1,8 @@
 mixin banner(opt)
 	-opt = opt || {};
-		.banner
-			img.banner__img(src=opt.imgSrc, alt="banner")
-			.banner__container(class=opt.banner_mode_class ? "banner__container" + opt.banner_mode_class : "")
+		.banner(class=opt.banner_mode_class ? "banner" + opt.banner_mode_class : "")
+			//- img.banner__img(src=opt.imgSrc, alt="banner")
+			.banner__container(class=opt.banner_container_mode_class ? "banner__container" + opt.banner_container_mode_class : "")
 
 				if opt.bannerBeforeText
 					.banner__text-before
@@ -54,7 +54,7 @@ mixin banner(opt)
 					.col.l6.m6.s12
 						.banner__search-yellow
 							.banner__search-content
-								span.banner__search-title Get started!
+								span.banner__search-title Destinations!
 								input.banner__search-input(type="text", placeholder="See where myTEFL takes you...")
 								.banner__search-btn
 					
