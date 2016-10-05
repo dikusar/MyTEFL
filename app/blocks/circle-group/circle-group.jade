@@ -1,7 +1,7 @@
 mixin circle-group-item(item, i)
-	-item - item || {};
+	-item = item || {};
 		.circle-group__item
-			a.circle-group__heading(href=jv0)
+			a.circle-group__heading(class=item.heading_mode_class ? "circle-group__heading" + item.heading_mode_class : "" href=jv0)
 				img.circle-group__img(src=item.imgSrc, alt="img")
 				if item.btnText
 					.circle-group__btn

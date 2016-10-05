@@ -6,26 +6,29 @@
 		display block
 		text-align center
 		
-		&:before
+		&_hoverable
 			display block
-			position absolute
-			top 0
-			left 0
-			z-index 2
-			content ''
-			height 100%
-			width 100%
-			border-radius 50%
-			background-color rgba(0, 0, 0, .0)
-			will-change background-color
-			transition .25s background-color ease-in
-		
-		&:hover:before
-			background-color rgba(0, 0, 0, .5)
-		
-		&:hover .circle-group__btn
-			color #efac1b
-			border-color #efac1b
+					
+			&:before
+				display block
+				position absolute
+				top 0
+				left 0
+				z-index 2
+				content ''
+				height 100%
+				width 100%
+				border-radius 50%
+				background-color rgba(0, 0, 0, .0)
+				will-change background-color
+				transition .25s background-color ease-in
+			
+			&:hover:before
+				background-color rgba(0, 0, 0, .5)
+			
+			&:hover .circle-group__btn
+				color #efac1b
+				border-color #efac1b
 			
 			
 
