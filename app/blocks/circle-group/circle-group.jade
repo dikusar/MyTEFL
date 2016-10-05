@@ -1,10 +1,10 @@
 mixin circle-group-item(item, i)
 	-item - item || {};
 		.circle-group__item
-			.circle-group__heading
+			a.circle-group__heading(href=jv0)
 				img.circle-group__img(src=item.imgSrc, alt="img")
 				if item.btnText
-					a.circle-group__btn(class=i === 0 ? "circle-group__btn_yellow button-st1 orange" : "", href=jv0)
+					.circle-group__btn
 						=item.btnText
 			
 			.circle-group__footer&attributes(attributes)

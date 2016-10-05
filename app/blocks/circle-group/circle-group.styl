@@ -3,13 +3,39 @@
 	
 	&__heading
 		position relative
+		display block
 		text-align center
+		
+		&:before
+			display block
+			position absolute
+			top 0
+			left 0
+			z-index 2
+			content ''
+			height 100%
+			width 100%
+			border-radius 50%
+			background-color rgba(0, 0, 0, .0)
+			will-change background-color
+			transition .25s background-color ease-in
+		
+		&:hover:before
+			background-color rgba(0, 0, 0, .5)
+		
+		&:hover .circle-group__btn
+			color #efac1b
+			border-color #efac1b
+			
+			
+
 	
 	&__title
 		text-align center
 		font-family PTSans-Bold
 		font-size pixelsToEm(38)
 		color #efac1b
+	
 		
 	&__subtitle
 		color #555555
@@ -48,10 +74,11 @@
 		text-transform uppercase
 		font-size pixelsToEm(18)
 		font-family PTSans-Bold
-		
-		&_yellow
-			color #efac1b
-			border-color #efac1b
+		will-change color, border-color
+		transition .25s color ease-in, .25s border-color ease-in
+		z-index 3
+		will-change color, border-color
+		transition .25s color ease-in, .25s border-color ease-in
 		
 		&-down
 			position relative

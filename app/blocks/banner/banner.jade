@@ -1,18 +1,22 @@
 mixin banner(opt)
 	-opt = opt || {};
 		.banner(class=opt.banner_mode_class ? "banner" + opt.banner_mode_class : "")
-			//- img.banner__img(src=opt.imgSrc, alt="banner")
+
 			.banner__container(class=opt.banner_container_mode_class ? "banner__container" + opt.banner_container_mode_class : "")
 
 				if opt.bannerBeforeText
 					.banner__text-before
-						span
-							=opt.bannerBeforeText.lineFist
-						span
-							=opt.bannerBeforeText.lineSecond
+						if opt.bannerBeforeText.lineFist
+							span
+								=opt.bannerBeforeText.lineFist
 
-				h3.banner__title
+						if opt.bannerBeforeText.lineSecond
+							span
+								=opt.bannerBeforeText.lineSecond
+
+				h3.banner__title(class=opt.banner_title_mode_class ? "banner__title" + opt.banner_title_mode_class : "")
 					span=opt.bannerTitle
+
 					if opt.bannerTitleSecondLine
 						span=opt.bannerTitleSecondLine
 
@@ -22,9 +26,11 @@ mixin banner(opt)
 
 				if opt.bannerText || opt.bannerText2
 					h6.banner__text(class=opt.banner_text_class ? "banner__text" + opt.banner_text_class : "")
-						=opt.bannerText
-						|<br>
-						=opt.bannerText2
+						if opt.bannerText
+							=opt.bannerText
+						if opt.bannerText2
+							|<br>
+							=opt.bannerText2
 
 				.banner__footer
 					if opt.btn

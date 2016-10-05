@@ -213,7 +213,6 @@
 			
 		
 		&-btn,
-		&-btn_white,
 		&-btn_white-transparent
 			display inline-block
 			padding 11px 14px
@@ -223,12 +222,15 @@
 			text-transform uppercase
 			border 2px solid #c1dcdc
 			border-radius 4px
+			will-change color, background-color, border-color
+			transition .25s color ease-in, .25s background-color ease-in, .25s border-color ease-in
+			
+			&:hover
+				color #f26522
+				background-color #fff
+				border-color #fff	
 		
-		&-btn_white
-			color #f26522
-			background-color #fff
-			border-color #fff
-		
+
 		&-btn_white-transparent
 			color #fff
 			border-color #fff
