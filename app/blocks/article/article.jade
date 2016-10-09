@@ -2,11 +2,12 @@ mixin article(data)
 	-data = data || [];
 		each elem in data
 			.col.l6.m6.s12&attributes(attributes)
-				article.article
-					.article__title(class=elem.titleModClass ? "article__title_"+elem.titleModClass+"" : "")
-						|#{elem.title}
-						if elem.titleIcon
-							img.article__title-icon(src=elem.titleIcon, alt="img")
+				article.article(class=elem.articleModClass ? "article_"+elem.articleModClass+"" : "")
+					if elem.title
+						.article__title(class=elem.titleModClass ? "article__title_"+elem.titleModClass+"" : "")
+							|#{elem.title}
+							if elem.titleIcon
+								img.article__title-icon(src=elem.titleIcon, alt="img")
 								
 					each item in elem.items
 						.article__item(style=item.style ? item.style : "")

@@ -1,5 +1,6 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/banner/banner
+include ../blocks/article/article
 
 block head
 	- var pageTitle = 'My TEFL';
@@ -22,10 +23,21 @@ block content
 		bannerTitle: "Pro 120 Hour TEFL",
 		banner_title_mode_class: '_page_online-courses-inner',
 
-		bannerText: "START YOUR 120 hours today",
-		banner_text_class: "_color_white",
+		calendar: [
+			{
+				text: "Hours",
+				integers: ["2", "4"]	
+			},
+			{
+				text: "Minutes",
+				integers: ["1", "1"]
+			},
+			{
+				text: "Seconds",
+				integers: ["0", "3"]
+			}
+		],
 
-		btn: "AND SAVE 10% discount",
 		btn_down_mod_class: '_page_online-courses-inner',
 		
 		bannerSearch: false
@@ -41,13 +53,13 @@ block content
 					li Comprehensivecourse-everything you need to start teaching and living abroad!
 
 			.col.l5
-				.widget-banner-discount.text-center.mt-40
-					div.bigest-header.uppercase.mt-15.mb-10 #[strong Get started!]
-					.cur-price.uppercase.mb-20 #[strong 120 Hour TEFL Only $299!]
-					a.button-st1.full-width.uppercase.alt.text-orange(href="#") ENROLL NOW
+				.widget-banner-discount.online-courses-inner.text-center.mt-40
+					div.bigest-header.uppercase.mt-15.mb-20 #[strong ONLY $299!]
+					.cur-price.uppercase.mb-20 #[strong get started 120 Hour TEFL]
+					a.button-st1.full-width.uppercase.alt(href="#") ENROLL NOW
 
 					.b-program-total__block-second.mb-0
-						.b-program-total__text-before.mb-20 I have an additional discount code:
+						.b-program-total__text-before.text-left.mb-20 I have an additional discount code:
 						input.b-program-total__input(type="text" placeholder="Paste URL here")
 						.b-program-total__btn.uppercase Submit
 	
@@ -57,17 +69,63 @@ block content
 				.col.l7
 					.title-st-2.text-white.uppercase.mt-30.mb-30 HEAR WHAT THEY SAY ABOUT US
 					iframe.mb-70(width="580" height="350" frameborder="0" src="https://www.youtube.com/embed/v8Ji0qGXJBA?rel=0&amp;controls=0")
-					img.smailes(src="assets/images/online-courses-inner-page/smiles.png", alt="img")
 
 				.col.l5
 					img.mt-50(src="assets/images/online-courses-inner-page/tefl-review.png", alt="img")
 
 	.container
 		.row
-			.col.l7
-				.title-st-2.uppercase.mt-100.mb-30.text-black What's included?
+			.col.l12
+				.title-st-2.uppercase.mb-30.mt-30 what's included?
 
-				div(class="accordion")
+			+article([
+				{
+					articleModClass: 'border',
+					items:[
+						{
+							img: "assets/images/article/internationally.png",
+							title: "Internationally-Recognized TEFL Certificate",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+						},
+						{
+							img: "assets/images/article/letter.png",
+							title: "Official Letter of Recommendation with Course Breakdown",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis"
+						},
+						{
+							img: "assets/images/article/tutor.png",
+							title: "Full Tutor & Tech Support with Personalised Feedback",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+							style: "margin-bottom:0px;"
+						}
+					]
+				},
+				{
+					articleModClass: 'border',
+					items:[
+						{
+							img: "assets/images/article/access.png",
+							title: "24/7 Access to Online Course via Multiple Devices",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+							style: "margin-bottom:58px;"
+						},
+						{
+							img: "assets/images/article/charity.png",
+							title: "FREE TEFL charity & Cover Letter Advice",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+							style: "margin-bottom:73px;"
+						},
+						{
+							img: "assets/images/article/placement.png",
+							title: "FREE TEFL Job Placement Assistance Worldwide",
+							text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+							style: "margin-bottom:0px;"
+						}
+					]
+				}
+			])
+
+				//- div(class="accordion")
 					div(class="content-title checked yellow")
 						i(class="accordion-icon")
 						| Internationally-RecognizedTEFL Certificate?
@@ -99,7 +157,7 @@ block content
 					div(class="content") Demand for TEFL has never been higher with students all over the world actively seeking to learn English. TEFL used to be a mainly private sector industry, in which the student centric, communicative approach was a departure from the stiff traditional English methodologies employed in public school systems. However, that has changed in recent years with public education systems around the world seeking qualified TEFL trainers for updated programs, goals, and better results.
 
 			.col.l5.text-center
-				img.mt-130(src="assets/images/online-courses-inner-page/img-1.png", alt="img")
+				//- img.mt-130(src="assets/images/online-courses-inner-page/img-1.png", alt="img")
 	
 	
 
