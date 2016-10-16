@@ -4,6 +4,8 @@
 	
 	&_page_home
 		background-image url('/assets/images/home_page_banner.jpg')
+		@media $medium_and_down
+			background-size cover
 	
 	&_internships-main_page
 		background-image url('/assets/images/Internships_main_page_banner.jpg')
@@ -51,6 +53,15 @@
 			
 			& span
 				color #fff !important
+		
+		span&-text_mobile
+			display block
+			font-size 20vw
+				
+			&:last-of-type
+				font-size 4vw
+				color #fff
+
 	
 	&__subtitle
 		font-family PTSans-Bold

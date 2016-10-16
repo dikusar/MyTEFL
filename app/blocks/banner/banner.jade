@@ -5,7 +5,7 @@ mixin banner(opt)
 			.banner__container(class=opt.banner_container_mode_class ? "banner__container" + opt.banner_container_mode_class : "")
 
 				if opt.bannerBeforeText
-					.banner__text-before
+					.banner__text-before.hide-on-med-and-down
 						if opt.bannerBeforeText.lineFist
 							span
 								=opt.bannerBeforeText.lineFist
@@ -15,10 +15,17 @@ mixin banner(opt)
 								=opt.bannerBeforeText.lineSecond
 
 				h3.banner__title(class=opt.banner_title_mode_class ? "banner__title" + opt.banner_title_mode_class : "")
-					span=opt.bannerTitle
+					span(class="hide-on-med-and-down")
+						=opt.bannerTitle
 
 					if opt.bannerTitleSecondLine
-						span=opt.bannerTitleSecondLine
+						span(class="hide-on-med-and-down")
+							=opt.bannerTitleSecondLine
+
+					span.banner__title-text_mobile.hide-on-large-only
+						| Freedom
+					span.banner__title-text_mobile.hide-on-large-only
+						| wherever you want #[i(class="fa fa-circle" aria-hidden="true")] whenever you want
 
 				if opt.bannerSubTitle
 					h5.banner__subtitle
@@ -37,7 +44,7 @@ mixin banner(opt)
 						a.banner__footer-btn.button-st1.orange.uppercase(href=jv0)
 							=opt.btn
 					if opt.calendar
-						.banner__footer-calendar
+						.banner__footer-calendar.hide-on-med-and-down
 							.banner__footer-calendar-title Discount until
 							each item in opt.calendar
 								.banner__footer-calendar-item
@@ -50,7 +57,7 @@ mixin banner(opt)
 			.banner__footer-btn_down(class=opt.btn_down_mod_class ? "banner__footer-btn" + opt.btn_down_mod_class : "")
 			
 			if opt.bannerSearch
-				.row.margin-bottom.banner__search
+				.row.margin-bottom.banner__search.hide-on-med-and-down
 					.col.l6.m6.s12
 						.banner__search-blue
 							.banner__search-content
