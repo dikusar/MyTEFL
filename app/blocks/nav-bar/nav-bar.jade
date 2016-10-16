@@ -3,10 +3,11 @@
 nav.nav-bar(class=navbar_position_absolute === true ? "nav-bar_position_absolute" : "")
 	.nav-bar__heading
 		.row.container.margin-bottom
-			.col.l3.m3.s3
+			.col.l4.m6.s6
 				a.nav-bar__logo(href=jv0)
 					img(src="assets/images/brand.png", alt="brand")
-			.col.l3.m3.s3.offset-s6.offset-m6.offset-l6
+
+			.col.l3.offset-l5.hide-on-med-and-down
 				ul.nav-bar__social
 					li.nav-bar__social-item
 						a.nav-bar__social-link.nav-bar__social-link_bg_blue(href=jv0)
@@ -35,6 +36,15 @@ nav.nav-bar(class=navbar_position_absolute === true ? "nav-bar_position_absolute
 								.nav-bar__social-facebook_white
 							else
 								.nav-bar__social-facebook
+
+			.col.m6.s6.hide-on-large-only
+				.nav-bar__menu_mobile
+					.nav-bar__login
+						a.nav-bar__login-btn.button-st1.orange(href=jv0)
+							| Login
+
+					i(class="fa fa-bars nav-bar__menu_mobile-icon" aria-hidden="true")
+					
 
 	.nav-bar__menu.hide-on-med-and-down
 		.row.margin-bottom.container

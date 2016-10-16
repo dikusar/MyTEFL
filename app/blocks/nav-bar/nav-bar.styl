@@ -18,6 +18,9 @@
 		display block
 		padding-top 12px
 		padding-bottom 12px
+		
+		img
+			max-width inherit
 	
 	&__social
 		overflow hidden
@@ -90,6 +93,8 @@
 			font-weight bold
 			will-change color
 			transition color .2s ease
+			@media (max-width: 1110px)
+				font-size .92em
 			
 			&:after
 				display block
@@ -124,6 +129,18 @@
 					z-index 2
 					content ''
 					sprite $devider
+		
+		&_mobile
+			display flex
+			align-items center
+			justify-content flex-end
+			padding-top 20px
+			
+			&-icon
+				margin-left 30px
+				font-size 2em
+				color #fff
+				cursor pointer
 					
 	&__submenu
 		position absolute
@@ -198,6 +215,9 @@
 	&__login
 		padding-top 7px
 		text-align right
+		@media $medium_and_down
+			padding-top 0
+		
 		
 		&-btn
 			position relative
