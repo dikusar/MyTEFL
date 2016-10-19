@@ -45,14 +45,33 @@
 		align-items stretch
 		padding-bottom 35px
 		justify-content center
+		@media $medium_and_down
+			padding-left 20px
+			padding-right 8px
+		@media (max-width: 915px)
+			flex-wrap wrap
 	
 	&__item
 		width 300px		
 		font-family PTSans-Bold
 		color #fff
 		text-align center
+		@media $medium_and_down
+			width 25%
+			border 2px solid #fff
+			border-radius 3px
+			margin-right 10px
+		@media (max-width: 915px)
+			width 34%
+		
+		&:nth-child(even)
+			@media (max-width: 915px)
+				margin-right 0
+				
 		
 		&:first-of-type
+			@media (max-width: 915px)
+				margin-bottom 30px
 			
 			.b-prise__item-title
 				border-top-left-radius 4px
@@ -60,8 +79,16 @@
 			.b-prise__item-footer
 				border-bottom-left-radius 4px
 		
+		&:nth-child(2)
+			@media (max-width: 915px)
+				margin-bottom 30px
+			
+		
 		&:last-of-type
 			padding-left 8px
+			@media $medium_and_down
+				padding-left 0
+				margin-right 0
 		
 		&:nth-child(3) &-content
 			border-right-color transparent
@@ -75,6 +102,9 @@
 			font-size pixelsToEm(32)
 			text-transform uppercase
 			background #4b8aaf
+			@media $medium_and_down
+				padding 15px
+				font-size 3vw	
 		
 		&-title_orange
 			background #f26522
@@ -102,6 +132,8 @@
 			overflow hidden
 			border-top 4px solid #b8d0df
 			border-right 2px dotted #61bbc0
+			@media $medium_and_down
+				border-right none
 			
 			& i
 				color #7badcc
@@ -116,6 +148,9 @@
 			margin-bottom 11px
 			font-size pixelsToEm(40)
 			color #77aaca
+			@media $medium_and_down
+				font-size 3.5vw
+			
 		
 		&-text_yellow
 			color #efac1b
@@ -169,6 +204,11 @@
 			background-color #4bbbb8
 			font-size pixelsToEm(18)
 			line-height 23px
+			
+			@media $medium_and_down
+				padding 8px
+				text-transform none
+				font-size 2vw
 		
 		&-descript_blue_light
 			background-color #93bad2
@@ -191,6 +231,14 @@
 			position relative
 			padding 24px 0
 			background-color #2f8b88
+			@media $medium_and_down
+				padding 15px
+			
+			& a
+				@media $medium_and_down
+					color #fff
+					font-size pixelsToEm(24)
+					text-transform uppercase
 		
 		&-footer_blue_light
 			background-color #73a7c8
