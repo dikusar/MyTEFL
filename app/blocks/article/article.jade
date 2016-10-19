@@ -1,7 +1,7 @@
 mixin article(data)
 	-data = data || [];
 		each elem in data
-			.col.l6.m6.s12&attributes(attributes)
+			.col.l6.m12.s12&attributes(attributes)
 				article.article(class=elem.articleModClass ? "article_"+elem.articleModClass+"" : "")
 					if elem.title
 						.article__title(class=elem.titleModClass ? "article__title_"+elem.titleModClass+"" : "")
@@ -21,5 +21,5 @@ mixin article(data)
 								.article__item-text
 									|#{item.text}
 								if item.buttonText
-									a.button-st1(href=jv0)
+									a.button-st1.uppercase(href=jv0)
 										=item.buttonText

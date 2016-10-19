@@ -39,6 +39,8 @@
 		text-transform uppercase
 		font-family PTSans-Bold
 		font-size pixelsToEm(87)
+		@media (max-width: 1240px)
+			font-size 7vw
 		
 		span:first-of-type
 			display block
@@ -203,6 +205,12 @@
 			padding 38px 38px 38px 0
 			background-color rgba(56, 102, 129, .9)
 			overflow hidden
+			@media (max-width: 1240px)
+				padding 28px 28px 28px 0
+		
+		&-blue
+			@media (max-width: 1240px)
+				padding-left 6px
 		
 		&-yellow
 			background-color rgba(231, 170, 37, .9)
@@ -211,6 +219,8 @@
 			.banner__search-content
 				float none
 				padding-left 37px
+				@media (max-width: 1240px)
+					padding-left 28px
 			
 			.banner__search-input
 				margin-left 7px
@@ -218,13 +228,19 @@
 		
 		&-content
 			position relative
-			display inline-block
 			float right
+			@media (min-width: 1240px)
+				display inline-block
+			@media (max-width: 1240px)
+				float none
 		
 		&-title
 			font-family PTSans-Bold
 			font-size pixelsToEm(30)
 			color #fff
+			@media (max-width: 1240px)
+				font-size 2.5vw
+			
 		
 		&-input
 			width 386px
@@ -235,6 +251,8 @@
 			color #929292
 			border-radius 3px
 			border none
+			@media (max-width: 1240px)
+				width calc(100% - 16vw)
 		
 		&-btn
 			position absolute
@@ -244,6 +262,8 @@
 			height 24px
 			z-index 2
 			cursor pointer
+			@media (max-width: 1240px)
+				right 20px
 			
 			&:after
 				position absolute

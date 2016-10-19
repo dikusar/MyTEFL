@@ -19,6 +19,10 @@ hr, .divider
 	border-top 1px solid #fafafa
 	border-bottom 1px solid #d8d8d8
 
+.page	
+	overflow hidden
+	overflow-y auto
+
 .clear
 	clear both	
 ol
@@ -443,6 +447,8 @@ ol
 .flex
 	display flex
 	align-items stretch
+	@media $medium_and_down
+		flex-wrap wrap
 	
 	&.justify-between
 		justify-content space-between
@@ -452,6 +458,18 @@ ol
 		
 		.blog-item_border
 			width 49%
+	
+	&-home-page
+		@media $medium_and_down
+			background-color #ededed
+			
+		img
+			@media $medium_and_down
+				display block
+				width 90%
+				margin 0 auto
+			@media $small-and-down
+				width 100%
 		
 /**/
 /* ! flex */

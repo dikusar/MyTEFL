@@ -17,21 +17,23 @@ mixin circle-group(items, isHeading, isBtnDown)
 	- items = items || [];
 	if isHeading
 		.row.circle-group
-			.col.l12.m12.s12
+			.col.l12.m12.s12.hide-on-med-and-down 
 				h5.circle-group__title.pt-40.pb-50 Why US
-			.col.l12.m12.s12.text-center.mb-60
-				span.circle-group__subtitle Accredited training with a socially responsible TEFL organization.
+			.col.l12.m12.s12.text-center.mb-60.mb-md-20 
+				span.circle-group__subtitle.hide-on-med-and-down Accredited training with a socially responsible TEFL organization.
+				span.circle-group__subtitle.hide-on-large-only
+					| Teaching English is one of the most amazing ways to discover the world! Get certified to teach with our accredited TEFL courses, depart on an exotic internship, or find teaching jobs around the world!
 		
 	.row
 		each item, i in items
 			if i === 0
-				.col.l4.m4.s4
+				.col.l4.m4.s12.circle-group__item-wrapper
 					+circle-group-item(item, i)
 			if i === 1
-				.col.l4.m4.s4.text-center
+				.col.l4.m4.s12.text-center.hide-on-small-and-down 
 					+circle-group-item(item, i)
 			if i === 2
-				.col.l4.m4.s4.text-right
+				.col.l4.m4.s12.text-right.hide-on-small-and-down 
 					+circle-group-item(item, i)
 
 	if isBtnDown

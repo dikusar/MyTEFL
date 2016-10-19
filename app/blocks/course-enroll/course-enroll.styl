@@ -20,6 +20,9 @@
 .course-enroll_form
 	font-size pixelsToEm(18)
 	line-height 1.7
+	@media $medium_and_down
+		text-align center
+
 	&:after
 		content ''
 		display table
@@ -39,4 +42,8 @@
 	.form-col-6
 		float left
 		width calc(50% - 17px)
+
+.text-white
+	@media $medium_and_down
+		text-align left	
 

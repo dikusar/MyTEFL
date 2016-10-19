@@ -49,10 +49,16 @@
 			padding-top 77px
 			padding-bottom 50px
 			font-size pixelsToEm(32)
+			@media $medium_and_down
+				display none
 			
 		.article__content
 			padding-left 0
 			max-width 530px
+			@media $medium_and_down
+				max-width inherit
+				margin-top 35px
+				text-align center
 		
 		.article__item-text
 			margin-bottom 54px
