@@ -15,12 +15,17 @@
 		
 		&-pay
 			margin-top 113px
+			@media $small-and-down
+				margin-top 22px
+			
 		
 		&-mail
 			margin-top 68px
 		
 		&-contact
 			padding-left 30%
+			@media $medium_and_down
+				padding-left 0
 			
 		&-item-header,
 		&-item
@@ -181,6 +186,9 @@
 			clear both
 			cursor pointer
 			z-index 1
+			@media $small-and-down
+				right 20px
+				left inherit
 		
 			&:after
 				display block

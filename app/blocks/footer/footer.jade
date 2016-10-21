@@ -6,13 +6,13 @@
 
 footer.footer
 	.row.margin-bottom.container
-		.col.l2.m2.s2
+		.col.l2.m2.s6
 			ul.footer__list
 				each item, i in menu
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
 						a(class=i === 4 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
 							= item
-		.col.l2.m2.s2
+		.col.l2.m2.s6
 			ul.footer__list
 				each item, i in programs
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
@@ -30,7 +30,8 @@ footer.footer
 						if i===2
 							a.footer__list-link-master(href=jv0)
 								= item
-		.col.l4.m4.s4
+		
+		.col.l4.m8.s12.hide-on-small-only
 			.footer__contact
 				h5.footer__contact-header
 					| Have any questions?
@@ -51,7 +52,8 @@ footer.footer
 			.footer__search
 				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
-		.col.l2.m2.s2
+		
+		.col.l2.hide-on-med-and-down 
 			ul.footer__list-contact
 				li.footer__list-item-heading
 					div.footer__list-item-text_lead Requset
@@ -64,7 +66,8 @@ footer.footer
 					div.footer__list-item-text_sub a mail
 				li.footer__list-item
 					a(class="footer__list-link-mail", href=jv0)
-		.col.l2.m2.s2
+
+		.col.l2.hide-on-med-and-down 
 			ul.footer__list-social
 				each item,i in social
 					li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
@@ -73,13 +76,37 @@ footer.footer
 							|<br>
 							span=item.text
 
-	.footer__sub
-		.row.margin-bottom.container
+	//- Only for small devices
+	.row
+		.col.s12.show-on-small.hide-on-med-and-up 
+			.footer__contact
+				h5.footer__contact-header
+					| Have any questions?
+				.footer__contact-subheader
+					| Call one of our friendly experts at:
+				.footer__contact-content
+					span Canada:&nbsp;
+					span.footer__contact-text-blue 1.778.807.9619
+					|<br>
+					span USA:&nbsp;
+					span.footer__contact-text-blue 1.917.580.3653
+					|<br>
+					span UK:&nbsp;
+					span.footer__contact-text-blue 0.203.318.9697
+				.footer__contact-footer
+					| Or alternatively, you can request a call-back or contact us by Skype at
+					span myTEFL
+			.footer__search
+				.footer__search-btn
+				input.footer__search-input(type="text" placeholder="Search")
+
+	.footer__sub.row.margin-bottom
+		.container
 			if footerSubBtn
-				.footer__sub-btn
-			.col.l6.m6.s6
+				.footer__sub-btn.hide-on-med-only 
+			.col.l6.m12.s10
 				span Copyright © 2015 MyTEFL.net. All rights reserved.
-			.col.l6.m6.s6
+			.col.l6.m6.s6.hide-on-med-and-down 
 				ul.footer__sub-menu
 					li.footer__sub-item 
 						a.footer__sub-link(href=jv0) Terms & Conditions&nbsp;&nbsp;|&nbsp;&nbsp;
