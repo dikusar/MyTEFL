@@ -36,14 +36,33 @@ nav.nav-bar(class=navbar_position_absolute === true ? "nav-bar_position_absolute
 								.nav-bar__social-facebook_white
 							else
 								.nav-bar__social-facebook
-
+			
+			//- Adaptive menu block
 			.col.m6.s6.hide-on-large-only
 				.nav-bar__menu_mobile
 					.nav-bar__login
 						a.nav-bar__login-btn.button-st1.orange(href=jv0)
 							| Login
 
-					i(class="fa fa-bars nav-bar__menu_mobile-icon" aria-hidden="true")
+					i(class="fa fa-bars nav-bar__menu_mobile-icon js-nav-bar-menu-mobile-icon" aria-hidden="true")
+
+				//- Adaptive menu items
+				ul.nav-bar__menu-list_mobile.js-nav-bar-menu-list-mobile
+					each item, i in menuArray 
+						li(class=i === 1 ? "nav-bar__menu-item_mobile active" : "nav-bar__menu-item_mobile")
+							a(class=i === 1 ? "nav-bar__menu-link_mobile active" : "nav-bar__menu-link_mobile", href=jv0)
+								= item.menu
+
+							if item.submenu
+								ul.nav-bar__submenu_mobile
+									each elem, k in item.submenu
+										li.nav-bar__submenu-item_mobile
+											if i === 0
+												a(class=k === 1 ? "nav-bar__submenu-link_mobile active" : "nav-bar__submenu-link_mobile", href=jv0)
+													=elem
+											else
+												a(class="nav-bar__submenu-link_mobile", href=jv0)
+													=elem
 					
 
 	.nav-bar__menu.hide-on-med-and-down

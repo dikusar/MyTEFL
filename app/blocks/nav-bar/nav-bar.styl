@@ -6,7 +6,7 @@
 		position absolute
 		left 0
 		right 0
-		z-index 1
+		z-index 5
 		
 		& .nav-bar__heading
 			background-color rgba(217, 217, 217, .5)	
@@ -114,9 +114,12 @@
 				color #efac1b
 				
 				&:hover
-					color #efac1b	
+					color #efac1b
 			
-		
+			&_mobile
+				color #fff
+				font-family PTSans-Bold
+				
 		&-item
 			position relative
 			float left
@@ -131,7 +134,22 @@
 					z-index 2
 					content ''
 					sprite $devider
-		
+			
+			&_mobile
+				padding 17px 0 17px 50px
+				
+				&:first-of-type
+					padding-top 20px
+				
+				&:last-of-type
+					padding-bottom 25px
+				
+				&.active
+					width 80%
+					border-bottom 1px solid #407696
+					border-top 1px solid #407696
+					background linear-gradient(to right, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%)
+			
 		&_mobile
 			display flex
 			align-items center
@@ -143,6 +161,28 @@
 				font-size 2em
 				color #fff
 				cursor pointer
+		
+		&-list_mobile
+			position absolute
+			z-index 1
+			top 79px
+			right 0
+			width 367px
+			background-image url('../images/submenu-mobile-bg.png')
+			background-repeat repeat
+			visibility hidden
+			z-index -1
+			opacity 0
+			transform translate(0, -9px)
+			will-change visibility, opacity, z-index
+			transition visibility .25s ease-out, opacity .25s ease-out, z-index .25s ease-out, transform .25s ease-out .1s
+			
+			&.display
+				visibility visible
+				z-index 12
+				opacity 1
+				transform translate(0, 1px)
+			
 					
 	&__submenu
 		position absolute
@@ -189,6 +229,9 @@
 			&:last-of-type:after
 				content none
 			
+			&_mobile
+				line-height 24px
+			
 		&-link
 			position relative
 			display block
@@ -206,7 +249,24 @@
 				
 				&:hover
 					color #efac1b
-	
+			
+			&_mobile
+				color #fff
+				
+				&:hover
+					color lighten(#efac1b, 35%)
+			
+				&.active
+					color #efac1b
+					text-decoration underline
+				
+					&:hover
+						color #efac1b
+		
+		&_mobile
+			padding-left 20px
+			margin-top 5px
+		
 	&__menu-item:hover &__submenu
 		visibility visible
 		z-index 12
