@@ -416,10 +416,15 @@ ol
 /**/
 
 .k-parallax-section
+	background-image url('../images/enroll-form.jpg')
 	position relative
 	z-index 1
 	background-size cover
 	background-attachment fixed
+	@media $medium_and_down
+		background-image url('../images/enroll-form-mobile.jpg')
+		background-attachment inherit
+	
 	&.overlay:before,
 	&.overlay-half:after
 		content ""
@@ -432,8 +437,12 @@ ol
 		z-index 1
 		background-color #000000
 		opacity 0.45
+		@media $medium_and_down
+			content none
+		
 	&.overlay-half:after
 		left 50%
+		
 	.row
 		position relative
 		z-index 4

@@ -1,11 +1,21 @@
-.k-parallax-section.overlay.overlay-half(style="background-image:url(assets/images/enroll-form.jpg)")
-	.container.pt-60.pb-40
+.k-parallax-section.overlay.overlay-half
+	.container.pt-60.pb-40.pt-md-0.pt-sm-0.pb-md-0.pb-sm-0
 		.row.course-enroll
 			.col.l6.hide-on-med-and-down
 				.course-enroll_slog.mb-25 Study Anywhere #[br] on any Device
 				.course-enroll_context.text-white.mb-30 #[strong All you need is internet connectivity #[br] and a web browser]
 				a.button-st1.orange(href="#") LEARN MORE
-			.col.l6
+
+			//- Display on mobile and tablet devices
+			.col.m6.s12.offset-m6
+				.course-enroll__mobile
+					h3.course-enroll_slog
+						| Your Ticket #[br] to the World!
+					.course-enroll__mobile-descript
+						| We provide FREE job placement upon completion of your TEFL COURSE
+					a.button-st1.orange(href="#") LEARN MORE
+
+			.col.l6.m12.s12
 				.course-enroll_container
 					.course-enroll_title.text-center.mb-30 Enroll in a TEFL course
 					form.course-enroll_form
