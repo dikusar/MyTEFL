@@ -6,13 +6,13 @@
 
 footer.footer
 	.row.margin-bottom.container
-		.col.l2.m2.s6
+		.col.l2.m2.s2
 			ul.footer__list
 				each item, i in menu
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
 						a(class=i === 4 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
 							= item
-		.col.l2.m2.s6
+		.col.l2.m2.s2
 			ul.footer__list
 				each item, i in programs
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
@@ -31,7 +31,7 @@ footer.footer
 							a.footer__list-link-master(href=jv0)
 								= item
 		
-		.col.l4.m8.s12.hide-on-small-only
+		.col.l4.m8.hide-on-small-only
 			.footer__contact
 				h5.footer__contact-header
 					| Have any questions?
@@ -53,7 +53,7 @@ footer.footer
 				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
 		
-		.col.l2.hide-on-med-and-down 
+		.col.l2.s4.hide-on-med-only 
 			ul.footer__list-contact
 				li.footer__list-item-heading
 					div.footer__list-item-text_lead Requset
@@ -67,7 +67,7 @@ footer.footer
 				li.footer__list-item
 					a(class="footer__list-link-mail", href=jv0)
 
-		.col.l2.hide-on-med-and-down 
+		.col.l3.s3.hide-on-med-only 
 			ul.footer__list-social
 				each item,i in social
 					li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
@@ -76,9 +76,9 @@ footer.footer
 							|<br>
 							span=item.text
 
-	//- Only for small devices
+	//- Display only on mobile devices
 	.row
-		.col.s12.show-on-small.hide-on-med-and-up 
+		.col.s12.show-on-small.hide-on-med-and-up
 			.footer__contact
 				h5.footer__contact-header
 					| Have any questions?
@@ -99,13 +99,72 @@ footer.footer
 			.footer__search
 				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
+	
+	//- Display only on mobile and tablet devices
+	.row.show-on-medium.footer__list-social-mobile
+		.col.m2
+			ul.footer__list-contact
+				li.footer__list-item-heading
+					div.footer__list-item-text_lead Requset
+					div.footer__list-item-text_sub a callback
+				li.footer__list-item
+					a(class="footer__list-link-callback", href=jv0)
+		.col.m2
+			ul.footer__list-mail.footer__list-contact
+				li.footer__list-item-heading
+					div.footer__list-item-text_lead Send Us
+					div.footer__list-item-text_sub a mail
+				li.footer__list-item
+					a(class="footer__list-link-mail", href=jv0)
+		.col.m3
+			ul.footer__list-social
+				each item,i in social
+					if i < 2
+						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
+							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+								span Join us on
+								|<br>
+								span=item.text
+		.col.m3
+			ul.footer__list-social
+				each item,i in social
+					if i >= 2 && i < 4
+						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
+							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+								span Join us on
+								|<br>
+								span=item.text
+		.col.m2(style="padding-left:0;")
+			ul.footer__list-social
+				each item,i in social
+					if i === 4
+						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
+							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+								span Join us on
+								|<br>
+								span=item.text
+
+
+
+
+	//- Display only on mobile and tablet devices
+	ul.footer__sub-menu.hide-on-large-only
+		li.footer__sub-item 
+			a.footer__sub-link(href=jv0) Terms & Conditions&nbsp;&nbsp;|&nbsp;&nbsp;
+		li.footer__sub-item 
+			a.footer__sub-link(href=jv0) Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;
+		li.footer__sub-item
+			a.footer__sub-link(href=jv0) Sitemap
 
 	.footer__sub.row.margin-bottom
 		.container
 			if footerSubBtn
-				.footer__sub-btn.hide-on-med-only 
+				.footer__sub-btn.hide-on-med-only
+			
 			.col.l6.m12.s10
 				span Copyright © 2015 MyTEFL.net. All rights reserved.
+			
+			//- Display only on large
 			.col.l6.m6.s6.hide-on-med-and-down 
 				ul.footer__sub-menu
 					li.footer__sub-item 

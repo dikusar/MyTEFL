@@ -8,6 +8,11 @@
 		
 		&-social
 			text-align right
+			@media (max-width: 1230px)
+				text-align left
+			
+			&-mobile
+				display none
 			
 			.footer__list-link
 				text-align left
@@ -15,12 +20,16 @@
 		
 		&-pay
 			margin-top 113px
+			@media $medium_and_down
+				margin-top 58px
 			@media $small-and-down
 				margin-top 22px
 			
 		
 		&-mail
 			margin-top 68px
+			@media $medium_and_down
+				margin-top 0
 		
 		&-contact
 			padding-left 30%
@@ -32,6 +41,8 @@
 			margin-bottom 17px
 			font-family PTSans-Bold
 			font-size pixelsToEm(18)
+			@media (max-width: 760px)
+				font-size 2.5vw
 			
 			&-header
 				margin-bottom 20px
@@ -46,6 +57,8 @@
 				font-size pixelsToEm(18)
 				color #555555
 				line-height pixelsToEm(20)
+				@media $small-and-down
+					font-size 2.5vw
 				
 				&:before
 					display block
@@ -54,6 +67,8 @@
 					left 68px
 					z-index 2
 					content ''
+					@media (max-width: 1230px)
+						left 0
 			
 			&-facebook:before
 				sprite $footerfacebook
@@ -79,10 +94,14 @@
 		&-item-text_lead
 			text-transform uppercase
 			font-size pixelsToEm(24)
+			@media (max-width: 760px)
+				font-size 3.1vw
 			
 		&-item-text_sub
 			text-transform uppercase
 			font-size pixelsToEm(18)
+			@media (max-width: 760px)
+				font-size 2.2vw
 		
 		&-link
 			color #646464
@@ -208,12 +227,25 @@
 		
 		&-menu
 			float right
+			@media $medium_and_down
+				float none
+				padding 17px 0 17px 0
+				border-top 1px solid #aeaeae
+				text-align center
+				overflow hidden
+			
 		
 		&-item
 			float left
+			@media $medium_and_down
+				float none
+				display inline-block
 		
 		&-link
 			color #fff
+			@media $medium_and_down
+				color #555555
+				font-family PTSans-Bold
 			
 			&_yellow
 				color #efac1b
