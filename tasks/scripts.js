@@ -24,8 +24,8 @@ function runWebpack(watch = false) {
 					scriptsErrorHandler.call({emit() {/* noop */}}, {message});
 				});
 			}
-			statsLogger(error, stats);
-			callback();
+			// statsLogger(error, stats);
+			// callback();
 		});
 	};
 }
