@@ -20,9 +20,13 @@
 		padding-bottom 12px
 		@media $medium_and_down
 			padding-left 8px
+		@media $small-and-down
+			padding-left 0
 		
 		img
 			max-width inherit
+			@media $small-and-down
+				width 138px
 	
 	&__social
 		overflow hidden
@@ -32,45 +36,73 @@
 		
 		&-item
 			float left
+			
+			&:last-of-type
+				
+				.nav-bar__social-link
+					&:after
+						display block
+						position absolute
+						right 0
+						top 12px
+						height 65%
+						width 1px
+						content ''
+						background linear-gradient(to bottom, rgba(176,176,176,0) 1%,rgba(176,176,176,0.65) 44%,rgba(176,176,176,1) 55%,rgba(176,176,176,0) 100%)
+					
+					&.white
+						&:after
+							background linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,0.65) 44%,rgba(255,255,255,1) 55%,rgba(255,255,255,0) 100%)
+						
+						&:hover:after
+							background transparent
+							
+
+		&-icon
+			font-size pixelsToEm(20)
+			
+			&.white
+				color white	
 		
 		&-link
+			position relative
+			width 37px
 			display flex
 			align-content center
 			align-items center
 			justify-content center
 			height 73px
+			background-color transparent
+			will-change background-color
+			transition background-color .1s linear
 			
-			&_bg_blue
+			&:before
+				display block
+				position absolute
+				left 0
+				top 12px
+				height 65%
+				width 1px
+				content ''
+				background linear-gradient(to bottom, rgba(176,176,176,0) 1%,rgba(176,176,176,0.65) 44%,rgba(176,176,176,1) 55%,rgba(176,176,176,0) 100%)
+			
+			&:hover
 				background-color #366d8f
-			
-		&-call
-			sprite $phone
-			
-		&-googlePl
-			sprite $googleplus
 				
-			&_white
-				sprite $googlepluswhite
+				& .nav-bar__social-icon
+					color $orange
+					
+				&:before
+					background transparent
 			
-		&-instagram
-			sprite $insta
+			&.white
 				
-			&_white
-				sprite $instawhite
-			
-		&-twitter
-			sprite $twit
+				&:before
+					background linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,0.65) 44%,rgba(255,255,255,1) 55%,rgba(255,255,255,0) 100%)
 				
-			&_white
-				sprite $twitwhite
-			
-		&-facebook
-			sprite $facebook
-				
-			&_white
-				sprite $f_white
-				padding-top 20px
-	
+				&:hover:before
+					background transparent
+		
 	&__menu
 		height 57px
 		background-color rgba(0, 0, 0, 0.6)
@@ -155,6 +187,8 @@
 			align-items center
 			justify-content flex-end
 			padding-top 20px
+			@media $small-and-down
+				padding-top 9px
 			
 			&-icon
 				margin-left 30px
@@ -176,6 +210,9 @@
 			transform translate(0, -9px)
 			will-change visibility, opacity, z-index
 			transition visibility .25s ease-out, opacity .25s ease-out, z-index .25s ease-out, transform .25s ease-out .1s
+			@media $small-and-down
+				top 59px
+				width 100%
 			
 			&.display
 				visibility visible
@@ -290,6 +327,8 @@
 			font-family PTSans-Bold
 			border 2px solid #efac1b
 			border-radius 3px
+			@media $small-and-down
+				padding 9px
 			
 			&:after
 				display block

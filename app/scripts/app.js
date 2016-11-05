@@ -7,7 +7,11 @@ $(() => {
 
 	const mySwiper = new Swiper('.swiper-container', {
 		// Optional parameters
-		loop: true
+		// loop: true,
+		// slidesOffsetBefore: 30,
+		// Navigation arrows
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev'
 	});
 
 });
