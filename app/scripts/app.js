@@ -6,12 +6,11 @@ $(() => {
 	svg4everybody();
 
 	const mySwiper = new Swiper('.swiper-container', {
-		// Optional parameters
-		// loop: true,
-		// slidesOffsetBefore: 30,
-		// Navigation arrows
 		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev'
+		prevButton: '.swiper-button-prev',
+		pagination: '.swiper-pagination',
+		paginationType: 'bullets',
+		paginationClickable: true
 	});
 
 });

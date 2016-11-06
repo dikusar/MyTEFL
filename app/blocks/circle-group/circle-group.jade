@@ -1,4 +1,4 @@
-mixin circle-group-item(item, i)
+mixin circle-group-item(item)
 	-item = item || {};
 		.circle-group__item
 			a.circle-group__heading(class=item.heading_mode_class ? "circle-group__heading" + item.heading_mode_class : "" href=jv0)
@@ -25,16 +25,27 @@ mixin circle-group(items, isHeading, isBtnDown)
 					| Teaching English is one of the most amazing ways to discover the world! Get certified to teach with our accredited TEFL courses, depart on an exotic internship, or find teaching jobs around the world!
 		
 	.row
+		
+		//- Slider-swiper for mobile devices
+		.col.s12.circle-group__item-wrapper.show-on-small
+			.swiper-container
+				.swiper-wrapper
+					each item, i in items
+						.swiper-slide
+							+circle-group-item(item)
+				.swiper-pagination.mt-30
+
 		each item, i in items
 			if i === 0
-				.col.l4.m4.s12.circle-group__item-wrapper
-					+circle-group-item(item, i)
+				.col.l4.m4.s12.hide-on-small-and-down
+					+circle-group-item(item)
 			if i === 1
 				.col.l4.m4.s12.text-center.hide-on-small-and-down 
 					+circle-group-item(item, i)
 			if i === 2
 				.col.l4.m4.s12.text-right.hide-on-small-and-down 
 					+circle-group-item(item, i)
+			
 
 	if isBtnDown
 		.row.mt-30.mb-30
