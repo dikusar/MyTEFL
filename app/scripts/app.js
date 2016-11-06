@@ -39,16 +39,14 @@ mobileMenuHandler();
 function initAccordion() {
 	$('.accordion').each( function () {
 		const allPanels = $(this).children('.content').hide();
-		allPanels.first().slideDown('easeOutExpo');
-		$(this).children('.content-title').first().addClass('active');
 
 		$(this).children('.content-title').on('click', function () {
-
 			const current = $(this).next('.content');
-			$(this).parent().children('.content-title').removeClass('active');
-			$(this).addClass('active');
+			$(this).parent().children('.content-title').not(this).removeClass('active');
 			allPanels.not(current).slideUp('easeInExpo');
-			$(this).next().slideDown('easeOutExpo');
+			current.toggleClass('active');
+			$(this).toggleClass('active');
+			$(this).next().slideToggle('easeOutExpo');
 			return false;
 		});
 	});
