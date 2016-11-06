@@ -3,16 +3,28 @@
 	display block
 	
 	&_position_absolute
-		position absolute
+		position fixed
 		left 0
 		right 0
 		z-index 5
 		
 		& .nav-bar__heading
-			background-color rgba(217, 217, 217, .5)	
+			background-color rgba(217, 217, 217, .5)
+	
+	&_position_fixed
+		position fixed
+		width 100%
+		left 0
+		top 0
+		z-index 12
+		
+		& .nav-bar__heading
+			background-color #ececec	
 	
 	&__heading
 		background-color #ececec
+		will-change background-color
+		transition background-color .2s ease-out
 	
 	&__logo
 		display block

@@ -13,6 +13,17 @@ $(() => {
 		paginationClickable: true
 	});
 
+	$(window).scroll(function () {
+		const $navBar = $('.js-nav-bar');
+		const fixedClass = 'nav-bar_position_fixed';
+
+		if ($(this).scrollTop() > 3) {
+			$navBar.addClass(fixedClass);
+		}else {
+			$navBar.removeClass(fixedClass);
+		}
+	});
+
 });
 
 // Mobile menu
