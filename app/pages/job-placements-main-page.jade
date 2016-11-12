@@ -11,8 +11,8 @@ block content
 	include ../blocks/nav-bar/nav-bar
 
 	main.container
-		.row.mt-100
-			.col.l12
+		.row.mt-100.mt-md-40
+			.col.l12.m12.s12
 				.page-title-wrapper.alt(style="background-image:url(assets/images/header-job-placements.png)")
 					h2.page-title Job Placement Services
 					h3.page-slog Free for myTEFL Grads!
@@ -23,9 +23,9 @@ block content
 					strong MyTEFL's Job Placement Service.
 					| Many TEFL providers leave you on your own once you have completed your course. We don't. We make sure you have a well-paying TEFL job before you land in your destination of choice.#[br]#[br]We help polish up your employment applications, match your desires and qualifications with suitable destinations, vet prospective employers, setup interviews, assist with work permit applications, and ensure all the details are taken care of so you don't have to.#[br]#[br]And the best part? All this is included in the price of the course! So go ahead, sign up, and become part of the international myTEFL family.
 		.row
-			.col.l5
+			.col.l5.m5.s12
 				img.block-center(src="assets/images/job-placements/placements-1.png")
-			.col.l7
+			.col.l7.m5.s12
 				.title-st-2.mt-15.mb-50.uppercase Our Job Placement Service Includes
 				ul.list-st1.mb-30.content-p
 					li Feedback and assistance on your CV & Cover Letter from our Coordinators
@@ -38,7 +38,7 @@ block content
 				.title-st-2 Check out the requirements for each of our TEFL Job Destination and contact our #[ins job placement experts] for more details.
 		//- placements section
 		.row
-			.col.l6
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item.mb-20
 					.placement-item-pic
@@ -56,7 +56,7 @@ block content
 						.text-center.mt-15
 							a.button-st1.uppercase(href="#") More details
 				//- ! placement item
-			.col.l6
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item.mb-20
 					.placement-item-pic
@@ -73,8 +73,9 @@ block content
 							li 2 more point from salary package
 						.text-center.mt-15
 							a.button-st1.uppercase(href="#") More details
-				//- ! placement item
-			.col.l6
+		.row
+			//- ! placement item
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item.mb-20
 					.placement-item-pic
@@ -92,7 +93,7 @@ block content
 						.text-center.mt-15
 							a.button-st1.uppercase(href="#") More details
 				//- ! placement item
-			.col.l6
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item.mb-20
 					.placement-item-pic
@@ -109,8 +110,9 @@ block content
 							li 2 more point from salary package
 						.text-center.mt-15
 							a.button-st1.uppercase(href="#") More details
-				//- ! placement item
-			.col.l6
+		.row
+			//- ! placement item
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item
 					.placement-item-pic
@@ -127,8 +129,8 @@ block content
 							li 2 more point from salary package
 						.text-center.mt-15
 							a.button-st1.uppercase(href="#") More details
-				//- ! placement item
-			.col.l6
+			//- ! placement item
+			.col.l6.m6.s12
 				//- placement item
 				.placement-item
 					.placement-item-pic
@@ -141,44 +143,7 @@ block content
 							a.button-st1.uppercase(href="#") More details
 				//- ! placement item
 		//- ! placements section
-	.k-parallax-section.overlay.overlay-half(style="background-image:url(assets/images/enroll-form.jpg)")
-			.container.pt-60.pb-40
-				.row.course-enroll
-					.col.l6
-						.course-enroll_slog.mb-25 Study Anywhere #[br] on any Device
-						.course-enroll_context.text-white.mb-30 #[strong All you need is internet connectivity #[br] and a web browser]
-						a.button-st1.orange(href="#") LEARN MORE
-					.col.l6
-						.course-enroll_container
-							.course-enroll_title.text-center.mb-30 Enroll in a TEFL course
-							form.course-enroll_form
-								input.form-row.form-col-6(type="text", name="name", placeholder="First Name")
-								input.form-row.form-col-6(type="text", name="name", placeholder="Last Name")
-								input.form-row(type="text", name="email" placeholder="Email address")
-								input.form-row(type="text", name="phone" placeholder="Phone Number")
-								p.text-white.mt-20 #[strong Your Location]
-								select.enroll-country-select(name="billing_country")
-									option Select a country...
-									option(value="") Select a country…
-									option(value="AX") Åland Islands
-									option(value="AF") Afghanistan
-									option(value="AL") Albania
-									option(value="DZ") Algeria
-									option(value="AD") Andorra
-									option(value="AO") Angola
-									option(value="AI") Anguilla
-									option(value="AQ") Antarctica
-									option(value="AG") Antigua and Barbuda
-									option(value="AR") Argentina
-									option(value="AM") Armenia
-									option(value="AW") Aruba
-									option(value="AU") Australia
-									option(value="AT") Austria
-								br
-								input(id="checkbox_enroll-1" type="checkbox" name="ship_to_different_address" value="1" class="checkbox_enroll")
-								label.text-white(for="checkbox_enroll-1") I have read and I agree to the #[span.text-orange Terms of Use] and #[span.text-orange Privacy Policy]
-								br
-								input.mt-25(type="submit" name="woocommerce_checkout_place_order", value="GET STARTED", data-value="Update Totals" class="button-st1 orange")
+	include ../blocks/course-enroll/course-enroll
 	include ../blocks/footer-banner/footer-banner
 
 

@@ -331,15 +331,23 @@ ol
 	p, .context-link
 		font-size pixelsToEm(18)
 		line-height 24px
+		
 	.media-part
 		display flex
 		background-color #f7f7f7
+		@media $small-and-down
+			flex-wrap wrap
+		
 		img
 			width 100%
+			
 		.context
 			align-self center
 			padding 15px 20px
 			width 50%
+			@media $small-and-down
+				width 100%
+				
 			.context-icon
 				font-size pixelsToEm(26)
 				color $main-color
@@ -356,6 +364,8 @@ ol
 					
 		.pic
 			width 50%
+			@media $small-and-down
+				width 100%
 
 /**/
 /* ! blog item */
@@ -467,6 +477,8 @@ ol
 		
 		.blog-item_border
 			width 49%
+			@media $small-and-down
+				width 100%
 	
 	&-home-page
 		@media $medium_and_down

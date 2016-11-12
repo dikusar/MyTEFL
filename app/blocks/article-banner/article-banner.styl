@@ -5,6 +5,8 @@
 		margin-left auto
 		margin-right auto
 		margin-bottom 40px
+		@media $medium_and_down
+			margin-left 10px
 		
 		&:last-of-type
 			margin-bottom 0
@@ -46,6 +48,9 @@
 		font-size pixelsToEm(18)
 		font-family PTSans-Bold
 		text-align center
+		@media (max-width:750px)
+			width 100%
+			margin-left 0
 	
 	&__img
 		width 100%
@@ -54,6 +59,8 @@
 		position relative
 		width 355px
 		margin-left 0
+		@media (max-width:750px)
+			width 100%
 		
 		&-btn_left,
 		&-btn_right

@@ -2,7 +2,7 @@ mixin article-banner(articles)
 	-articles = articles || [];
 		each article in articles
 				.row.article-banner
-					.col.l3.m3.s5
+					.col.l3.m6.s12
 						.article-banner__info
 							.article-banner__text
 								| Teach in
@@ -14,7 +14,7 @@ mixin article-banner(articles)
 							.article-banner__text
 								=article.paid
 
-					.col.l4.m4.s5
+					.col.l4.m6.s12
 						//- Slider
 						.article-banner__slider.swiper-container
 							.swiper-wrapper
@@ -28,5 +28,5 @@ mixin article-banner(articles)
 							.article-banner__slider-btn_left.swiper-button-prev
 							.article-banner__slider-btn_right.swiper-button-next
 
-					.col.l5.m5.s12.padding-right
+					.col.l5.m12.s12.padding-right
 						img.article-banner__img(src=article.imgPath, alt="img")

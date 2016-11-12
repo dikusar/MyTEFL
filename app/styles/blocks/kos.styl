@@ -136,14 +136,21 @@ img
 .blog-item-2
 	display flex
 	flex-wrap wrap
+	
 	& + .blog-item-2
 		margin-top 27px
+		
 	&>*
 		width 33.33%
+		@media $medium_and_down
+			width 100%
+
 	.media-wrap
 		font-size 0
+		
 		img
 			width 100%
+			
 	.content-wrap
 		padding 25px
 		.content-p
@@ -388,11 +395,15 @@ img
 	position relative
 	z-index 1
 	overflow hidden
+	@media $medium_and_down
+		justify-content center
+	
 	img.top
 		position absolute
 		left -10px
 		top -10px
 		z-index 1
+		
 	.tx-size-18
 		font-size pixelsToEm(18)
 		text-shadow 0 2px 1px rgba(0,0,0,0.3)
@@ -409,7 +420,10 @@ img
 		font-size pixelsToEm(76)
 		text-shadow 0 2px 1px rgba(0,0,0,0.3)
 	.tx-bold
+		display inline-block
+		width 100%	
 		font-weight 700
+		
 	.dark-orange
 		color #efac1b
 	.wrapper-1
@@ -417,14 +431,24 @@ img
 	.wrapper-2
 		width 60%
 		padding-right 20px
+		@media $medium_and_down
+			width 100%
+			text-align center
+			
+	.text-white
+		@media $medium_and_down
+			text-align center
+			
 	.wrapper-3
 		width 220px
 	.text-main-color
 		color #77bfeb
+		
 	img.top-center
 		position absolute
 		top 0
 		left 58px
+			
 /**/
 /* blog main style */
 /**/
@@ -670,8 +694,16 @@ p a
 		max-width calc(100% + 40px)
 		float left
 		margin-right 40px
+		@media $medium_and_down
+			float none
+			margin-right 0
+			width 100%
+		
 		img
 			max-width calc(100% + 40px)
+			@media $medium_and_down
+				width 100%
+			
 	.first-title
 		text-transform uppercase
 	.first-title,

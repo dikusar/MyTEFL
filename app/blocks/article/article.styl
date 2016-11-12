@@ -1,4 +1,6 @@
 .article
+	@media $medium_and_down
+		margin-left 20px
 	
 	&_border
 		border 1px solid #d9d9d9
@@ -26,6 +28,8 @@
 	
 	&__item
 		margin-bottom 57px
+		@media $medium_and_down
+			padding-right 20px
 		
 		&:last-of-type
 			margin-bottom 40px
