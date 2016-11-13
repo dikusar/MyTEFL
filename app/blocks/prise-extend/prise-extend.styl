@@ -6,6 +6,9 @@
 	
 	&__table
 		display flex
+		@media (max-width:1240px)
+			flex-wrap wrap
+			justify-content center
 		
 		&-title
 			display flex
@@ -31,15 +34,22 @@
 		
 		&-item.side-bar
 			margin-top 57px
+			@media (max-width:1240px)
+				margin-top 96px
 			
 			& .prise-extend__table-heading
 				font-family PTSans-Bold
 				padding 30px
 				background-color #366d8f
+				@media (max-width:547px)
+					padding-left 16px
+				@media (max-width:485px)
+					padding-left 24%
 				
 				& .first-line
 					font-size pixelsToEm(40)	
 					color #fff
+					white-space nowrap
 				
 				& .second-line
 					font-size pixelsToEm(61)
@@ -48,10 +58,17 @@
 				& .third-line
 					font-size pixelsToEm(35)
 					color #ee9d41
+					white-space nowrap
+			
+			& .prise-extend__list._content .prise-extend__list-item
+				@media (max-width:485px)
+					padding-left 24%
 			
 			& .prise-extend__list._footer
 				padding 18px
 				background-color #366d8f
+				@media (max-width:485px)
+					padding-left 24%
 				
 				& .prise-extend__list-item
 					margin-bottom 30px
@@ -71,6 +88,8 @@
 						color #ee9d41
 			
 		&-item.accent
+			@media $small-and-down
+				width 100%
 			
 			.prise-extend__table-title
 				color #f26522
@@ -95,6 +114,14 @@
 					background-color #ee9d41		
 		
 		&-item
+			@media (max-width:1240px)
+				margin-top 40px
+				width 33%
+			@media (max-width:855px)
+				width 50%
+			@media (max-width:485px)
+				width 100%
+
 			& .prise-extend__table-heading
 				color #fff
 				min-width 218px
@@ -156,6 +183,7 @@
 				color #555555
 				font-size pixelsToEm(18)
 				min-height 38px
+				white-space nowrap
 				
 				&.padding-none
 					padding 0

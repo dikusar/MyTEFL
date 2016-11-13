@@ -4,6 +4,8 @@
 	font-size pixelsToEm(18)
 	background-color #f4f4f4
 	text-align right
+	@media (max-width:1150px)
+		text-align center
 	
 	& .container
 		padding 20px 0
@@ -14,6 +16,12 @@
 		bottom -23px
 		font-size pixelsToEm(100)
 		color #fff
+		@media (max-width:1150px)
+			position relative
+			left inherit
+			bottom inherit
+		@media $small-and-down
+			font-size 21vw
 	
 	&__content
 		display inline-block
@@ -43,3 +51,5 @@
 		padding 13px 54px
 		background-color #4987ad
 		cursor pointer
+		@media $small-and-down
+			margin-top 10px

@@ -29,18 +29,38 @@ img
 	& + .course-banner-item
 		margin-top 37px
 	display flex
+	flex-wrap wrap
 	border 2px solid #d9d9d9
+	
 	.course-banner-pic
 		font-size 0
+		@media (max-width:1240px)
+			width 25%
+			max-width 304px
+		@media $medium_and_down
+			width 100%
+			max-width inherit
+		
+		& img
+			width 100%
+
 	.course-banner-content
-		.button-st1
-			max-width 306px
 		display flex
-		flex-wrap wrap
 		flex 1
 		padding 19px 20px 24px 5px
+		@media $medium_and_down
+			justify-content center
+		@media $small-and-down
+			flex-wrap wrap
+			
 		>*
 			padding 0 25px
+			@media $small-and-down
+				text-align center
+		
+		.button-st1
+			max-width 306px
+			
 		.course-banner-price-section
 			box-sizing content-box
 			max-width 306px

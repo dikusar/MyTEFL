@@ -167,6 +167,9 @@ ol
 	font-weight 700
 	white-space nowrap
 	transition all .3s ease
+	@media $medium_and_down
+		padding 9px 20px	
+
 	&.add-triangle:after
 		content ""
 		display inline-block
@@ -466,11 +469,12 @@ ol
 .flex
 	display flex
 	align-items stretch
-	@media $medium_and_down
-		flex-wrap wrap
+	flex-wrap wrap
 	
 	&.justify-between
 		justify-content space-between
+		@media $medium_and_down
+			justify-content center
 	
 	&_job-page
 		justify-content space-between
