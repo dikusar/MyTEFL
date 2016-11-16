@@ -139,7 +139,22 @@
 	&-small
 		display flex
 		justify-content space-between
+		@media $medium_and_down
+			flex-wrap wrap
+			justify-content center
 		
+		.circle-group__footer
+			@media $medium_and_down
+				width 100%
+		
+		.circle-group__item
+			@media $medium_and_down
+				width 25%
+				margin-right 20px
+				margin-bottom 20px
+			@media (max-width:480px)
+				width 100%
+				
 		.circle-group__item-title
 			color #366d8f
 			font-size pixelsToEm(18)
