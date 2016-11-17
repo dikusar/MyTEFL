@@ -14,13 +14,21 @@ $(() => {
 	});
 
 	$(window).scroll(function () {
+		const screenWidth = $(window).width();
 		const $navBar = $('.js-nav-bar');
+		const $navBarHeading = $('.js-nav-bar-heading');
 		const fixedClass = 'nav-bar_position_fixed';
 
 		if ($(this).scrollTop() > 3) {
 			$navBar.addClass(fixedClass);
+			if (screenWidth > 975) {
+				$navBarHeading.slideUp();
+			}
 		}else {
 			$navBar.removeClass(fixedClass);
+			if (screenWidth > 975) {
+				$navBarHeading.slideDown();
+			}
 		}
 	});
 

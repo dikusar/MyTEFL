@@ -15,6 +15,8 @@
 		width 55%
 		float left
 		margin-right 30px
+		@media (max-width:1135px)
+			width 100%
 	
 	&__text
 		margin-bottom 35px
@@ -28,13 +30,18 @@
 		border-radius 3px
 	
 	&__link
+		@media (max-width:1135px)
+			text-align center
 		
 		& p
+			display inline-block
 			float left
 			margin-right 20px
 			font-size pixelsToEm(24)
 			color #444444
 			line-height 29px
+			@media (max-width:1135px)
+				float none
 		
 		& a
 			font-family PTSans-Bold
@@ -42,5 +49,11 @@
 			text-decoration underline
 		
 		& img
-			display block
+			display inline-block
 			padding-top 7px
+	
+	&__img
+		@media (max-width:1135px)
+			width 124px
+			margin 0 auto
+			display block

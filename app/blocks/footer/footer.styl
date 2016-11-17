@@ -105,6 +105,12 @@
 		
 		&-link
 			color #646464
+			will-change color, text-decoration
+			transition color .2s ease-out, text-decoration .2s ease-out
+			
+			&:hover
+				color #366d8f
+				text-decoration underline
 			
 			&_blue
 				color #366d8f

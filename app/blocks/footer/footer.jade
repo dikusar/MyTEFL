@@ -10,7 +10,7 @@ footer.footer
 			ul.footer__list
 				each item, i in menu
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
-						a(class=i === 4 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+						a(class="footer__list-link", href=jv0)
 							= item
 		.col.l2.m2.s2
 			ul.footer__list
@@ -71,7 +71,7 @@ footer.footer
 			ul.footer__list-social
 				each item,i in social
 					li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
-						a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+						a(class="footer__list-link", href=jv0)
 							span Join us on
 							|<br>
 							span=item.text
@@ -121,7 +121,7 @@ footer.footer
 				each item,i in social
 					if i < 2
 						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
-							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+							a(class="footer__list-link", href=jv0)
 								span Join us on
 								|<br>
 								span=item.text
@@ -130,7 +130,7 @@ footer.footer
 				each item,i in social
 					if i >= 2 && i < 4
 						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
-							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+							a(class="footer__list-link", href=jv0)
 								span Join us on
 								|<br>
 								span=item.text
@@ -139,7 +139,7 @@ footer.footer
 				each item,i in social
 					if i === 4
 						li.footer__list-item-avatar(class="footer__list-item-"+item.classPefix+"")
-							a(class=i === 2 ? "footer__list-link_blue" : "footer__list-link", href=jv0)
+							a(class="footer__list-link", href=jv0)
 								span Join us on
 								|<br>
 								span=item.text
