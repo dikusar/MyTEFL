@@ -4,8 +4,8 @@
 	clear both
 	background-image url("../images/prise/prise-bg.jpg")
 	background-size cover
-	@media $medium_and_down
-		background-image url("../images/prise/prise-bg-mobile.jpg")
+	// @media $medium_and_down
+	// 	background-image url("../images/prise/prise-bg-mobile.jpg")
 	
 	&__heading
 		text-align center
@@ -171,6 +171,10 @@
 		&-content_orange
 			border-top-color #f2c6a2
 			border-right none
+			
+			& .b-prise__item-img
+				@media $small-and-down
+					width 126px
 		
 		&-text,
 		&-text_yellow,
@@ -254,11 +258,13 @@
 			@media $small-and-down
 				padding 8px 4vw
 			@media (max-width: 503px)
-				padding 8px 0
+				padding 8px 2vw
 			
 		
 		&-descript_blue_dark
 			background-color #4987ad
+			@media $medium_and_down
+				padding 8px 0	
 			
 		&-descript_blue
 			background-color #73a7c8
