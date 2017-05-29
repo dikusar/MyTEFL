@@ -68,5 +68,11 @@ PTSans-Regular = 'PTSans-Regular', sans-serif
 .text-center-sm
 	@media $small-and-down
 		text-align center !important
-	
+
+.truncate-on-md
+	@media $medium-only
+		display block
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
 

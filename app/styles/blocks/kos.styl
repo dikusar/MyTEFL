@@ -325,6 +325,9 @@ img
 	border 2px solid #d9d9d9
 	border-radius 2px
 	padding 20px 30px 30px 30px
+	overflow hidden
+	@media (max-width:1145px)
+		padding 4%
 	
 	&.online-courses-inner
 		padding 25px 18px 15px 25px
@@ -374,12 +377,39 @@ img
 		font-size pixelsToEm(53)
 		line-height 60px
 		font-weight 700
+		
 	.float-text
 		float left
 		margin-right 25px
+		@media only screen and (max-width: 1145px)
+			margin-right 0
+		@media $medium_and_down
+			width 100%
+			float none
+			text-align center
+		@media $small-and-down
+			width inherit
+			float left
+			text-align left
+			
 		& + img
 			margin-top -18px
 			margin-bottom -32px
+			@media only screen and (max-width: 1145px)
+				width 40%
+				float right
+			@media $medium_and_down
+				width 38%
+				float none
+				margin 0 auto
+				display block
+			@media only screen and (max-width:815px)
+				width 45%
+				margin-top 5px
+			@media $small-and-down
+				width 40%
+				float right
+
 		.middle-header
 			font-size pixelsToEm(36)
 			color $main-color

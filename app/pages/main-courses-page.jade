@@ -12,45 +12,47 @@ block content
 	include ../blocks/nav-bar/nav-bar
 	main
 		.container
-			.row.mt-100
-				.col.l12
+			.row.mt-100.mt-md-40
+				.col.l12.m12.s12
 					.page-title-wrapper(style="background-image:url(assets/images/about-us/main-courses-1.png)")
 						h2.page-title.uppercase Online & Onsite Courses
 			.row.mt-40.mb-30
-				.col.l7
+				.col.l6.m6.s12
 					.title-st-2.uppercase.mb-40 TEFL Training options to match your lifestyle
 					p.content-p.mb-40 At myTEFL we know there isn't a one size fits all solution when it comes to training. Busy with work, school, socializing and having a good time? Do you live far away from major urban centres? Looking for the best value?  An online TEFL is the smart choice.#[br]#[br]More traditional? Do you need to be in a classroom with other students? Interested in training overseas? An onsite course might be right up your alley!
-				.col.l5
-					.widget-banner-discount
-						.float-text
-							.middle-header.uppercase.mt-10 Download
-							div.bigest-header.uppercase а free
-							.middle-plus-header.uppercase brochure
-						img(src="assets/images/about-us/main-courses-4.png")
+				.col.l6.m6.s12
+					//- .widget-banner-discount
+					//- 	.float-text
+					//- 		.middle-header.uppercase.mt-10 Download
+					//- 		div.bigest-header.uppercase а free
+					//- 		.middle-plus-header.uppercase brochure
+					//- 	img(src="assets/images/about-us/main-courses-4.png")
+					include ../blocks/brochure/brochure
+
 			.row.mb-40
-				.col.l6
+				.col.l6.m6.s12
 					.page-title-wrapper(style="background-image:url(assets/images/about-us/main-courses-2.png)")
 						h2.page-title.text-center ONLINE COURSES
 					.title-st-2.uppercase.mt-20.mb-10(style='color:#444444;') Choose an online course if you:
 					ul.list-st1.checked.content-p
-						li have commitments like work, school etc
-						li don't want a commute and set schedules
-						li are looking for good value
-						li want to get started right away
-						li prefer job placement flexibility
-						li are already on the road
-					a.button-st1.full-width.uppercase.alt.text-orange.mt-30(href="#") view online courses >
-				.col.l6
+						li.truncate-on-md have commitments like work, school etc
+						li.truncate-on-md don't want a commute and set schedules
+						li.truncate-on-md are looking for good value
+						li.truncate-on-md want to get started right away
+						li.truncate-on-md prefer job placement flexibility
+						li.truncate-on-md are already on the road
+					a.button-st1.full-width.uppercase.alt.text-orange.mt-30.mb-sm-40(href="#") view online courses >
+				.col.l6.m6.s12
 					.page-title-wrapper(style="background-image:url(assets/images/about-us/main-courses-3.png)")
 						h2.page-title.text-center ONSITE COURSES
 					.title-st-2.uppercase.mt-20.mb-10(style='color:#444444;') Choose an onsite course if you:
 					ul.list-st1.checked.content-p.orange
-						li can commit to a full time study program
-						li require a traditional environment to learn
-						li would like to train overseas
-						li are seeking a placement in the country of training
-						li want to study with other students
-						li don't have stable internet access
+						li.truncate-on-md can commit to a full time study program
+						li.truncate-on-md require a traditional environment to learn
+						li.truncate-on-md would like to train overseas
+						li.truncate-on-md are seeking a placement in the country of training
+						li.truncate-on-md want to study with other students
+						li.truncate-on-md don't have stable internet access
 					a.button-st1.full-width.uppercase.alt.orange-bg.mt-30(href="#") view onsite courses >
 	
 	include ../blocks/banner-blue/banner-blue
