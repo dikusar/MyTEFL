@@ -6,9 +6,9 @@
 	
 	&__table
 		display flex
-		@media (max-width:1240px)
-			flex-wrap wrap
-			justify-content center
+		// @media (max-width:1240px)
+		// 	flex-wrap wrap
+		// 	justify-content center
 		
 		&-title
 			display flex
@@ -30,6 +30,19 @@
 			
 			& img
 				display block
+		
+		&-items-wrapper
+			display flex
+			flex-wrap nowrap
+			overflow hidden
+			@media (max-width:1260px)
+				overflow-x scroll
+			@media (max-width:800px)
+				& .prise-extend__table-item
+					min-width 70%
+					@media (max-width:670px)
+						min-width 90%
+					
 			
 		
 		&-item.side-bar
@@ -116,11 +129,11 @@
 		&-item
 			@media (max-width:1240px)
 				margin-top 40px
-				width 33%
-			@media (max-width:855px)
-				width 50%
-			@media (max-width:485px)
-				width 100%
+			// 	width 33%
+			// @media (max-width:855px)
+			// 	width 50%
+			// @media (max-width:485px)
+			// 	width 100%
 
 			& .prise-extend__table-heading
 				color #fff
