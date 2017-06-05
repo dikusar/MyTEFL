@@ -1,10 +1,14 @@
 .prise-extend
+	// margin 0 auto
+	// max-width 1240px
+	// width 100%
 	
 	&__heading-wrapper
 		overflow hidden
 		display inline-block
 	
 	&__table
+		position relative
 		display flex
 		// @media (max-width:1240px)
 		// 	flex-wrap wrap
@@ -39,16 +43,21 @@
 				overflow-x scroll
 			@media (max-width:800px)
 				& .prise-extend__table-item
-					min-width 70%
-					@media (max-width:670px)
-						min-width 90%
-					
-			
+					min-width 100%
 		
 		&-item.side-bar
+			position relative
 			margin-top 57px
+			width 310px
 			@media (max-width:1240px)
-				margin-top 96px
+				margin-top 97px
+			@media $small-and-down
+				position absolute
+				top 294px
+				width 60%				
+				margin-top 0
+				z-index 3
+
 			
 			& .prise-extend__table-heading
 				font-family PTSans-Bold
@@ -72,16 +81,24 @@
 					font-size pixelsToEm(35)
 					color #ee9d41
 					white-space nowrap
+					
+			& .prise-extend__list._content
+				@media $small-and-down
+					opacity .7
 			
 			& .prise-extend__list._content .prise-extend__list-item
 				@media (max-width:485px)
-					padding-left 24%
+					overflow hidden
+					text-overflow ellipsis
+					white-space nowrap
 			
 			& .prise-extend__list._footer
 				padding 18px
 				background-color #366d8f
-				@media (max-width:485px)
-					padding-left 24%
+				@media (max-width: 1240px)
+					padding-bottom 30px
+				// @media (max-width:485px)
+				// 	padding-left 24%
 				
 				& .prise-extend__list-item
 					margin-bottom 30px
@@ -127,9 +144,10 @@
 					background-color #ee9d41		
 		
 		&-item
+			width 100%
 			@media (max-width:1240px)
+			// 	width 33%	
 				margin-top 40px
-			// 	width 33%
 			// @media (max-width:855px)
 			// 	width 50%
 			// @media (max-width:485px)
@@ -197,12 +215,16 @@
 				font-size pixelsToEm(18)
 				min-height 38px
 				white-space nowrap
+				background-color #fff
 				
 				&.padding-none
 					padding 0
 				
 				&.text-blue
 					color #4987ad
+					@media $small-and-down
+						text-align right !important
+						padding-right 20px
 					
 					.circle
 						border-radius 50%
@@ -218,6 +240,9 @@
 				& span
 					display inline-block
 					margin-left 15px
+					@media $small-and-down
+						display inline
+						margin-left 5px
 		
 		
 				

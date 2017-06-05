@@ -1,16 +1,17 @@
 .swiper-container
-  margin-left auto
-  margin-right auto
-  position relative
-  overflow hidden
-  z-index 1
-	.swiper-notification
-		position absolute
-		left 0
-		top 0
-		pointer-events none
-		opacity 0
-		z-index -1000
+	width 100%
+	margin-left auto
+	margin-right auto
+	position relative
+	overflow hidden
+	z-index 1
+		.swiper-notification
+			position absolute
+			left 0
+			top 0
+			pointer-events none
+			opacity 0
+			z-index -1000
 
 .swiper-container-no-flexbox
 	.swiper-slide
@@ -75,6 +76,13 @@
 	width 100%
 	height 100%
 	position relative
+	&-prise-extend
+		@media $small-and-down
+			padding-bottom 13px
+			
+		&:last-of-type
+			@media (min-width: 1240px)
+				min-width 285px
 
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide
@@ -158,5 +166,34 @@
 		
 		&-active
 			background-color #366d8f
+
+.swiper-scrollbar
+	border-radius 10px
+	position relative
+	-ms-touch-action none
+	background rgba(0,0,0,.1)
+
+.swiper-container-horizontal>.swiper-scrollbar
+	display block !important
+	opacity 1
+	position absolute
+	left 0
+	bottom 1px
+	z-index 50
+	width 100%
+	height 6px
+	opacity 0
+	@media (max-width: 1240px)
+		opacity 1
+
+.swiper-scrollbar-drag
+	height 100%
+	width 100%
+	position relative
+	background rgba(0,0,0,.5)
+	border-radius 10px
+	left 0
+	top 0
+
 		
 

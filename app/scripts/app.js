@@ -5,12 +5,34 @@ import Swiper from 'swiper';
 $(() => {
 	svg4everybody();
 
-	const mySwiper = new Swiper('.swiper-container', {
+	const baseSwiper = new Swiper('.js-swiper-container-base', {
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 		pagination: '.swiper-pagination',
 		paginationType: 'bullets',
 		paginationClickable: true
+	});
+
+	const priseExtendSwiper = new Swiper('.js-swiper-container-prise-extend', {
+		scrollbar: '.swiper-scrollbar',
+		direction: 'horizontal',
+		slidesPerView: 4.2,
+		mousewheelControl: true,
+		freeMode: true,
+		scrollbarHide: false,
+
+		// Responsive breakpoints
+		breakpoints: {
+			740: {
+				slidesPerView: 1
+			},
+			970: {
+				slidesPerView: 2
+			},
+			1240: {
+				slidesPerView: 3	
+			}
+		}
 	});
 
 	$(window).scroll(function () {

@@ -21,7 +21,7 @@ function runWebpack(watch = false) {
 			const jsonStats = stats.toJson();
 			if (jsonStats.errors.length) {
 				jsonStats.errors.forEach(message => {
-					// scriptsErrorHandler.call({emit() {/* noop */}}, {message});
+					scriptsErrorHandler.call({emit() {/* noop */}}, {message});
 				});
 			}
 			statsLogger(error, stats);
