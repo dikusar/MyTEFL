@@ -23,9 +23,16 @@ block content
 
 	main.container
 		.row
+			div.col.l6.m6.s12
+				atrticle.article
+					div.article__title Why choose to go with an internship?
+			div.col.l6.m6.s12
+				atrticle.article
+					div.article__title.article__title_align_right Request a callback
+							img(src="assets/images/article/callback.png" alt="img" class="article__title-icon")
+
 			+article([
 				{
-					title: 'Why choose to go with an internship?',
 					items:[
 						{
 							img: "assets/images/article/degree-required.png",
@@ -40,9 +47,6 @@ block content
 					]
 				},
 				{
-					title: 'Request a callback',
-					titleModClass: 'align_right',
-					titleIcon: "assets/images/article/callback.png",
 					items:[
 						{
 							img: "assets/images/article/teaching-experience.png",
