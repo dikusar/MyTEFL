@@ -30,7 +30,7 @@ $(() => {
 				slidesPerView: 2
 			},
 			1240: {
-				slidesPerView: 3	
+				slidesPerView: 3
 			}
 		}
 	});
