@@ -6,13 +6,13 @@
 
 footer.footer
 	.row.margin-bottom.container
-		.col.l2.m2.s2
+		.col.l2.m2.s3
 			ul.footer__list
 				each item, i in menu
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
 						a(class="footer__list-link", href=jv0)
 							= item
-		.col.l2.m2.s2
+		.col.l2.m2.s3
 			ul.footer__list
 				each item, i in programs
 					li(class=i === 0 ? "footer__list-item-header" : "footer__list-item")
@@ -53,7 +53,7 @@ footer.footer
 				.footer__search-btn
 				input.footer__search-input(type="text" placeholder="Search")
 		
-		.col.l2.s4.hide-on-med-only 
+		.col.l2.s3.hide-on-med-only 
 			ul.footer__list-contact
 				li.footer__list-item-heading
 					div.footer__list-item-text_lead Requset

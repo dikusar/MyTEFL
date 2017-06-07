@@ -144,6 +144,8 @@ img
 	align-items center
 	div:first-child
 		width 160px
+	@media $medium_and_down
+		justify-content center
 
 /**/
 /*  !  service 2*/
@@ -572,7 +574,7 @@ p a
 	& + .widget-wrapper
 		margin-top 20px
 	&:first-child
-		margin-top 45px
+		margin-top 20px
 	&.widget-search,
 	&.widget-select
 		padding 18px 12px
@@ -799,3 +801,21 @@ p a
 /**/
 /* ! widget services */
 /**/
+
+@media only screen and (max-width: 600px)
+	.article__title_align_small_left
+		text-align left !important
+
+		.article__title-icon
+			float none
+			vertical-align middle
+	.article__title	
+		&.custom
+			padding 50px 0 10px 0
+		&.custom.article__title_align_small_left
+			padding 10px 0 50px 0
+
+.instalink-header-pic
+	padding-right 10px !important
+	background-color #ffffff
+	box-sizing content-box
