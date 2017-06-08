@@ -17,8 +17,10 @@ $(() => {
 		scrollbar: '.swiper-scrollbar',
 		direction: 'horizontal',
 		slidesPerView: 4.2,
-		mousewheelControl: true,
-		freeMode: true,
+		nextButton: '.s-swiper-next',
+		prevButton: '.s-swiper-prev',
+		/*mousewheelControl: true,
+		freeMode: true,*/
 		scrollbarHide: false,
 
 		// Responsive breakpoints

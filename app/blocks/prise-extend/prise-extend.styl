@@ -53,7 +53,7 @@
 				margin-top 97px
 			@media $small-and-down
 				position absolute
-				top 294px
+				top 268px
 				width 60%				
 				margin-top 0
 				z-index 3
@@ -243,6 +243,60 @@
 					@media $small-and-down
 						display inline
 						margin-left 5px
+
+.s-swiper-next
+	display none
+	position: absolute;
+	right: 15px;
+	top: 24px;
+	z-index: 100;
+	border-width: 2px 2px 0 0;
+	border-style: solid;
+	border-color: #f26522;
+	width: 24px;
+	height: 24px;
+	transform: rotate(45deg);
+	cursor: pointer;
+
+	&.swiper-button-disabled
+		opacity 0.5
+
+.s-swiper-prev
+	display none
+	position: absolute;
+	left: 15px;
+	top: 24px;
+	z-index: 100;
+	border-width: 2px 2px 0 0;
+	border-style: solid;
+	width: 24px;
+	border-color: #f26522;
+	height: 24px;
+	transform: rotate(225deg);
+	cursor: pointer;
+
+	&.swiper-button-disabled
+		opacity 0.5
+
+@media (max-width:600px)
+	.s-swiper-prev,
+	.s-swiper-next
+		display block
+
+	.prise-extend__table
+		margin-top 30px
+		border 1px solid #dadada
+
+	.prise-extend__table-item
+		margin-top 15px
+
+	.prise-extend__table-item .first
+		margin 0 3px 3px 3px
+
+	.prise-extend__table-item .second
+		margin 0 3px
+
+
 		
 		
 				
